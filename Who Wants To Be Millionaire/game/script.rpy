@@ -3,31 +3,56 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Brian")
-
+define c = Character("Contestant", color="#03f0fc")
+define a = Character("Announcer", color="#bbc400")
 
 # The game starts here.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
 
-    scene bg room
+    scene milstart
+    
+    a "Welcome, everyone, to Information is Money! The game where knowledge is power... and that power turns into cash!"
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    show announcer at right with dissolve
 
-    show eileen happy
+    a "Tonight, our contestants will face a mountain of questions, each one worth more than the last"
+    a "With every right answer, they'll climb higher, earning more and more cash... but every wrong answer brings them closer to losing it all."
+    a "In this game, it’s not just what you know – it’s how much you're willing to risk!"
 
-    # These display lines of dialogue.
+    show announcer at left with move
 
-    e "You've created a new Ren'Py game."
+    a "Who will conquer the questions, outsmart the odds, and walk away with a fortune? It’s time to find out! Let’s play Information is Money!"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+label intro:
+    scene backcont
+    show announcer at right with dissolve
 
-    # This ends the game.
+    a "Our first contestant of the night is X"
+
+    show cont1 at left with dissolve
+
+    a "Good Evening X, Please introduce yourself to the audience"
+    c "Hello my name is X and i like waffles and winning"
+    a "very poggers of you X, shall we get into the first question"
+
+label q1:
+    c "What energy drink did Logan Paul and KSI make?"
+    
+    menu:
+        "Prime":
+            c "THAT'S CORRECT"
+            jump q2
+        "Gatorade":
+            c "Do they look like gators?"
+        "Liquid Cryptoscam"
+            c "God, we wish!"
+        "Wedang Jahe"
+            c "Goblok!"
+    jump q1
+
+label q2:
+    c "congratz"
 
     return
