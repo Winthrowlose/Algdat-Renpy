@@ -48,7 +48,7 @@ label q1:
             c "Do they look like gators?"
         "Liquid Cryptoscam":
             c "God, we wish!"
-        "Wedang Jahe"
+        "Wedang Jahe":
             c "Goblok!"
     jump q1
 
