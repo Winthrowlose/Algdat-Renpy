@@ -85,6 +85,7 @@ label start:
 
     label q2:
         scene backcont
+        show announcer at right with dissolve
         call lifecount
         a "Did you Know?"
 
