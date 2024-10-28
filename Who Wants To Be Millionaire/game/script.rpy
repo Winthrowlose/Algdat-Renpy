@@ -54,21 +54,21 @@ label q1:
             if life_counter < 1:
                 jump q1
             else: 
-                jump end
+                jump game_over
         "Liquid Cryptoscam":
             c "God, we wish!"
             $ life_counter -= 1
             if life_counter < 1:
                 jump q1
             else: 
-                jump end
+                jump game_over
         "Wedang Jahe":
             c "Goblok!"
             $ life_counter -= 1
             if life_counter < 1:
                 jump q1
             else: 
-                jump end
+                jump game_over
     
 return
 
