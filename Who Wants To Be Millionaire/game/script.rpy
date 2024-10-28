@@ -48,7 +48,7 @@ label start:
         menu:
             "Prime":
                 a "THAT'S CORRECT"
-                jump q2
+                jump win1
 
             "Gatorade":
                 a "Do they look like gators?"
@@ -75,12 +75,15 @@ label start:
                     jump game_over
     return
 
-    label q2:
+    label win1:
         scene 100d
         show announcer at right with dissolve
         a "congratz u got the first one right"
         a "u get 100 bucks"
         a "Next question"
+        jump q2
+
+    label q2:
         call lifecount
         a "Did you Know?"
 
