@@ -47,8 +47,9 @@ label start:
 
         menu:
             "Prime":
-                a "THAT'S CORRECT":
+                a "THAT'S CORRECT"
                     jump q2
+
             "Gatorade":
                 a "Do they look like gators?"
                 $ life_counter -= 1
@@ -56,6 +57,7 @@ label start:
                     jump q1
                 else: 
                     jump game_over
+
             "Liquid Cryptoscam":
                 a "God, we wish!"
                 $ life_counter -= 1
@@ -63,6 +65,7 @@ label start:
                     jump q1
                 else: 
                     jump game_over
+
             "Wedang Jahe":
                 a "Goblok!"
                 $ life_counter -= 1
