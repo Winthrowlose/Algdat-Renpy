@@ -48,7 +48,7 @@ label start:
         menu:
             "Prime":
                 a "THAT'S CORRECT"
-                    jump q2
+                jump q2
 
             "Gatorade":
                 a "Do they look like gators?"
