@@ -66,11 +66,11 @@ label q2:
 
 
 label lifecount:
-    if life_counter == 3
+    if life_counter == 3:
         show three at top_right with dissolve
-    elif life_counter == 2
+    elif life_counter == 2:
         show two at top_right with vpunch
-    elif life counter == 1
+    elif life counter == 1:
         show one at top_right with vpunch
     else
         show zero at top_right with vpunch
