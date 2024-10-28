@@ -51,21 +51,21 @@ label q1:
         "Gatorade":
             c "Do they look like gators?"
             $ life_counter -= 1
-            if life_counter == 0:
+            if life_counter > 0:
                 jump q1
             else: 
                 jump game_over
         "Liquid Cryptoscam":
             c "God, we wish!"
             $ life_counter -= 1
-            if life_counter == 0:
+            if life_counter > 0:
                 jump q1
             else: 
                 jump game_over
         "Wedang Jahe":
             c "Goblok!"
             $ life_counter -= 1
-            if life_counter == 0:
+            if life_counter > 0:
                 jump q1
             else: 
                 jump game_over
