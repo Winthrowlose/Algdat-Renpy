@@ -25,7 +25,6 @@ label start:
 
     a "Who will conquer the questions, outsmart the odds, and walk away with a fortune? It’s time to find out! Let’s play Information is Money!"
 
-    call lifecount
 
     label intro:
         scene backcont
@@ -43,6 +42,7 @@ label start:
 
 
     label q1:
+        call lifecount
         a "What energy drink did Logan Paul and KSI make?"
 
         menu:
@@ -73,6 +73,7 @@ label start:
                     jump q1
                 else: 
                     jump game_over
+    return
 
     label q2:
         scene 100d
@@ -80,6 +81,7 @@ label start:
         a "congratz u got the first one right"
         a "u get 100 bucks"
         a "Next question"
+        call lifecount
         a "Did you Know?"
 
         menu:
@@ -99,6 +101,7 @@ label start:
                 a "STOP"
                 a "FUCKING DIE"
                 jump game_over
+    return
         
 
 
