@@ -73,6 +73,7 @@ label q1:
 return
 
 label q2:
+    call lifecount
     scene 100d
     show announcer at right with dissolve
     a "congratz u got the first one right"
