@@ -95,7 +95,7 @@ label q2:
         "That in terms of Pokemon and Human....":
             a "STOP"
             a "FUCKING DIE"
-            jump game over
+            jump game_over
         
     return
 
