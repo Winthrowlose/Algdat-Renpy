@@ -73,7 +73,7 @@ label q1:
 return
 
 label q2:
-    show scene 100d
+    scene 100d
     a "congratz u got the first one right"
     a "u get 100 bucks"
     a "Next question"
