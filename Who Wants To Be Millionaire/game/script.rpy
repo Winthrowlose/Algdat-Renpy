@@ -141,11 +141,11 @@ label start:
 
     label win_game:
     
-    scene milstart
-    show announcer at right with dissolve
-    a "you win"
+        scene milstart
+        show announcer at right with dissolve
+            a "you win"
 
-    show cont1 at left with dissolve
-    c "poggies"
+        show cont1 at left with dissolve
+            c "poggies"
 
     return
