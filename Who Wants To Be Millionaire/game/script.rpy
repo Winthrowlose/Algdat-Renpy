@@ -51,13 +51,25 @@ label q1:
         "Gatorade":
             c "Do they look like gators?"
             $ life_counter -= 1
+            if life_counter < 1:
+                jump q1
+            else: 
+                jump end
         "Liquid Cryptoscam":
             c "God, we wish!"
             $ life_counter -= 1
+            if life_counter < 1:
+                jump q1
+            else: 
+                jump end
         "Wedang Jahe":
             c "Goblok!"
             $ life_counter -= 1
-    jump q1
+            if life_counter < 1:
+                jump q1
+            else: 
+                jump end
+    
 return
 
 label q2:
@@ -75,7 +87,6 @@ label lifecount:
         show one at right with vpunch
     else:
         show zero at right with vpunch
-        call game_over
 return
     
 
