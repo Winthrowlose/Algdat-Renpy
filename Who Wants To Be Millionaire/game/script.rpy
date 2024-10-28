@@ -87,7 +87,4 @@ label game_over:
 
     show cont1 at left with vpunch
     a "dogshit game fr"
-
-
-
-return
+    return
