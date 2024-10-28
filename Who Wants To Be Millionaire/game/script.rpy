@@ -10,7 +10,7 @@ default life_counter = 3
 
 label start:
 
-    play music "bm3"
+    play music bm3
 
     scene milstart
     
