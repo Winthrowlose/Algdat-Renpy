@@ -74,6 +74,7 @@ return
 
 label q2:
     scene 100d
+    show announcer at right with dissolve
     a "congratz u got the first one right"
     a "u get 100 bucks"
     a "Next question"
