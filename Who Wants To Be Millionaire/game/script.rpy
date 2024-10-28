@@ -72,7 +72,7 @@ label lifecount:
         show two at top_right with vpunch
     elif life counter == 1:
         show one at top_right with vpunch
-    else
+    else:
         show zero at top_right with vpunch
         jump game_over
 
