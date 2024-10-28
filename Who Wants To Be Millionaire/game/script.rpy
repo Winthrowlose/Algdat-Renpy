@@ -89,7 +89,7 @@ label start:
                 a "fuckin idiot"
                 $ life_counter -= 1
                 if life_counter > 0:
-                    jump q1
+                    jump q2
                 else: 
                     jump game_over
     
