@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 51: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Wedang Jahe"
-                 ^
+File "game/script.rpy", line 75: expected ':' not found.
+    else
+        ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Sun Oct 27 18:52:53 2024
+Mon Oct 28 11:06:41 2024

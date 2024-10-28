@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 71, in script
+    jump end
+ScriptError: could not find label 'end'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 71, in script
+    jump end
+  File "C:\Users\Castra\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1699, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\Castra\Downloads\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'end'.
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.3.2.24090902
+Who Wants To Be Millionaire 1.0
+Mon Oct 28 11:30:38 2024
