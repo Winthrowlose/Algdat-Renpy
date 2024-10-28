@@ -77,7 +77,7 @@ label lifecount:
         show zero at right with vpunch
     
 label endgame:
-    if lifecounter == 0:
+    if life_counter == 0:
         jump game_over
     else: 
         call lifecount
