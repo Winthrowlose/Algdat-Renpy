@@ -5,7 +5,7 @@
 
 define c = Character("Contestant", color="#03f0fc")
 define a = Character("Announcer", color="#bbc400")
-
+default life_counter: 3
 # The game starts here.
 
 label start:
@@ -36,23 +36,56 @@ label intro:
     a "Good Evening X, Please introduce yourself to the audience"
     c "Hello my name is X and i like waffles and winning"
     a "very poggers of you X, shall we get into the first question"
+    
+    call lifecount
 
 label q1:
     c "What energy drink did Logan Paul and KSI make?"
     
+
     menu:
         "Prime":
             c "THAT'S CORRECT"
             jump q2
         "Gatorade":
             c "Do they look like gators?"
+            [lctickdown]
         "Liquid Cryptoscam":
             c "God, we wish!"
+            [lctickdown]
         "Wedang Jahe":
             c "Goblok!"
+            [lctickdown]
     jump q1
 
 label q2:
-    c "congratz"
+    c "Did you Know?"
+
+
+
+
+label lifecount:
+    if life_counter == 3
+        show three at top_right with dissolve
+    elif life_counter == 2
+        show two at top_right with vpunch
+    elif life counter == 1
+        show one at top_right with vpunch
+    else
+        show zero at top_right with vpunch
+        jump game_over
+
+label lctickdown:
+    $ life_counter -= 1
+
+
+label game_over:
+    
+scene milstart
+show announcer at right with dissolve
+c "game over mfker"
+
+show cont1 at left with vpunch
+a "dogshit game fr"
 
     return
