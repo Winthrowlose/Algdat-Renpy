@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -41,29 +41,29 @@ label intro:
 
 label q1:
     call lifecount
-    c "What energy drink did Logan Paul and KSI make?"
+    a "What energy drink did Logan Paul and KSI make?"
     
 
     menu:
         "Prime":
-            c "THAT'S CORRECT"
+            a "THAT'S CORRECT"
             jump q2
         "Gatorade":
-            c "Do they look like gators?"
+            a "Do they look like gators?"
             $ life_counter -= 1
             if life_counter > 0:
                 jump q1
             else: 
                 jump game_over
         "Liquid Cryptoscam":
-            c "God, we wish!"
+            a "God, we wish!"
             $ life_counter -= 1
             if life_counter > 0:
                 jump q1
             else: 
                 jump game_over
         "Wedang Jahe":
-            c "Goblok!"
+            a "Goblok!"
             $ life_counter -= 1
             if life_counter > 0:
                 jump q1
@@ -73,7 +73,37 @@ label q1:
 return
 
 label q2:
-    c "Did you Know?"
+    show scene 100d
+    a "congratz u got the first one right"
+    a "u get 100 bucks"
+    a "Next question"
+    a "Did you Know?"
+
+    menu
+    "No, I don't":
+        a "fuckin idiot"
+        $ life_counter -= 1
+            if life_counter == 0:
+                jump q2
+            else: 
+                jump game_over
+    
+    "Yes, I do":
+        a "Goood"
+        jump q3
+
+    "That in terms of Pokemon and Human....":
+        a "STOP"
+        a "FUCKING DIE"
+        jump game over
+        
+    return
+
+
+
+label q3:
+    a "Good anakin, Good"
+
 
 
 
@@ -94,8 +124,8 @@ label game_over:
     
     scene milstart
     show announcer at right with dissolve
-    c "game over mfker"
+    a "game over mfker"
 
     show cont1 at left with vpunch
-    a "dogshit game fr"
+    c "dogshit game fr"
     return
