@@ -84,6 +84,7 @@ label start:
         jump q2
 
     label q2:
+        scene backcont
         call lifecount
         a "Did you Know?"
 
