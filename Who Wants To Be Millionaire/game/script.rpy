@@ -71,7 +71,7 @@ label lifecount:
         show three at right with dissolve
     elif life_counter == 2:
         show two at right with vpunch
-    elif life counter == 1:
+    elif life_counter == 1:
         show one at right with vpunch
     else:
         show zero at right with vpunch
