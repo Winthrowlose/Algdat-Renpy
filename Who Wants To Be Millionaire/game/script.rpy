@@ -1,4 +1,4 @@
-# The script of the game goes in this file.
+﻿# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -144,9 +144,9 @@ label start:
     
         scene milstart
         show announcer at right with dissolve
-            a "you win"
+        a "you win"
 
         show cont1 at left with dissolve
-            c "poggies"
+        c "poggies"
 
     return
