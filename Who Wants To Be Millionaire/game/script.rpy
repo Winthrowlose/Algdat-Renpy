@@ -37,9 +37,10 @@ label intro:
     c "Hello my name is X and i like waffles and winning"
     a "very poggers of you X, shall we get into the first question"
     
-    call lifecount
+    
 
 label q1:
+    call lifecount
     c "What energy drink did Logan Paul and KSI make?"
     
 
