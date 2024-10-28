@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -10,6 +10,7 @@ default life_counter = 3
 
 label start:
 
+    play music "bm3"
 
     scene milstart
     
