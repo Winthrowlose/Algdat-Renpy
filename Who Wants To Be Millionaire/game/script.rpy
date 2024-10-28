@@ -139,4 +139,13 @@ label start:
     show cont1 at left with vpunch
     c "dogshit game fr"
 
+    label win_game:
+    
+    scene milstart
+    show announcer at right with dissolve
+    a "you win"
+
+    show cont1 at left with dissolve
+    c "poggies"
+
     return
