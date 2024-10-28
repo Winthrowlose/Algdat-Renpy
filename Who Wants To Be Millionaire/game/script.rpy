@@ -1,4 +1,4 @@
-# The script of the game goes in this file.
+﻿# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -79,23 +79,23 @@ label q2:
     a "Next question"
     a "Did you Know?"
 
-    menu
-    "No, I don't":
-        a "fuckin idiot"
-        $ life_counter -= 1
-            if life_counter == 0:
-                jump q2
+    menu:
+        "No, I don't":
+            a "fuckin idiot"
+            $ life_counter -= 1
+            if life_counter > 0:
+                jump q1
             else: 
                 jump game_over
     
-    "Yes, I do":
-        a "Goood"
-        jump q3
+        "Yes, I do":
+            a "Goood"
+                jump q3
 
-    "That in terms of Pokemon and Human....":
-        a "STOP"
-        a "FUCKING DIE"
-        jump game over
+        "That in terms of Pokemon and Human....":
+            a "STOP"
+            a "FUCKING DIE"
+                jump game over
         
     return
 
