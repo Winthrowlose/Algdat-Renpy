@@ -40,7 +40,7 @@ label intro:
     
 
 label q1:
-    call lifecount
+    call endgame
     c "What energy drink did Logan Paul and KSI make?"
     
 
@@ -75,8 +75,12 @@ label lifecount:
         show one at right with vpunch
     else:
         show zero at right with vpunch
+    
+label endgame:
+    if lifecounter == 0:
         jump game_over
-
+    else: 
+        call lifecount
     return
 
 label game_over:
