@@ -90,12 +90,12 @@ label q2:
     
         "Yes, I do":
             a "Goood"
-                jump q3
+            jump q3
 
         "That in terms of Pokemon and Human....":
             a "STOP"
             a "FUCKING DIE"
-                jump game over
+            jump game over
         
     return
 
