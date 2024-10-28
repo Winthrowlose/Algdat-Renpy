@@ -122,11 +122,11 @@ label start:
         if life_counter == 3:
             show three at right with dissolve
         elif life_counter == 2:
-            show two at right with vpunch
+            show two at right with dissolve
         elif life_counter == 1:
-            show one at right with vpunch
+            show one at right with dissolve
         else:
-            show zero at right with vpunch
+            show zero at right with dissolve
         return
     
 
