@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 51: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    jump q2
+File "game/script.rpy", line 147: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    a "you win"
+    ^
+
+File "game/script.rpy", line 150: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    c "poggies"
     ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Mon Oct 28 12:57:35 2024
+Mon Oct 28 19:55:29 2024
