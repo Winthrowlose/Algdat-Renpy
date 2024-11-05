@@ -85,7 +85,7 @@ label start:
     a "Ein großer Vorteil von Heapsort ist, dass er in-situ arbeitet, also nur eine konstante Menge an zusätzlichem Speicherplatz benötigt."
     a "Dies unterscheidet ihn von einigen anderen Algorithmen, die mehr Speicher benötigen."
     a "Er ist auch keine Divide-and-Conquer-Methode wie Quicksort oder Mergesort"
-        "sondern arbeitet durch das kontinuierliche Wiederherstellen der Heap-Struktur, ohne das Array in kleinere Teile zu zerlegen."
+    a "sondern arbeitet durch das kontinuierliche Wiederherstellen der Heap-Struktur, ohne das Array in kleinere Teile zu zerlegen."
     a "Wusstet ihr außerdem, dass Heapsort nicht stabil ist?"
     a "Das bedeutet, dass gleiche Werte ihre relative Reihenfolge im Array verlieren können."
     a "Ein kleiner Nachteil, den ihr im Hinterkopf behalten solltet."
@@ -400,7 +400,7 @@ label start:
                 if life_counter > 0:
                     jump q8
                 else: 
-                    jump game_over"
+                    jump game_over
     return
         
     label q9a:
@@ -418,7 +418,7 @@ label start:
                 if life_counter > 0:
                     jump q9a
                 else: 
-                    jump game_over"
+                    jump game_over
             
             "Heapsort ist im Durchschnitt schneller als Quicksort.":
                 a "aa"
@@ -426,7 +426,7 @@ label start:
                 if life_counter > 0:
                     jump q9a
                 else: 
-                    jump game_over"
+                    jump game_over
             
             "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
                 a "aa"
@@ -444,7 +444,7 @@ label start:
                 if life_counter > 0:
                     jump q9a
                 else: 
-                    jump game_over"
+                    jump game_over
             
             "Heapsort ist im Durchschnitt schneller als Quicksort.":
                 a "aa"
@@ -452,7 +452,7 @@ label start:
                 if life_counter > 0:
                     jump q9a
                 else: 
-                    jump game_over"
+                    jump game_over
 
             "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
                 a "aa"
@@ -474,7 +474,7 @@ label start:
                 if life_counter > 0:
                     jump q9a
                 else: 
-                    jump game_over"
+                    jump game_over
 
             "Heapsort ist im Durchschnitt schneller als Quicksort.":
                 a "aa"
@@ -482,7 +482,7 @@ label start:
                 if life_counter > 0:
                     jump q9a
                 else: 
-                    jump game_over"
+                    jump game_over
     return
 
     label q10:
@@ -496,7 +496,7 @@ label start:
                 if life_counter > 0:
                     jump q10
                 else: 
-                    jump game_over"
+                    jump game_over
 
             "Das Nicht-Anwenden von Heapify nach dem Tausch der Wurzel.":
                 a "aa"
@@ -508,7 +508,7 @@ label start:
                 if life_counter > 0:
                     jump q10
                 else: 
-                    jump game_over"
+                    jump game_over
             
             "Das erneute Aufbauen des Heaps nach jedem Sortierschritt.":
                 a "aa"
@@ -516,7 +516,8 @@ label start:
                 if life_counter > 0:
                     jump q10
                 else: 
-                    jump game_over"
+                    jump game_over
+    return
 
     label lifecount:
         if life_counter == 3:
@@ -538,6 +539,8 @@ label start:
 
     show cont1 at left with vpunch
     c "aww"
+    
+    jump over_screen
 
     label win_game:
     
@@ -547,5 +550,9 @@ label start:
 
         show cont1 at left with dissolve
         c "yay"
+    jump over_screen
+
+    label over_screen:
+        a "So ends the class"
 
     return
