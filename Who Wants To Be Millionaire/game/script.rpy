@@ -6,11 +6,69 @@
 define c = Character("[name_c]", color="#03f0fc")
 define a = Character("[name_a]", color="#bbc400")
 default life_counter = 3
-default name_a = "Announcer"
-default name_c = "Contestant"
+default name_a = "Lehrer"
+default name_c = "Mitschüler"
 # The game starts here.
 
 label start:
+
+    menu:
+        "experimentelle features" :
+            menu:
+                "namen ändern":
+                    $ name_c = renpy.input("name für Mitschüler ?")
+                    $ name_c = name_c.strip()
+                    $ name_a = renpy.input("name für Lehrer ?")
+                    $ name_a = name_a.strip()
+                "heapsort demo":
+
+                    $ n1 = renpy.input("", "", allow="0123456789") # the same as $ z = renpy.input(prompt="", default="", allow="0123456789")
+                    $ n1 = int(n1)
+                    "[n1]"
+                    $ n2 = renpy.input("", "", allow="0123456789") # the same as $ a = renpy.input(prompt="", default="", allow="0123456789")
+                    $ n2 = int(n2)
+                    "[n2]"
+                    $ n3 = renpy.input("", "", allow="0123456789") # the same as $ b = renpy.input(prompt="", default="", allow="0123456789")
+                    $ n3 = int(n3)
+                    "[n3]"
+                    $ n4 = renpy.input("", "", allow="0123456789") # the same as $ c = renpy.input(prompt="", default="", allow="0123456789")
+                    $ n4 = int(n4)
+                    "[n4]"
+                    $ n5 = renpy.input("", "", allow="0123456789") # the same as $ d = renpy.input(prompt="", default="", allow="0123456789")
+                    $ n5 = int(n5)
+                    "[n5]"
+                    $ n6 = renpy.input("", "", allow="0123456789") # the same as $ f = renpy.input(prompt="", default="", allow="0123456789")
+                    $ n6 = int(n6)
+                    "[n6]"
+                    python :
+                        def heapify(arr, n, i):
+                            renpy.say(a,"[arr]")
+                            largest = i # Initialize largest as root
+                            l = 2 * i + 1 # left = 2*i + 1
+                            r = 2 * i + 2 # right = 2*i + 2
+                            if l < n and arr[i] < arr[l]:
+                                largest = l
+                            if r < n and arr[largest] < arr[r]:
+                                largest = r
+                            if largest != i:
+                                (arr[i], arr[largest]) = (arr[largest], arr[i]) # swap
+                                heapify(arr, n, largest)
+                                renpy.say(a,"[arr]")
+                        def heapSort(arr):
+                            n = len(arr)
+                            for i in range(n // 2, -1, -1):
+                                heapify(arr, n, i)
+                            for i in range(n - 1, 0, -1):
+                                (arr[i], arr[0]) = (arr[0], arr[i]) # swap
+                                heapify(arr, i, 0)
+                        arr = [n1, n2, n3, n4, n5, n6, ]
+                        heapSort(arr)
+                        renpy.say(a,"[arr]")
+                        n = len(arr)
+
+                    return
+        "normal":
+            "ok , normal "
 
     play music bm3
 
@@ -28,7 +86,7 @@ label start:
 
     show cont1 at right with dissolve
 
-    c "Lehrer, was genau ist ein Heap? Ich habe den Begriff schon gehört, aber wie sieht so eine Struktur eigentlich aus?"
+    c "[name_a], was genau ist ein Heap? Ich habe den Begriff schon gehört, aber wie sieht so eine Struktur eigentlich aus?"
 
     a "Gute Frage,  [name_c] ! Ein Heap ist eine spezielle Art binärer Baum, der eine feste Struktur einhält: Jeder Elternknoten ist größer als seine Kindknoten. Das bedeutet, dass der größte Wert im Baum immer an der Spitze, also an der Wurzel, steht."
     a "Wir nennen diese Struktur einen Max-Heap. Das ist wichtig, weil wir beim Heapsort genau diese Max-Heap-Eigenschaft nutzen, um das größte Element im Baum zu identifizieren und an die richtige Stelle im Array zu bringen."
@@ -108,7 +166,7 @@ label start:
 
     label q1:
         call lifecount
-        a "Frage 1: Grundlagen von Heapsort "
+        a "Kommen wir zur ersten Frage!"
         a "Was ist die Hauptidee hinter dem Heapsort-Algorithmus?"
 
         menu:
@@ -142,8 +200,6 @@ label start:
     return
 
     label win1:
-        scene 100d
-        show announcer at right with dissolve
         jump q2
 
     label q2:
@@ -154,7 +210,7 @@ label start:
 
         menu:
             "Jeder Kindknoten hat einen größeren Wert als sein Elternknoten.":
-                a "fuckin idiot"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q2
@@ -162,12 +218,11 @@ label start:
                     jump game_over
     
             "Jeder Elternknoten hat einen größeren Wert als seine Kindknoten.":
-                a "Goood"
+                a "Ja genau jeder Elternknoten hat einen größeren Wert als seine Kindknoten."
                 jump q3
 
             "Die Knoten sind in zufälliger Reihenfolge angeordnet.":
-                a "STOP"
-                a "FUCKING DIE"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q2
@@ -175,7 +230,7 @@ label start:
                     jump game_over
             
             "Der linke Kindknoten ist immer kleiner als der rechte Kindknoten.":
-                a "STOP"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q2
@@ -191,7 +246,7 @@ label start:
 
         menu:
             "O(n)":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q3
@@ -199,11 +254,11 @@ label start:
                     jump game_over
             
             "O(n log (n))":
-                a "gooood"
+                a "Ja genau die Zeitkomplexität beträgt immer O(n log (n))."
                 jump q4
             
             "O(n^2)":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q3
@@ -211,7 +266,7 @@ label start:
                     jump game_over
             
             "O(log n)":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q3
@@ -225,7 +280,7 @@ label start:
         menu:
 
             "Sie vertauscht das größte und kleinste Element im Array.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q4
@@ -233,11 +288,11 @@ label start:
                     jump game_over
 
             "Sie vertauscht das größte und kleinste Element im Array.":
-                a "gooood"
+                a "Ja genau die Heapify-Prozedur überprüft und stellt sicher, dass die Max-Heap-Eigenschaft eines Knotens und seinen Kinder gewahrt bleibt."
                 jump q5
             
             "Sie teilt das Array in kleinere Unterarrays auf.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q4
@@ -245,7 +300,7 @@ label start:
                     jump game_over
             
             "Sie entfernt das kleinste Element aus dem Heap.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q4
@@ -259,7 +314,7 @@ label start:
         menu:
 
             "Aufbau eines Max-Heaps aus dem Eingabearray.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q5
@@ -267,11 +322,11 @@ label start:
                     jump game_over
             
             "Aufteilen des Arrays in mehrere Teilbäume.":
-                a "aa"
+                a "Ja genau, das Aufteilen des Arrays in mehrere Teilbäume ist kein Teil des Algorithmus."
                 jump q6
             
             "Vertauschen des größten Elements mit dem letzten Element des Heaps.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q5
@@ -279,7 +334,7 @@ label start:
                     jump game_over
             
             "Wiederholtes Anwenden von Heapify nach jedem Tausch.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q5
@@ -292,7 +347,7 @@ label start:
         menu:
 
             "O(n) zusätzlicher Speicher":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q6
@@ -300,7 +355,7 @@ label start:
                     jump game_over
             
             "O(n^2) zusätzlicher Speicher":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q6
@@ -308,11 +363,11 @@ label start:
                     jump game_over
 
             "O(1) zusätzlicher Speicher":
-                a "aa"
+                a "Ja genau, das Aufteilen des Arrays in mehrere Teilbäume ist kein Teil des Algorithmus."
                 jump q7
             
             "O(log n) zusätzlicher Speicher":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q6
@@ -326,11 +381,11 @@ label start:
         menu:
 
             "Wenn der Speicherverbrauch minimiert werden muss.":
-                a "aa"
+                a "Ja genau, man sollte Heapsort verwenden, wenn der Speicherverbrauch minimiert werden muss."
                 jump q8
             
             "Wenn die Daten bereits fast sortiert sind.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q7
@@ -338,7 +393,7 @@ label start:
                     jump game_over
 
             "Wenn eine stabile Sortierung notwendig ist.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q7
@@ -346,7 +401,7 @@ label start:
                     jump game_over
             
             "Wenn die Eingabegröße klein ist.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q7
@@ -364,7 +419,7 @@ label start:
         menu:
 
             "2 → 1 → 4 → 3":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q8
@@ -372,7 +427,7 @@ label start:
                     jump game_over
             
             "1 → 2 → 3 → 4":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q8
@@ -380,11 +435,11 @@ label start:
                     jump game_over
 
             "2 → 1 → 3 → 4":
-                a "aa"
+                a "Ja genau, genau das ist die richtige Reihenfolge."
                 jump q9a
 
             "3 → 2 → 1 → 4":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q8
@@ -398,11 +453,11 @@ label start:
         menu:
 
             "Heapsort benötigt in der Regel weniger Speicher als Quicksort.":
-                a "aa"
+                a "Ja genau, Heapsort benötigt in der Regel weniger Speicher als Quicksort."
                 jump q9b
             
             "Quicksort ist stabil, Heapsort jedoch nicht.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -410,7 +465,7 @@ label start:
                     jump game_over
             
             "Heapsort ist im Durchschnitt schneller als Quicksort.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -418,7 +473,7 @@ label start:
                     jump game_over
             
             "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
-                a "aa"
+                a "Ja genau, Heapsort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall."
                 jump q9c
     return
 
@@ -428,7 +483,7 @@ label start:
         menu:
 
             "Quicksort ist stabil, Heapsort jedoch nicht.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -436,7 +491,7 @@ label start:
                     jump game_over
             
             "Heapsort ist im Durchschnitt schneller als Quicksort.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -444,7 +499,7 @@ label start:
                     jump game_over
 
             "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
-                a "aa"
+                a "Ja genau, Heapsort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall."
                 jump q10
     return
         
@@ -454,11 +509,11 @@ label start:
         menu:
 
             "Heapsort benötigt in der Regel weniger Speicher als Quicksort.":
-                a "aa"
+                a "Ja genau, Heapsort benötigt in der Regel weniger Speicher als Quicksort ."
                 jump q10
 
             "Quicksort ist stabil, Heapsort jedoch nicht.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -466,7 +521,7 @@ label start:
                     jump game_over
 
             "Heapsort ist im Durchschnitt schneller als Quicksort.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -480,7 +535,7 @@ label start:
         menu:
 
             "Das Vertauschen des größten Elements mit dem ersten Element statt mit dem letzten.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q10
@@ -488,11 +543,11 @@ label start:
                     jump game_over
 
             "Das Nicht-Anwenden von Heapify nach dem Tausch der Wurzel.":
-                a "aa"
+                a "Ja genau, das Nicht-Anwenden von Heapify nach dem Tausch der Wurzel, kann zu einer Fehlerhaften Sortierung führen."
                 jump win_game
 
             "Das Vertauschen der Kindknoten im Heap während des Heapify-Prozesses.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q10
@@ -500,7 +555,7 @@ label start:
                     jump game_over
             
             "Das erneute Aufbauen des Heaps nach jedem Sortierschritt.":
-                a "aa"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q10
