@@ -69,6 +69,7 @@ label start:
                     return
         "normal":
             "ok , normal "
+    return
 
     play music bm3
 
@@ -340,6 +341,7 @@ label start:
                     jump q5
                 else: 
                     jump game_over
+    return
     
     label q6:
         a "Welchen Speicherbedarf hat der Heapsort-Algorithmus?"
