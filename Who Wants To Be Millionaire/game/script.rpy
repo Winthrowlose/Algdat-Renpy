@@ -26,77 +26,70 @@ label start:
 
     show announcer at left with move
 
-    show c at right with dissolve
+    show cont1 at right with dissolve
 
     c "Lehrer, was genau ist ein Heap? Ich habe den Begriff schon gehört, aber wie sieht so eine Struktur eigentlich aus?"
 
-    a "Gute Frage,  [name_c] ! Ein Heap ist eine spezielle Art binärer Baum, der eine feste Struktur einhält: Jeder Elternknoten ist größer als seine Kindknoten. Das bedeutet, dass der größte Wert im Baum immer an der Spitze, also an der Wurzel, steht."    a "Beim Heapsort verwenden wir einen Max-Heap. Das bedeutet, dass jeder Elternknoten in diesem Baum größer ist als seine beiden Kindknoten."
+    a "Gute Frage,  [name_c] ! Ein Heap ist eine spezielle Art binärer Baum, der eine feste Struktur einhält: Jeder Elternknoten ist größer als seine Kindknoten. Das bedeutet, dass der größte Wert im Baum immer an der Spitze, also an der Wurzel, steht."
     a "Wir nennen diese Struktur einen Max-Heap. Das ist wichtig, weil wir beim Heapsort genau diese Max-Heap-Eigenschaft nutzen, um das größte Element im Baum zu identifizieren und an die richtige Stelle im Array zu bringen."
     a  "Verstanden?"
 
     show cont1 at right with dissolve
-    c "Ahh i seee"
 
-    a "Warum aber nutzen wir einen Heap für die Sortierung?"
-    a "Ein Max-Heap ermöglicht es uns, in jedem Schritt das größte verbleibende Element schnell zu finden und zu sortieren. Das gibt Heapsort seine Struktur und Effizienz."
-    a "Lasst mich euch den Ablauf des Heapsort-Algorithmus schrittweise erklären."
+    c "Ja, das hilft schon mal! Aber wie genau können wir diesen Heap dann für die Sortierung verwenden?"
+
+    a "Sehr gute Frage! Der Max-Heap gibt uns die Möglichkeit, in jedem Schritt das größte verbleibende Element schnell zu finden und an die richtige Position im Array zu setzen."
+    a "Ich werde den Ablauf des Heapsort-Algorithmus Schritt für Schritt erklären, damit ihr seht, wie das funktioniert."
 
     show cont1 at right with vpunch
-    c "YAYYY"
 
     a "Schritt 1: Aufbau des Max-Heaps."
     a "Der erste Schritt beim Heapsort besteht darin, das Eingabearray – also die Liste der zu sortierenden Zahlen – in einen Max-Heap umzuwandeln."
-    a "Dabei passen wir die Elemente so, dass der größte Wert an der Wurzel steht und die Max-Heap-Eigenschaft für alle Eltern-Kind-Beziehungen gilt."
-    a "Um den Max-Heap zu erstellen, verwenden wir eine Methode namens 'Heapify'." 
-    a "Heapify überprüft jeden Knoten und stellt sicher, dass die Max-Heap-Eigenschaft für diesen Knoten und seine Kinder erfüllt ist."
-    a "Wir arbeiten uns von unten nach oben durch den Baum, beginnend bei den Knoten, die Kinder haben, und bewegen uns schrittweise zur Wurzel." 
-    a "So garantieren wir, dass der gesamte Baum am Ende die Max-Heap-Eigenschaft erfüllt."
+    a  "Das bedeutet, dass wir die Elemente so anordnen, dass der größte Wert an der Wurzel steht und die Max-Heap-Eigenschaft für alle Eltern-Kind-Beziehungen gilt."
 
-    show cont1 at right with vpunch
-    c "COOOOL"
+    c  "Und wie genau machen wir das? Ist das nicht aufwendig?"
+
+    a  "Gute Beobachtung, [name_c]! Um das Array in einen Max-Heap umzuwandeln, verwenden wir eine Methode namens 'Heapify'. Die Heapify-Prozedur überprüft jeden Knoten und stellt sicher, dass die Max-Heap-Eigenschaft für diesen Knoten und seine Kinder erfüllt ist."
+    a  "Wir arbeiten uns dabei von unten nach oben durch den Baum – beginnend bei den Knoten, die Kinder haben, und bewegen uns schrittweise zur Wurzel. Das ermöglicht uns, die Max-Heap-Eigenschaft für den gesamten Baum zu garantieren, ohne alles neu zu ordnen."
+
 # Visualisierung Anzeigen (ungeordneter Heap)
     a "Hier seht ihr ein Beispiel eines Arrays vor dem Heapify-Prozess. Die Zahlen sind noch ungeordnet."
     a "Nach dem Heapify-Prozess sieht der Baum jedoch so aus:"
 #Visualisierung Anzeigen (geordneter Heap)
     show cont1 at right with vpunch
-    c "Woooow"
-    
-    a "Jetzt haben wir einen Max-Heap, und der größte Wert befindet sich an der Wurzel des Baums."
+    c  "Okay, jetzt verstehe ich, wie der Max-Heap aussieht! Aber was machen wir dann damit?"
+
+    a  "Sehr gut, [name_c]. Das bringt uns zu Schritt 2."
     a "Schritt 2: Tauschen und neu aufbauen."
 
     a "Da der größte Wert nun an der Wurzel steht, tauschen wir ihn mit dem letzten Element des Arrays."
     a "Dadurch bringen wir das größte Element an die richtige Position im Array."
     a "Nachdem wir diesen Tausch durchgeführt haben, reduzieren wir die Größe des Heaps um eins, weil das größte Element jetzt sortiert und fest an seiner Position ist."
-    a "Durch den Tausch kann die Max-Heap-Eigenschaft jedoch verletzt worden sein." 
-    a "Daher wenden wir erneut die Heapify-Prozedur auf die Wurzel an, um den Heap wiederherzustellen und sicherzustellen, dass die Max-Heap-Eigenschaft weiterhin gilt."
+
+    c  "Und was passiert dann mit dem Heap? Ist er dann nicht kaputt?"
+
+    a  "Genau, [name_c]! Nach dem Tausch kann die Max-Heap-Eigenschaft tatsächlich verletzt sein. Deshalb wenden wir die Heapify-Prozedur erneut auf die Wurzel an, um den Heap zu reparieren und sicherzustellen, dass die Max-Heap-Eigenschaft wiederhergestellt wird."
+
 #Visualisierung Anzeigen (Heapify vorher)
-    show cont1 at right with vpunch
-    "Woooow"
     a "Hier tauschen wir das Wurzelelement mit dem letzten Element."
     a "Da die Max-Heap-Eigenschaft dadurch verletzt wurde, wenden wir Heapify auf den Wurzelknoten an, um die Struktur zu reparieren."
 #Visualisierung Anzeigen(Heapify nachher)
-    show cont1 at right with vpunch
-    c "Ooooooh"
+
     a "Nach dem erneuten Aufrufen von Heapify sieht der Heap wieder korrekt aus, und wir können den nächsten Schritt fortsetzen."
     a "Schritt 3: Wiederholen, bis das gesamte Array sortiert ist."
     a "Wir wiederholen den Prozess – das Wurzelelement mit dem letzten Element tauschen, die Heapgröße reduzieren und Heapify auf die Wurzel anwenden – bis das gesamte Array sortiert ist."
     a "Am Ende ist das Array vollständig sortiert, und wir haben die Zahlen in aufsteigender Reihenfolge angeordnet."
 #Visualisierung Anzeigen (vollständige Sortierung der Liste)
-    show cont1 at right with vpunch
-    c "Woooow"
-    a "Zusammengefasst: Heapsort verwendet den Max-Heap, um in jedem Schritt das größte verbleibende Element schnell zu identifizieren und es an die richtige Position im Array zu bringen."
-    a "Dieser Prozess macht den Algorithmus besonders effizient."
-    a "Heapsort hat eine Zeitkomplexität von O(nlog(n)) – im besten, durchschnittlichen und schlechtesten Fall."
-    a "Das bedeutet, dass Heapsort auch für große Datenmengen gut geeignet ist."
-    a "Ein großer Vorteil von Heapsort ist, dass er in-situ arbeitet, also nur eine konstante Menge an zusätzlichem Speicherplatz benötigt."
-    a "Dies unterscheidet ihn von einigen anderen Algorithmen, die mehr Speicher benötigen."
-    a "Er ist auch keine Divide-and-Conquer-Methode wie Quicksort oder Mergesort"
-    a "sondern arbeitet durch das kontinuierliche Wiederherstellen der Heap-Struktur, ohne das Array in kleinere Teile zu zerlegen."
-    a "Wusstet ihr außerdem, dass Heapsort nicht stabil ist?"
-    a "Das bedeutet, dass gleiche Werte ihre relative Reihenfolge im Array verlieren können."
-    a "Ein kleiner Nachteil, den ihr im Hinterkopf behalten solltet."
-    show cont1 at right with vpunch
-    c "WOWWWW"
+    c  "Wow, das ist echt clever! Aber warum ist Heapsort eigentlich so effizient?"
+
+    a  "Gute Frage, [name_c]! Der Heapsort-Algorithmus hat im besten, durchschnittlichen und schlechtesten Fall eine Zeitkomplexität von O(n log n), was bedeutet, dass er auch bei großen Datenmengen effizient bleibt."
+    a  "Im Gegensatz zu einigen anderen Algorithmen benötigt Heapsort außerdem nur eine konstante Menge an zusätzlichem Speicherplatz, da der gesamte Sortiervorgang direkt im Eingabearray durchgeführt wird. Das nennt man in-situ-Sortierung."
+
+    c  "Das klingt ziemlich nützlich! Gibt es Nachteile im Vergleich zu anderen Algorithmen?"
+
+    a  "Ja, tatsächlich. Ein Nachteil von Heapsort ist, dass er keine stabile Sortierung bietet. Das bedeutet, dass gleiche Werte ihre relative Reihenfolge im Array verlieren können."
+    a  "Außerdem ist Heapsort keine Divide-and-Conquer-Methode wie Quicksort oder Mergesort. Heapsort teilt das Array nicht in kleinere Teile auf, sondern arbeitet durch das kontinuierliche Wiederherstellen der Heap-Struktur, um die Sortierung zu erreichen."
+
 #Abschluss Monolog (Begleitete Simulation)
 
 
@@ -109,29 +102,22 @@ label start:
         a "Ich werde bei jedem Schritt erklären, warum wir ihn durchführen und was im Hintergrund passiert."
         a "Lasst uns also in die Simulation einsteigen und Heapsort in Aktion sehen!"
 
-        show cont1 at left with dissolve
-        c "LETSGOOOOOOOO"
-
 # Potenzielle Simulation an einem Beispiel. 
         a "Jetzt solltet ihr genügend wissen zu dem Heapsort-Algorithmus gesammelt haben, um euch den Kontrollfragen zu stellen."
         
-        show cont1 at left with vpunch 
-        c "I'M READYYYY"
-    
-    
-
 
     label q1:
         call lifecount
+        a "Frage 1: Grundlagen von Heapsort "
         a "Was ist die Hauptidee hinter dem Heapsort-Algorithmus?"
 
         menu:
             "Den Eingabedatensatz in einen geordneten Baum umzuwandeln, um das größte Element schnell zu finden.":
-                a "THAT'S CORRECT"
+                a "Ja genau, der Eingabedatensatz wird in einen geordneten Baum umgewandelt, um das größte Element schnell zu finden."
                 jump win1
 
             "Den Eingabedatensatz in kleinere Teile aufzuteilen und diese unabhängig zu sortieren.":
-                a "Do they look like gators?"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q1
@@ -139,7 +125,7 @@ label start:
                     jump game_over
 
             "Jedes Element mit jedem anderen zu vergleichen und in aufsteigender Reihenfolge anzuordnen.":
-                a "God, we wish!"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q1
@@ -147,7 +133,7 @@ label start:
                     jump game_over
 
             "Eine Sortierung durch wiederholtes Vergleichen benachbarter Elemente.":
-                a "Goblok!"
+                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q1
@@ -158,9 +144,6 @@ label start:
     label win1:
         scene 100d
         show announcer at right with dissolve
-        a "congratz u got the first one right"
-        a "u get 100 bucks"
-        a "Next question"
         jump q2
 
     label q2:
