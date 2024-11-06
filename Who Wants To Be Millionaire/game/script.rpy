@@ -3,9 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define c = Character("Contestant", color="#03f0fc")
-define a = Character("Announcer", color="#bbc400")
+define c = Character("[name_c]", color="#03f0fc")
+define a = Character("[name_a]", color="#bbc400")
 default life_counter = 3
+default name_a = "Announcer"
+default name_c = "Contestant"
 # The game starts here.
 
 label start:
@@ -24,9 +26,13 @@ label start:
 
     show announcer at left with move
 
-    a "Ein Heap ist eine Art binärer Baum, bei dem jeder Elternknoten bestimmte Eigenschaften erfüllt, die ihn von den Kindknoten abheben."
-    a "Beim Heapsort verwenden wir einen Max-Heap. Das bedeutet, dass jeder Elternknoten in diesem Baum größer ist als seine beiden Kindknoten."
-    a "Das hat zur Folge, dass der größte Wert im Baum immer an der Spitze, also an der Wurzel, steht. Diese Eigenschaft nennen wir die Max-Heap-Eigenschaft."
+    show c at right with dissolve
+
+    c "Lehrer, was genau ist ein Heap? Ich habe den Begriff schon gehört, aber wie sieht so eine Struktur eigentlich aus?"
+
+    a "Gute Frage,  [name_c] ! Ein Heap ist eine spezielle Art binärer Baum, der eine feste Struktur einhält: Jeder Elternknoten ist größer als seine Kindknoten. Das bedeutet, dass der größte Wert im Baum immer an der Spitze, also an der Wurzel, steht."    a "Beim Heapsort verwenden wir einen Max-Heap. Das bedeutet, dass jeder Elternknoten in diesem Baum größer ist als seine beiden Kindknoten."
+    a "Wir nennen diese Struktur einen Max-Heap. Das ist wichtig, weil wir beim Heapsort genau diese Max-Heap-Eigenschaft nutzen, um das größte Element im Baum zu identifizieren und an die richtige Stelle im Array zu bringen."
+    a  "Verstanden?"
 
     show cont1 at right with dissolve
     c "Ahh i seee"
