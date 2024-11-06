@@ -2,9 +2,110 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 51: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    jump q2
-    ^
+File "game/script.rpy", line 403: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    jump game_over"
+                  ^
+        return
+            
+        label q9a:
+            a "Welche der folgenden Aussagen ist richtig im Vergleich von Heapsort und Quicksort?"
+    
+            menu:
+    
+                "Heapsort benötigt in der Regel weniger Speicher als Quicksort.":
+                    a "aa"
+                    jump q9b
+                
+                "Quicksort ist stabil, Heapsort jedoch nicht.":
+                    a "aa"
+                    $ life_counter -= 1
+                    if life_counter > 0:
+                        jump q9a
+                    else: 
+                        jump game_over"
+
+File "game/script.rpy", line 429: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    jump game_over"
+                  ^
+                
+                "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
+                    a "aa"
+                    jump q9c
+        return
+    
+        label q9b:
+            a "True, which else is true?"
+    
+            menu:
+    
+                "Quicksort ist stabil, Heapsort jedoch nicht.":
+                    a "aa"
+                    $ life_counter -= 1
+                    if life_counter > 0:
+                        jump q9a
+                    else: 
+                        jump game_over"
+
+File "game/script.rpy", line 455: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    jump game_over"
+                  ^
+    
+                "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
+                    a "aa"
+                    jump q10
+        return
+            
+        label q9c:
+            a "True, which else is true?"
+    
+            menu:
+    
+                "Heapsort benötigt in der Regel weniger Speicher als Quicksort.":
+                    a "aa"
+                    jump q10
+    
+                "Quicksort ist stabil, Heapsort jedoch nicht.":
+                    a "aa"
+                    $ life_counter -= 1
+                    if life_counter > 0:
+                        jump q9a
+                    else: 
+                        jump game_over"
+
+File "game/script.rpy", line 485: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    jump game_over"
+                  ^
+        return
+    
+        label q10:
+            a "Welcher Fehler kann zu einer fehlerhaften Sortierung bei Heapsort führen?"
+    
+            menu:
+    
+                "Das Vertauschen des größten Elements mit dem ersten Element statt mit dem letzten.":
+                    a "aa"
+                    $ life_counter -= 1
+                    if life_counter > 0:
+                        jump q10
+                    else: 
+                        jump game_over"
+
+File "game/script.rpy", line 511: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    jump game_over"
+                  ^
+                
+                "Das erneute Aufbauen des Heaps nach jedem Sortierschritt.":
+                    a "aa"
+                    $ life_counter -= 1
+                    if life_counter > 0:
+                        jump q10
+                    else: 
+                        jump game_over"
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Mon Oct 28 12:57:35 2024
+Tue Nov  5 21:33:32 2024
