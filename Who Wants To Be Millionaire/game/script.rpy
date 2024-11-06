@@ -69,7 +69,7 @@ label start:
                     return
         "normal":
             "ok , normal "
-    return
+    
 
     play music bm3
 
