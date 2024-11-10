@@ -8,6 +8,7 @@ define a = Character("[name_a]", color="#bbc400")
 default life_counter = 3
 default name_a = "Lehrer"
 default name_c = "Mitschüler"
+default hint_counter = 3
 # The game starts here.
 
 label start:
@@ -575,6 +576,10 @@ label start:
         else:
             show zero at right with dissolve
         return
+
+    label hint_counter:
+        if hint_counter == 3:
+            show 
     
 
     label game_over:
