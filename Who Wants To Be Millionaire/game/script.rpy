@@ -199,6 +199,10 @@ label start:
                     jump q1
                 else: 
                     jump game_over
+
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q1
     return
 
     label win1:
@@ -238,6 +242,10 @@ label start:
                     jump q2
                 else: 
                     jump game_over
+
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q2
     return
         
 
@@ -274,6 +282,10 @@ label start:
                     jump q3
                 else: 
                     jump game_over
+            
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q3
     return
             
     label q4:
@@ -308,6 +320,10 @@ label start:
                     jump q4
                 else: 
                     jump game_over
+            
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q4
     return
 
     label q5:
@@ -342,6 +358,10 @@ label start:
                     jump q5
                 else: 
                     jump game_over
+            
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q5
     return
     
     label q6:
@@ -376,6 +396,10 @@ label start:
                     jump q6
                 else: 
                     jump game_over
+
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q6
     return
 
     label q7:
@@ -410,6 +434,10 @@ label start:
                     jump q7
                 else: 
                     jump game_over
+
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q7
     return
 
     label q8:
@@ -448,10 +476,14 @@ label start:
                     jump q8
                 else: 
                     jump game_over
+            
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q8
     return
         
     label q9a:
-        a "Welche der folgenden Aussagen ist richtig im Vergleich von Heapsort und Quicksort?"
+        a "Welche der folgenden Aussagen ist richtig?"
 
         menu:
 
@@ -478,10 +510,14 @@ label start:
             "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
                 a "Ja genau, Heapsort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall."
                 jump q9c
+
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q9a
     return
 
     label q9b:
-        a "True, which else is true?"
+        a "Welche Aussage ist wahr?"
 
         menu:
 
@@ -503,11 +539,15 @@ label start:
 
             "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
                 a "Ja genau, Heapsort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall."
-                jump q10
+                jump q9c
+
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q9b
     return
         
     label q9c:
-        a "True, which else is true?"
+        a "Welche Aussage stimmt noch?"
 
         menu:
 
@@ -530,6 +570,10 @@ label start:
                     jump q9a
                 else: 
                     jump game_over
+
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q9c
     return
 
     label q10:
@@ -564,6 +608,10 @@ label start:
                     jump q10
                 else: 
                     jump game_over
+
+            "Ich brauche einen Hinweis!":
+                a "Hast du mir überhaupt zugehört?"
+                jump q10
     return
 
     label lifecount:
