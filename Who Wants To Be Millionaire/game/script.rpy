@@ -5,6 +5,9 @@
 
 define c = Character("[name_c]", color="#03f0fc")
 define a = Character("[name_a]", color="#bbc400")
+define x = character("", color = "#eb3200")
+define r = character("Rex", color ="#eb3000")
+define b = character("Bolt", color="#03f0fc")
 default life_counter = 3
 default name_a = "Lehrer"
 default name_c = "Mitschüler"
@@ -71,6 +74,117 @@ label start:
         "normal":
             "ok , normal "
     
+    #Storyline
+
+    scene black
+
+    x "Wissen beruht nicht nur auf Wahrheit, sondern auch auf Irrtum. - Carl Jung"
+    
+    scene future #idk what picture
+
+    x "Jahr 3670"
+    x "Bevölkerung 25%"
+
+    x "Was von den größten Errungenschaften der Menschheit übrig blieb, waren längst
+    waren längst vergessene Erinnerungen in Schutt und Asche"
+
+    x "Manche geben dem Übermut der Menschen die Schuld: Sie dachten, sie könnten alles haben
+    erkannten dann aber, dass das Einzige, dass zwischen uns und allem was wir haben wollten stand,
+    die Menschheit selbst war."
+
+    x "Andere gaben den Maschinen die Schuld."
+
+    x "Die Menscheit trug die Sünden derer, die für den Bau schreklicher Massenvernichtungswaffen
+    verantwortlich waren. Sie setzten alles aufs Spiel."
+
+    x "Und damit besiegelte sich das Schicksal der Menschen, in einem zweiten dunklen
+    Zeitalter zu leben, in dem das Streben nach Wissen Ketzerei ist."
+
+    x "Doch in einer Geschichte, die so alt ist wie die Menschheit selbst, gibt es immer
+    Induviduen, die sich dem Griff der Ungewissheit entziehen."
+
+    scene rex #picture missing
+
+    show rex at right with dissolve
+
+    r "Was zur Hölle? Ein Wecker so früh nach der gestrigen Aufgabe?
+    Der Arzt ist diese Woche absolut in Höchstform."
+
+    b "Rex an die Kommandozentrale, Rex an die Kommandozentrale! Wir haben endlich
+    Informationen für den Sortieralgorithmus gefunden, den wir brauchen."
+
+    scene Kommandozentrale
+
+    show bolt at left with dissolve
+    
+    b "Ah, da bist du ja, komm mein Junge. Wir haben Arbeit zu erledigen."
+
+    show r at right with dissolve
+
+    r "Morgen Doc, ich dachte wir hätten das Sortieren mit Informationen geknackt, die ich
+    gestern von Goldstein und von Neumann im Jahr 1948 stehlen musste?"
+
+    b "Das, Rex, war eine detaillierte Beschreibung und Analyse von Mergesort. Was wir
+    heute hier finden müssen, ist Heapsort. Man könnte sagen, ein Verwandter von Mergesort,
+    aber in vielerei Hinsicht einzigartig."
+    
+    r "Das ist ja alles cool Doc, aber müssen wir wirklich alle Sortieralgorithmen verstehen?
+    Reicht das, was wir bis jetzt haben nicht aus?"
+
+    b "Rex, Die verschiedenen Sortieralgorithmen haben ihre eigenen praktischen Funktionen.
+    Unsere Kollegen aus der Versorgung könnten eine bessere Methode gebrauchen, um die
+    Lebensmittelkisten nach ihrem Gewicht zu stapeln."
+
+    r "Sie haben Recht, Doc."
+
+    b "Außerdem ist das der Zweck des Kodex, das Wissen aus unserer Vergangenheit
+    wiederzuerlangen, egal, was die älteren Führer wollen. Ziel ist es doch die Unwissenheit
+    über unsere Geschichte und ehemalige Technologien auszulöschen, damit wir nach einer besseren
+    Zukunft streben können."
+
+    r "Ja, ja, die edle Vision"
+
+    b "Rex, mein Junge. Für die nächste Mission wirst du ins Jahr 2024 transportiert.
+    An einen Ort namens Estinien Applied University of Technology"
+
+    r "Moment. Anfang 2000? Sie sagten doch, jeder Moment zwischen 1999 und 2500 sei
+    aufgrund der Zeitfeld-Interferenz tabu?"
+
+    b "Ja, ja, ich weiß. Die Spiral-Termporal-Field-Theroie meines Vaters. Das ist aber der
+    Hauptgrund, warum wir fast nichts über die Informatik wissen."
+
+    b "Aber sieh doch, aufgrund ihrer Vergangenheit glauben wir Zugang zu diesem zeitlichen
+    Feld gefunden zu haben."
+
+    r "Ein Hoch auf die Wissenschaft!"
+
+    b "Die Wissenschaft ist wirklich wunderbar."
+
+    scene zeitmaschine
+
+    b "Siehst du Rex, das Zeitfeld wirkt wie ein Schild um die Jahre 1999 und 2500. Wir haben
+    aber rausgefunden, dass wir diese Barriere durchdringen können. Dafür müssen wir uns nur
+    als Objekt dieser Zeit verkleiden und unsere wahre Zeitsignatur verbergen."
+
+    b "Um es kurz zu machen: Wenn das Zeitfeld irgendwie deine wahre Zeitsignatur kennt, dann
+    werden Sie gewaltsam in die Vergangenheit oder Zukunft geschleudert."
+
+    b "Hier das wichtigste. Das Temporal Cloaking Device. Du musst nur diese Taste drücken,
+    und auf 2024 einstellen. Die Zeitmaschine wird dich in das Jahr befördern und
+    sich selbst tarnen"
+
+    #Music missing
+
+    scene 2024
+
+    r "Ist das?"
+
+    b "Ja, das ist es tatsächlich, ein Ort, den die meisten Menschen meiden, perfekt,
+    um eine Zeitmaschine zu verstecken"
+    
+
+
+
 
     play music bm3
 
