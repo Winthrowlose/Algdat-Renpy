@@ -175,13 +175,81 @@ label start:
 
     #Music missing
 
-    scene 2024
+    scene zeitmaschine 3670
 
     r "Ist das?"
 
     b "Ja, das ist es tatsächlich, ein Ort, den die meisten Menschen meiden, perfekt,
     um eine Zeitmaschine zu verstecken"
+
+    r "Okay, los geht's! Basierend auf dem, was der Arzt gesagt hat, müssen wir nur
+    die Zeit auswählen, die wir brauchen. Plus/Minus eine Woche. "
+
+    r "Lass uns den 02.08.2024 daraus machen und dann müssen wir nur noch das Temporal
+    Cloaking Device auf 2024 stellen, kurz bevor wir ankommen."
+
+    b "Okay, Rex, alles sieht gut aus und scheint in Ordnung zu sein. Viel Glück bei deiner
+    Mission und vergiss nicht, dein Tarngerät einzuschalten."    
+
+    r "Wird gemacht, Doc!"
+
+    x "Und damit verlässt Doctor Bolt Spiral die TM510 und Rex setzt seinen Weg fort."
+
+    x "Etwa eine Stunde nach Beginn der Reise..."
+
+    r "Sie haben viel Arbeit in dieses neue Modell gesteckt. Sie haben die Austattung definitiv
+    verbessert. Ich könnte hier sogar..."
+
+    r "...hier sogar"
+
+    r "...schlafen"
+
+    x "Und so kam es auch, Rex schlief während der Reise durch Raum und Zeit ein."
+
+    #Alarmgeräusche
+
+    x "Zielort nähert sich. Tarnvorrichtung akiviert!"
+
+    r "Mist, ich muss eingeschlafen sein. Ich habe vergessen meine Tarnung zu aktivieren."
     
+    r "Anscheinend gibt es aber eine automatische Funktion, danke Doc!"
+
+    scene sachsen
+
+    r "Moment mal, der Doc hat diese Autofunktion nie erwähnt, ist die überhaupt sicher?"
+
+    x "Rex drückt die Taste für die Tarnfunktion"
+
+    x "Manuelle Übersteuerung erkannt! Tarnfunktion abgeschaltet. Zeitreise wird beendet."
+
+    #Alarm Zeitmaschine, Absturz dieser
+
+    #Bolt nur als Hologramm
+
+    b "Was ist los, Rex? Ich empfange eine kritische Störung."
+
+    r "Die Zeitmaschine ist abgestürzt!"
+
+    b "Mit dir ist es immer ein Abenteuer oder? Bleib wo du bist. Ich werde den Schaden
+    analysieren und sehen was ich tun kann."
+
+    r "Naja wenigstens ist die Landschaft nicht schlecht. Sachsen, was? Ich war hier noch nie."
+
+    r "Und was soll ich tun während ich warte?"
+
+    b "Rex, ich hab gute und schlechte Neuigkeiten."
+
+    b "Zuerst die schlechten. Es wird wohl eine Weile dauern, bis die Maschine repariert ist."
+
+    b "Nimm bitte dein Kommunikationsgerät mit!"
+
+    r "Und die guten Nachrichten?"
+
+    b "Du befindest dich genau in der Mitte deines Ziels. Jetzt liegt es nur an ihnen,
+    mehr über Heapsort zu lernen."
+
+
+
 
 
 
