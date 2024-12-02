@@ -248,8 +248,171 @@ label start:
     b "Du befindest dich genau in der Mitte deines Ziels. Jetzt liegt es nur an ihnen,
     mehr über Heapsort zu lernen."
 
+    #English Version------------------------------------------------
 
+    scene black
 
+    x "Knowledge rests not upon truth alone, but upon error also. - Carl Jung"
+
+    x "Year 3670"
+    x "Population 25%"
+
+    x "What was left of the humatity's greatest achievements were long-forgotten memories
+    in rubble and ash."
+
+    x "Some blamed the hubris of humans, thinking we could have it all only to realize the only 
+    ones between us and everything we wanted was our kin."
+
+    x "Others blamed the machines."
+
+    x "Bearing the sins of those responsible for terrible weapons of mass destruction, mankind
+    put their technologies to the fire."
+
+    x "And in doing so, sealed the fate of mankind to live in a second dark age where pursuit of 
+    knowledge is heresy."
+
+    x "But in a tale as old as human history itself, there are those who renounce the grip of 
+    ignorance on their neck."
+
+    #cut to rex waking up from sleep in the Command Center 3670 due to an alarm
+
+    scene command center 3670
+
+    r "What the hell? An alarm this early after yesterday's task? The doctor is absolutely on fire 
+    this week"
+
+    b "Rex to the command center, Rex to the command center. We've finally 
+    tracked the information for the sorting algorithm we need."
+
+    b "Ah, there you are, my boy. Come, we have work to do."
+
+    r "Morning, Doc, I thought we've cracked sorting with the information you had me steal 
+    yesterday from Goldsteine and von Neumann in 1948."
+
+    b "That, rex, was a detailed description and analysis of Merge sort, what we need to find 
+    here today, is Heapsort, one might say, a relative of Merge sort, yet unique in so many different ways."
+
+    r "That’s cool and all Doc, but do we really need to understand all Sorting algorithms? 
+    Isn't what we have now enough?"
+
+    b "Rex my dear boy, The different Sorting Algorithms have their own practical functions. 
+    Our good comrades down in provisions could use a better way of stacking the food 
+    crates by their weight, hm?"
+
+    r "I mean, I guess you're right Doc."
+
+    b "Besides that’s what the Codex was built around, the retrieval of knowledge from our past despite what the 
+    Elder Leaders want, to erase ignorance of our history and technology so that we may strive for a better future."
+
+    r "Yeah, yeah, The Noble Vision."
+
+    b "Rex my boy, For your next mission you will be transported back to 2024, specifically to a place called the 
+    Estinien Applied University of Technology."
+
+    r "Wait, the early 2000? But you said every moment in between 1999 and 2120 is a no go due to the temporal field 
+    caused by the interference with the..."
+
+    b "Yes yes, i know, the Spiral Temporal Field theory, its all my father could talk about, and the main reason why we're 
+    left with scraps when it comes to learning about the basics of Informatics."
+
+    b "But, look, due to your past excursions we think we’ve found a way with which to pierce the temporal field of the time."
+
+    r " Yo, Hell yeah Doc, Science!"
+
+    b "Yes Rex, Science, truly wonderful, isn't it."
+
+    #in front of the time maschine
+
+    scene time machine front
+
+    b "You see rex, The Temporal field acts like a shield around the temporal space between 1999 and 2500, as you know. Well the way 
+    we've found that might allow us through this field is to disguise yourself as an object from that time, 
+    masking our true Temporal Signature."
+
+    r "And what would happen if it knows our true Temporal Signature doc?"
+
+    b "well, think of it like this, what would happen if you were to somehow change the magnetic field of a positively charged magnet 
+    to negative while its sticking to another negatively charged magnet?"
+
+    b " in short, if the Temporal Field somehow knows that your and the time machine's true Temporal Signature, you'd be violently 
+    flung into the past or future."
+
+    scene time machine inside
+
+    b "I'd like to Introduce you to TM-510, the 510th iteration of the Time Machine."
+
+    b "In here rex, you can see the controls of the time machine. But as that's the 
+    basic controls that you already know anyway i won't explain too much"
+
+    b "The most important thing is here, the Temporal Cloaking Device, It is currently deactivated but all you need to do is press 
+    this button and set this to “2024” and it would change your temporal signature to 2024 while also changing the outward appearance 
+    of the time machine to look like something from its time."
+
+    scene timemachine front
+
+    r "Is that?"
+
+    b "Bolt: Yes, indeed it is, a place where people avoid most of the time, 
+    perfect to disguise a time machine."
+
+    scene time machine inside
+
+    r "Alright, lets get going. Based on what the doc said, all we gotta do is 
+    to select the time we are going to give or take a week."
+
+    r "Let's make that 02.08.2024 and then all we have to do is to set the 
+    Temporal Cloaking Device to 2024 too right before we arrive."
+
+    b "Okay rex, all looks good, and everything seems to be in order. Good luck on your mission and remember, don't 
+    forget to turn your Temporal Cloaking Device a bit of time before entering the Spiral Temporal Field."
+
+    r "Will do, Doc!"
+
+    x "And with that, Doctor Bolt Spiral departs the TM510 and Rex goes on his way."
+
+    x "Around an hour into the journey..."
+
+    r "They did a lot of work on this new model of the Time Machine, They certainly upgraded the amenities, 
+    I mean, it's so comfortable, i might..."
+
+    r "even be able to..."
+
+    r "to sleep...here..."
+
+    x "Approaching Spiral Temporal Field! Warning! Warning! Cloaking Device Engaged!"
+
+    r "OH NO, i must've fallen asleep and forgot to turn on the Cloaking Device, Thank god 
+    for the auto Cloak function!"
+
+    r "Wait a minute... the professor never mentioned an auto-function! Is this even safe?"
+
+    r "Eh, better safe than sorry."
+
+    x "Warning! Manual override detected. Shutting down the cloak function. Terminating time travel."
+
+    b "Rex! What's happening? I'm picking up a critical malfunction!"
+
+    r "Doc? Yeah, we've got a bit of a situation here. Seems I accidentally turned off the cloak thingy, 
+    and we had a rough landing. The Time Machine's busted."
+
+    b "Rex, Rex... Always an adventure with you, isn't it? Stay put, I'll analyze 
+    the damage and see what I can do."
+
+    r "Well, at least the scenery's not bad. Saxony, huh? Never been here before."
+
+    r "Now, what to do while I wait..."
+
+    b "Rex, I have good news and bad news."
+
+    r "Hit me with it, Doc."
+
+    b "Bad news first. It's going to take a while to figure out how to fix TM-510 remotely. 
+    You'll need to bring your comms device with you."
+
+    r "Explore? But I don't know where I am!"
+
+    b "hat's the good news, my dear boy! You're smack dab in the middle of our destination, 
+    chronologically speaking. Now it's up to you to find where."
 
 
 
