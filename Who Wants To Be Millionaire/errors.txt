@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 33: end of line expected.
-    a "Gute Frage,  [name_c] ! Ein Heap ist eine spezielle Art binärer Baum, der eine feste Struktur einhält: Jeder Elternknoten ist größer als seine Kindknoten. Das bedeutet, dass der größte Wert im Baum immer an der Spitze, also an der Wurzel, steht."    a "Beim Heapsort verwenden wir einen Max-Heap. Das bedeutet, dass jeder Elternknoten in diesem Baum größer ist als seine beiden Kindknoten."
-                                                                                                                                                                                                                                                                 ^
+File "game/screens.rpy", line 759: frame expects a non-empty block.
+    frame:
+          ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Nov  6 19:49:30 2024
+Tue Dec  3 18:06:34 2024

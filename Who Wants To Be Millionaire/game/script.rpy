@@ -15,7 +15,6 @@ default hint_counter = 3
 # The game starts here.
 
 label start:
-
     menu:
         "experimentelle features" :
             menu:
