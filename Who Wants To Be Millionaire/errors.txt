@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 759: frame expects a non-empty block.
-    frame:
+File "game/script.rpy", line 11: expected '=' not found.
+    define TM-510 = Character("TM-510")
+             ^
+
+File "game/script.rpy", line 1165: expected statement.
+    TM-510: "Warnung: Unbekannte Entität erkannt. Empfehle sofortige Rückkehr zur Zeitmaschine."
           ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Tue Dec  3 18:06:34 2024
+Tue Dec  3 22:27:14 2024

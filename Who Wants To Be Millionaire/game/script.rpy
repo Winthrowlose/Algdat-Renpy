@@ -8,10 +8,15 @@ define a = Character("[name_a]", color="#bbc400")
 define x = Character("", color = "#eb3200")
 define r = Character("Rex", color ="#eb3000")
 define b = Character("Bolt", color="#03f0fc")
+define T = Character("TM-510")
+define p = Character("[name_p]")
 default life_counter = 3
 default name_a = "Lehrer"
 default name_c = "Mitschüler"
+default name_p = "???"
 default hint_counter = 3
+transform half_size: 
+    zoom 0.5 #adjust as required
 # The game starts here.
 
 label start:
@@ -71,7 +76,7 @@ label start:
 
                     return
         "normal":
-            menu :              #scuffed version of translation , replace with renpy translation feature
+            menu :              #scuffed version of translation , replace with renpy translation feature -E
                 "Deutsch":
                     jump D_start
                 
@@ -87,7 +92,7 @@ label D_start :
     scene future #idk what picture
 
     x "Jahr 3670"
-    x "Bevölkerung 25%%"
+    x "Bevölkerung {color=#f00}25%%{/color}"
 
     x "Was von den größten Errungenschaften der Menschheit übrig blieb, waren längst
     waren längst vergessene Erinnerungen in Schutt und Asche"
@@ -106,10 +111,11 @@ label D_start :
 
     x "Doch in einer Geschichte, die so alt ist wie die Menschheit selbst, gibt es immer
     Induviduen, die sich dem Griff der Ungewissheit entziehen."
+    scene command center 3670
+    
+    #picture missing
 
-    scene rex #picture missing
-
-    show rex at right with dissolve
+    show rex at half_size, right with dissolve
 
     r "Was zur Hölle? Ein Wecker so früh nach der gestrigen Aufgabe?
     Der Arzt ist diese Woche absolut in Höchstform."
@@ -117,14 +123,14 @@ label D_start :
     b "Rex an die Kommandozentrale, Rex an die Kommandozentrale! Wir haben endlich
     Informationen für den Sortieralgorithmus gefunden, den wir brauchen."
 
-    scene Kommandozentrale
+    scene command center 3670
 
-    show bolt at left with dissolve
+    show bolt at half_size, left with dissolve
     
     b "Ah, da bist du ja, komm mein Junge. Wir haben Arbeit zu erledigen."
 
-    show r at right with dissolve
-
+    show rex at half_size, right
+    with dissolve
     r "Morgen Doc, ich dachte wir hätten das Sortieren mit Informationen geknackt, die ich
     gestern von Goldstein und von Neumann im Jahr 1948 stehlen musste?"
 
@@ -164,7 +170,6 @@ label D_start :
 
     b "Die Wissenschaft ist wirklich wunderbar."
 
-    scene zeitmaschine
 
     b "Siehst du Rex, das Zeitfeld wirkt wie ein Schild um die Jahre 1999 und 2500. Wir haben
     aber rausgefunden, dass wir diese Barriere durchdringen können. Dafür müssen wir uns nur
@@ -179,7 +184,7 @@ label D_start :
 
     #Music missing
 
-    scene zeitmaschine 3670
+    scene time_machine_outside
 
     r "Ist das?"
 
@@ -218,7 +223,7 @@ label D_start :
     
     r "Anscheinend gibt es aber eine automatische Funktion, danke Doc!"
 
-    scene sachsen
+    scene time_machine_outside_past_02
 
     r "Moment mal, der Doc hat diese Autofunktion nie erwähnt, ist die überhaupt sicher?"
 
@@ -259,7 +264,7 @@ label E_start :
     x "Knowledge rests not upon truth alone, but upon error also. - Carl Jung"
 
     x "Year 3670"
-    x "Population 25%%"
+    x "Population {color=#f00}25%%{/color}"
 
     x "What was left of the humatity's greatest achievements were long-forgotten memories
     in rubble and ash."
@@ -280,8 +285,9 @@ label E_start :
 
     #cut to rex waking up from sleep in the Command Center 3670 due to an alarm
 
-    scene command center 3670
-
+    scene command center 3670 # should we add an alarm here ? -E
+    show rex at half_size , right with dissolve
+    show bolt at half_size , left with dissolve
     r "What the hell? An alarm this early after yesterday's task? The doctor is absolutely on fire 
     this week"
 
@@ -327,8 +333,9 @@ label E_start :
 
     #in front of the time maschine
 
-    scene time machine front
-
+    scene time_machine_outside
+    show rex at half_size , right with dissolve
+    show bolt at half_size , left with dissolve
     b "You see rex, The Temporal field acts like a shield around the temporal space between 1999 and 2500, as you know. Well the way 
     we've found that might allow us through this field is to disguise yourself as an object from that time, 
     masking our true Temporal Signature."
@@ -341,7 +348,9 @@ label E_start :
     b " in short, if the Temporal Field somehow knows that your and the time machine's true Temporal Signature, you'd be violently 
     flung into the past or future."
 
-    scene time machine inside
+    scene timemachine
+    show rex at half_size , right with dissolve
+    show bolt at half_size , left with dissolve
 
     b "I'd like to Introduce you to TM-510, the 510th iteration of the Time Machine."
 
@@ -352,14 +361,18 @@ label E_start :
     this button and set this to “2024” and it would change your temporal signature to 2024 while also changing the outward appearance 
     of the time machine to look like something from its time."
 
-    scene timemachine front
+    scene time_machine_outside
+    show rex at half_size , right with dissolve
+    show bolt at half_size , left with dissolve
 
     r "Is that?"
 
     b "Bolt: Yes, indeed it is, a place where people avoid most of the time, 
     perfect to disguise a time machine."
 
-    scene time machine inside
+    scene timemachine
+    show rex at half_size , right with dissolve
+    show bolt at half_size , left with dissolve
 
     r "Alright, lets get going. Based on what the doc said, all we gotta do is 
     to select the time we are going to give or take a week."
@@ -417,6 +430,159 @@ label E_start :
 
     b "hat's the good news, my dear boy! You're smack dab in the middle of our destination, 
     chronologically speaking. Now it's up to you to find where."
+
+    r "Alright, alright. But first, I need to find some clothes. This jumpsuit isn't exactly going to blend in….. Not to mention the water."
+
+    b "Water?"
+
+    r "Yes, Water. I landed on an island… in a lake."
+
+    b "Well, then, I suppose you better start swimming"
+
+    r "I was about to!"
+
+    x "Rex then reluctantly swims across the lake to begin his search."
+
+    #SCENE 4 :
+
+    scene clothing_store
+
+    show rex at half_size , right with dissolve
+
+    x "Rex, shivering slightly in his damp jumpsuit, steps into a clothing store. He awkwardly browses the racks, trying to find something that fits both the current fashion and his unusual physique."
+    x "He bumps into a tall, imposing man with a neatly trimmed beard and a black tweed jacket. The man raises an eyebrow, looking Rex up and down."
+    show professor at half_size, left with dissolve
+    p "Well, well, haven't seen you around here before. You one of the new students?"
+    r "Uh, yeah... something like that."
+    p "Bit lost, are we? Don't worry, happens to the best of us. Say, that's quite the... interesting outfit you've got there."
+    hide professor
+    x "Rex's comms device suddenly starts buzzing. A holographic image of Bolt pops up."
+    show bolt at half_size, left with dissolve
+    b "Rex! That's him! That's the professor!"
+    $ [name_p] == "Professor"
+    r  "Doc, not so loud!"
+    b "Oh, right. Ahem. Follow him, Rex! He's the key to Heapsort knowledge!"
+    hide bolt
+    show professor  at half_size, left with dissolve
+
+    r  "Well, uh, nice to meet you, Professor... I, uh, gotta run!"
+    x "Rex clumsily tries to follow the professor."
+    p "Hold on there, Buster! What's the rush?"
+
+    r "I.. uh.. "
+    p  "if you’re lost for the 13.15 seminar, then you’ve met the right person, come."
+
+    r "Aye aye, sir!"
+
+    p "That’s Professor Black to you. Remington Black."
+    $ [name_p] == "Professor Black"
+
+
+    #Scene 5: Classroom shenanigans
+    scene Classroom
+    show rex at half_size, left with dissolve
+    show professor at half_size, right with dissolve
+
+
+    x "Rex follows Professor Black into a large lecture hall, packed with students who are tapping away on their tablets, looking bored. Rex slides into a seat in the back row, trying to blend in. Professor Black strides energetically to the lectern and begins his lecture in a booming voice."
+    p "Good morning, ladies and gentlemen! Today, we'll be delving into the fascinating world of sorting algorithms..."
+    x "Rex yawns and lets his gaze wander around the room. Suddenly, Bolt's voice rings in his ear."
+    hide professor with dissolve
+    b "Rex! Pay attention! Here comes Heapsort!"
+    show professor at half_size, right with dissolve
+    x "Rex sits up abruptly and fixes Professor Black with a focused stare."
+    p "Heapsort is an efficient algorithm based on the heap data structure..."
+    x "Professor Black begins to explain the algorithm in detail. Rex scribbles furiously on his tablet."
+    b "Yes! Yes! This is the key to fixing TM-510! Rex, my boy, listen carefully and take notes like you've done countless times before, and get back to our good old time ma-" 
+    r "...Doc? Doc!... Dammit! Must be the water messing with the comms device!"
+    x "Professor Black wraps up his lecture with a broad grin."
+    p "...and that concludes today's lecture on sorting algorithms. They may not seem particularly useful now... but you'll see the day when you need this knowledge, whether it be in your programming career, developing programs as a hobby (with a subtle smirk and a side glance at Rex)... or saving humanity."
+    x "Professor Black exits the lecture hall as the students start packing up to leave."
+
+
+# Scene 6 : Heapsort to the rescue
+
+    scene time_machine_outside_past
+    show rex at half_size, right with dissolve
+    # Rex stands before the TM-510
+    r "Okay, Doc mentioned something about Heapsort being the key...let me see if I can't figure that out."  
+    x "Rex approaches the Time Machine. He places his hand on the control panel, and it slides open with a hiss, revealing a dizzying array of futuristic-looking circuits and panels."
+    x "Rex's eyes scan the intricate workings until they land on a section labeled 'Manual Temporal Field Override'."
+    r "Bingo. Looks like this is where the magic happens." 
+    # [Proceed to the interactive HeapSort ]
+
+
+
+    # Scene 7 : Too far into the future
+
+
+#Jahr 5000. Die Zeitmaschine landet in einer verwüsteten Landschaft. Rex steigt aus und sieht gigantische Maschinen und eine unheimlich stille Umgebung.
+
+#Rex Purplewoman: (erschrocken) "Was… was ist hier passiert? Das ist nicht 3670!"
+
+#TM-510 (Automatische Stimme): "Fehler bei der Zielzeit. Angekommen: Jahr 5000."
+
+#Bolt Spiral: (erscheint als Hologramm) "Rex, was hast du getan?! Du bist zu weit in die Zukunft gereist! Unsere Berechnungen zeigen, dass die Menschheit in dieser Zeit vollständig durch Maschinen ersetzt wurde."
+
+#Rex Purplewoman: "Das kann nicht wahr sein. Alles ist… so leer. Und diese Maschinen, sie sehen aus, als wären sie lebendig."
+
+#(Plötzlich beginnt eine der Maschinen sich zu bewegen und nähert sich Rex.)
+
+#TM-510: "Warnung: Unbekannte Entität erkannt. Empfehle sofortige Rückkehr zur Zeitmaschine."
+
+#Bolt Spiral: "Rex, du musst sofort die Zeitmaschine reaktivieren! Die Maschinen in dieser Zeit könnten feindlich sein!"
+
+#Rex Purplewoman: (rennt zurück zur Zeitmaschine) "Ich hasse es, wenn du recht hast, Doc! Los geht's, TM-510, bring mich hier raus!"
+
+    #Scene 7: Too Far back in the past
+
+#Jahr 65 Millionen v. Chr. Die Zeitmaschine landet in einem dichten Dschungel. Rex tritt vorsichtig heraus und hört seltsame Geräusche.
+
+#Rex Purplewoman: (sich umblickend) "Okay, das hier sieht definitiv nicht nach Sachsen aus. Oder nach 3670. Wo bin ich?!"
+
+#TM-510 (Automatische Stimme): "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
+
+#Rex Purplewoman: (panisch) "Was?! Das ist die Kreidezeit! Ich bin bei den Dinosauriern gelandet!"
+
+#(Ein lautes Brüllen ertönt in der Ferne, und der Boden bebt leicht.)
+
+#Bolt Spiral: (erscheint als Hologramm) "Rex! Was hast du gemacht?! Du bist in der Kreidezeit! Wir haben keine Daten darüber, wie lange du hier sicher bleiben kannst!"
+
+#Rex Purplewoman: (nervös) "Oh, keine Sorge, Doc, ich bin sicher, die Dinosaurier sind freundlich. Oder… auch nicht?"
+
+#(Ein riesiger Tyrannosaurus Rex tritt in Sichtweite und richtet seinen Blick auf Rex.)
+
+#Bolt Spiral: "Rex, steig sofort zurück in die Zeitmaschine! Und vergiss nicht, die Koordinaten zu korrigieren!"
+
+#Rex Purplewoman: (rennt zur Zeitmaschine) "Wusste ich doch, dass das schiefgeht! TM-510, bring mich hier raus, bevor ich auf der Speisekarte lande!"
+
+#(Die Zeitmaschine startet im letzten Moment, und der T-Rex bleibt verwirrt zurück.)
+
+
+
+#Scene 8: Happy Ending
+
+
+
+#Die Zeitreise hat geklappt (Zurück in die richtige Zeit)
+
+#Szene: Ankunft in der Kommandozentrale im Jahr 3670. Rex steigt aus der Zeitmaschine aus.
+
+#Bolt Spiral: "Rex! Du hast es geschafft! Die TM-510 zeigt die korrekten Koordinaten an – willkommen zurück in 3670."
+
+#Rex Purplewoman: (springt erleichtert aus der Zeitmaschine) "Puh, ich dachte, das würde schiefgehen. Aber hey, Heapsort hat mich gerettet!"
+
+#Bolt Spiral: (lacht) "Heapsort und deine Fähigkeit, sich anzupassen. Das Wissen, das du zurückgebracht hast, wird der Schlüssel zur Wiederherstellung unseres Fortschritts sein."
+
+#Rex Purplewoman: "Na ja, ich hatte meine Zweifel, ob ich das hinbekomme. Aber es hat sich gelohnt. Also, was jetzt?"
+
+#Bolt Spiral: "Jetzt, mein Junge, werden wir das Wissen über Heapsort analysieren und in die Codex-Datenbank aufnehmen. Du hast Geschichte geschrieben, Rex!"
+
+#Rex Purplewoman: "Ich? Ein Held? Na, wenn das so ist… können wir jetzt endlich eine Pause machen? Ich brauche ein Sandwich."
+
+#Bolt Spiral: (lachend) "Natürlich. Aber mach dich darauf gefasst, dass die nächste Mission bald beginnt. Wissen ruht nie!"
+
+
 
 
 
@@ -978,30 +1144,75 @@ label E_start :
         if hint_counter == 3:
             show text""    # there is something missing here
             
-    
+label game_over:
+    # Scene 7 : Too far into the future
+    scene game_over
+    show rex  at right , half_size with dissolve
 
-    label game_over:
-    
-    scene milstart
-    show announcer at right with dissolve
-    a "game over"
 
-    show cont1 at left with vpunch
-    c "aww"
-    
-    jump over_screen
+    #Jahr 5000. Die Zeitmaschine landet in einer verwüsteten Landschaft. Rex steigt aus und sieht gigantische Maschinen und eine unheimlich stille Umgebung.
 
-    label win_game:
-    
-        scene milstart
-        show announcer at right with dissolve
-        a "you win"
+    r  "Was… was ist hier passiert? Das ist nicht 3670!"
 
-        show cont1 at left with dissolve
-        c "yay"
-    jump over_screen
+    T   "Fehler bei der Zielzeit. Angekommen: Jahr 5000."
 
-    label over_screen:
-        a "So ends the class"
+    b  "Rex, was hast du getan?! Du bist zu weit in die Zukunft gereist! Unsere Berechnungen zeigen, dass die Menschheit in dieser Zeit vollständig durch Maschinen ersetzt wurde."
 
-    return
+    r "Das kann nicht wahr sein. Alles ist… so leer. Und diese Maschinen, sie sehen aus, als wären sie lebendig."
+
+    x "(Plötzlich beginnt eine der Maschinen sich zu bewegen und nähert sich Rex.)"
+
+    T "Warnung: Unbekannte Entität erkannt. Empfehle sofortige Rückkehr zur Zeitmaschine."
+
+    b "Rex, du musst sofort die Zeitmaschine reaktivieren! Die Maschinen in dieser Zeit könnten feindlich sein!"
+
+    r  "Ich hasse es, wenn du recht hast, Doc! Los geht's, TM-510, bring mich hier raus!"
+
+    #Scene 7: Too Far back in the past
+
+#Jahr 65 Millionen v. Chr. Die Zeitmaschine landet in einem dichten Dschungel. Rex tritt vorsichtig heraus und hört seltsame Geräusche.
+
+#Rex Purplewoman: (sich umblickend) "Okay, das hier sieht definitiv nicht nach Sachsen aus. Oder nach 3670. Wo bin ich?!"
+
+#TM-510 (Automatische Stimme): "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
+
+#Rex Purplewoman: (panisch) "Was?! Das ist die Kreidezeit! Ich bin bei den Dinosauriern gelandet!"
+
+#(Ein lautes Brüllen ertönt in der Ferne, und der Boden bebt leicht.)
+
+#Bolt Spiral: (erscheint als Hologramm) "Rex! Was hast du gemacht?! Du bist in der Kreidezeit! Wir haben keine Daten darüber, wie lange du hier sicher bleiben kannst!"
+
+#Rex Purplewoman: (nervös) "Oh, keine Sorge, Doc, ich bin sicher, die Dinosaurier sind freundlich. Oder… auch nicht?"
+
+#(Ein riesiger Tyrannosaurus Rex tritt in Sichtweite und richtet seinen Blick auf Rex.)
+
+#Bolt Spiral: "Rex, steig sofort zurück in die Zeitmaschine! Und vergiss nicht, die Koordinaten zu korrigieren!"
+
+#Rex Purplewoman: (rennt zur Zeitmaschine) "Wusste ich doch, dass das schiefgeht! TM-510, bring mich hier raus, bevor ich auf der Speisekarte lande!"
+
+#(Die Zeitmaschine startet im letzten Moment, und der T-Rex bleibt verwirrt zurück.)
+
+
+
+#Scene 8: Happy Ending
+
+label win_game :
+
+    x "Die Zeitreise hat geklappt "
+    scene command center 3670
+    show rex at right , half_size with dissolve
+
+    b  "Rex! Du hast es geschafft! Die TM-510 zeigt die korrekten Koordinaten an – willkommen zurück in 3670."
+
+    x "Rex (springt erleichtert aus der Zeitmaschine)"
+    r "Puh, ich dachte, das würde schiefgehen. Aber hey, Heapsort hat mich gerettet!"
+
+    b  "Heapsort und deine Fähigkeit, sich anzupassen. Das Wissen, das du zurückgebracht hast, wird der Schlüssel zur Wiederherstellung unseres Fortschritts sein."
+
+    r "Na ja, ich hatte meine Zweifel, ob ich das hinbekomme. Aber es hat sich gelohnt. Also, was jetzt?"
+
+    b "Jetzt, mein Junge, werden wir das Wissen über Heapsort analysieren und in die Codex-Datenbank aufnehmen. Du hast Geschichte geschrieben, Rex!"
+
+    r "Ich? Ein Held? Na, wenn das so ist… können wir jetzt endlich eine Pause machen? Ich brauche ein Sandwich."
+
+    b "Natürlich. Aber mach dich darauf gefasst, dass die nächste Mission bald beginnt. Wissen ruht nie!"
