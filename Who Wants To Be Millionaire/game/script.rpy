@@ -5,9 +5,9 @@
 
 define c = Character("[name_c]", color="#03f0fc")
 define a = Character("[name_a]", color="#bbc400")
-define x = character("", color = "#eb3200")
-define r = character("Rex", color ="#eb3000")
-define b = character("Bolt", color="#03f0fc")
+define x = Character("", color = "#eb3200")
+define r = Character("Rex", color ="#eb3000")
+define b = Character("Bolt", color="#03f0fc")
 default life_counter = 3
 default name_a = "Lehrer"
 default name_c = "Mitschüler"
@@ -72,10 +72,15 @@ label start:
 
                     return
         "normal":
-            "ok , normal "
+            menu :              #scuffed version of translation , replace with renpy translation feature
+                "Deutsch":
+                    jump D_start
+                
+                "English" :
+                    jump E_start
     
     #Storyline
-
+label D_start :
     scene black
 
     x "Wissen beruht nicht nur auf Wahrheit, sondern auch auf Irrtum. - Carl Jung"
@@ -83,7 +88,7 @@ label start:
     scene future #idk what picture
 
     x "Jahr 3670"
-    x "Bevölkerung 25%"
+    x "Bevölkerung 25%%"
 
     x "Was von den größten Errungenschaften der Menschheit übrig blieb, waren längst
     waren längst vergessene Erinnerungen in Schutt und Asche"
@@ -249,13 +254,13 @@ label start:
     mehr über Heapsort zu lernen."
 
     #English Version------------------------------------------------
-
+label E_start :
     scene black
 
     x "Knowledge rests not upon truth alone, but upon error also. - Carl Jung"
 
     x "Year 3670"
-    x "Population 25%"
+    x "Population 25%%"
 
     x "What was left of the humatity's greatest achievements were long-forgotten memories
     in rubble and ash."
@@ -972,7 +977,8 @@ label start:
 
     label hint_counter:
         if hint_counter == 3:
-            show 
+            show text""    # there is something missing here
+            
     
 
     label game_over:
