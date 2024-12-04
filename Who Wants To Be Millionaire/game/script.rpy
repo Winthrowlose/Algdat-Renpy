@@ -285,7 +285,7 @@ label D_start :
     x "Rexs Kommunikationsgerät fängt plötzlich an zu brummen . ein Hologram von Bolt erscheint."
     show bolt at half_size, left with dissolve
     b "Rex! das ist er , das ist der Professor!"
-    $ [name_p] == "Professor"
+    $ name_p = "Professor"
     r  "DoK, nicht so laut!"
     b "Oh, richtig. Ahem. Folge ihm, Rex! Er ist der Schlüssel zum Heapsort wissen!"
     hide bolt
@@ -301,7 +301,7 @@ label D_start :
     r "roger roger!"
 
     p " Professor Black ist der Name. Remington Black."
-    $ [name_p] == "Professor Black"
+    $ name_p = "Professor Black"
 
 
     #Scene 5: Classroom shenanigans
@@ -540,7 +540,7 @@ label E_start :
     x "Rex's comms device suddenly starts buzzing. A holographic image of Bolt pops up."
     show bolt at half_size, left with dissolve
     b "Rex! That's him! That's the professor!"
-    $ [name_p] == "Professor"
+    $ name_p = "Professor"
     r  "Doc, not so loud!"
     b "Oh, right. Ahem. Follow him, Rex! He's the key to Heapsort knowledge!"
     hide bolt
@@ -556,10 +556,10 @@ label E_start :
     r "Aye aye, sir!"
 
     p "That’s Professor Black to you. Remington Black."
-    $ [name_p] == "Professor Black"
+    $ name_p = "Professor Black"
 
 
-    #Scene 5: Classroom shenanigans
+#Scene 5: Classroom shenanigans
     scene Classroom
     show rex at half_size, left with dissolve
     show professor at half_size, right with dissolve
