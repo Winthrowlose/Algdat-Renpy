@@ -124,7 +124,7 @@ label start:
                     jump game_over
     
             " 1 to 7":
-                scene mg31 #minigame heaptree 1 to 7
+                scene mg17 #minigame heaptree 1 to 7
                 #play explosion sound effect
                 b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
@@ -194,7 +194,7 @@ label start:
         b "what's next"
         menu:
             "0 to 1":
-                scene mg17 #minigame heaptree 1 to 0
+                scene mg01w #minigame heaptree 1 to 0
                 #play explosion sound effect
                 b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
@@ -204,7 +204,7 @@ label start:
                     jump game_over
     
             "7 to 6":
-                scene mg36 #minigame heaptree 7 to 6
+                scene mg76 #minigame heaptree 7 to 6
                 #play explosion sound effect
                 b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
@@ -232,8 +232,8 @@ label start:
         call lifecount2
         b "what's next"
         menu:
-            "0 to 7":
-                scene mg07 #minigame heaptree 1 to 0
+            "7 to 0":
+                scene mg70w #minigame heaptree 1 to 0
                 #play explosion sound effect
                 b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
@@ -242,8 +242,8 @@ label start:
                 else: 
                     jump game_over
     
-            "6 to 1":
-                scene mg61 #minigame heaptree 7 to 6
+            "1 to 6":
+                scene mg16w #minigame heaptree 7 to 6
                 #play explosion sound effect
                 b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
@@ -281,8 +281,8 @@ label start:
                 else: 
                     jump game_over
     
-            "3 to 7":
-                scene mg37 #minigame heaptree 3 to 7
+            "7 to 3":
+                scene mg73 #minigame heaptree 3 to 7
                 #play explosion sound effect
                 b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
@@ -350,7 +350,7 @@ label start:
         b "what's next"
         menu:
             "6 to 0":
-                scene mg60 #minigame heaptree 1 to 0
+                scene mg60w #minigame heaptree 1 to 0
                 #play explosion sound effect
                 b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
@@ -360,7 +360,7 @@ label start:
                     jump game_over
     
             "7 to 0":
-                scene mg70 #minigame heaptree 7 to 6
+                scene mg70w2 #minigame heaptree 7 to 6
                 #play explosion sound effect
                 b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
@@ -388,8 +388,8 @@ label start:
         call lifecount2
         b "what's next"
         menu:
-            "0 to 1":
-                scene mg17 #minigame heaptree 1 to 0
+            "6 to 7":
+                scene mg67w2 #minigame heaptree 1 to 0
                 #play explosion sound effect
                 b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
@@ -398,8 +398,8 @@ label start:
                 else: 
                     jump game_over
     
-            "7 to 6":
-                scene mg36 #minigame heaptree 7 to 6
+            "3 to 1":
+                scene mg31w #minigame heaptree 7 to 6
                 #play explosion sound effect
                 b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
@@ -425,12 +425,9 @@ label start:
 
     label mg11:
         call lifecount2
-        b "make the array boyo"
+        r "the correct array is"
         menu:
             "7, 6, 3, 1, 0":
-                scene mg17 #minigame heaptree 1 to 0
-                #play explosion sound effect
-                b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg11
@@ -438,23 +435,16 @@ label start:
                     jump game_over
     
             "6, 1, 0, 3, 7":
-                scene mg36 #minigame heaptree 7 to 6
-                #play explosion sound effect
-                b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg11
                 else: 
                     jump game_over
 
-            "0, 1, 2, 3, 6, 7":
-                scene mg07 #minigame heaptree 0 to 
-                b "that seems right me boi"
+            "0, 1, 3, 6, 7":
                 jump victory   
 
             "7, 6, 1, 3, 0":
-                #play explosion sound effect
-                b "i don't think that's right, careful now"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg11
