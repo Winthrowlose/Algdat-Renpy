@@ -2,13 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 681: end of line expected.
-    show rex at right ,half_sizewith dissolve
-                                     ^
-
-File "game/script.rpy", line 688: end of line expected.
-    show rex at right , half_sizewith vpunch
-                                      ^
+File "game/script.rpy", line 58: Indentation mismatch.
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Dec  4 19:31:44 2024
+Wed Dec  4 19:54:22 2024

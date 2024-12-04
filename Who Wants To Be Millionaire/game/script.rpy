@@ -3,8 +3,6 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define c = Character("[name_c]", color="#03f0fc")
-define a = Character("[name_a]", color="#bbc400")
 define x = Character("", color = "#eb3200")
 define r = Character("Rex", color ="#eb3000")
 define b = Character("Bolt", color="#03f0fc")
@@ -20,61 +18,54 @@ transform half_size:
 # The game starts here.
 
 label start:
-    menu:
-        "experimentelle features" :
-            menu:
-                "namen ändern":
-                    $ name_c = renpy.input("name für Mitschüler ?")
-                    $ name_c = name_c.strip()
-                    $ name_a = renpy.input("name für Lehrer ?")
-                    $ name_a = name_a.strip()
-                "heapsort demo":
+    menu: 
+        "heapsort demo":
 
-                    $ n1 = renpy.input("", "", allow="0123456789") # the same as $ z = renpy.input(prompt="", default="", allow="0123456789")
-                    $ n1 = int(n1)
-                    "[n1]"
-                    $ n2 = renpy.input("", "", allow="0123456789") # the same as $ a = renpy.input(prompt="", default="", allow="0123456789")
-                    $ n2 = int(n2)
-                    "[n2]"
-                    $ n3 = renpy.input("", "", allow="0123456789") # the same as $ b = renpy.input(prompt="", default="", allow="0123456789")
-                    $ n3 = int(n3)
-                    "[n3]"
-                    $ n4 = renpy.input("", "", allow="0123456789") # the same as $ c = renpy.input(prompt="", default="", allow="0123456789")
-                    $ n4 = int(n4)
-                    "[n4]"
-                    $ n5 = renpy.input("", "", allow="0123456789") # the same as $ d = renpy.input(prompt="", default="", allow="0123456789")
-                    $ n5 = int(n5)
-                    "[n5]"
-                    $ n6 = renpy.input("", "", allow="0123456789") # the same as $ f = renpy.input(prompt="", default="", allow="0123456789")
-                    $ n6 = int(n6)
-                    "[n6]"
-                    python :
-                        def heapify(arr, n, i):
-                            renpy.say(a,"[arr]")
-                            largest = i # Initialize largest as root
-                            l = 2 * i + 1 # left = 2*i + 1
-                            r = 2 * i + 2 # right = 2*i + 2
-                            if l < n and arr[i] < arr[l]:
-                                largest = l
-                            if r < n and arr[largest] < arr[r]:
-                                largest = r
-                            if largest != i:
-                                (arr[i], arr[largest]) = (arr[largest], arr[i]) # swap
-                                heapify(arr, n, largest)
-                                renpy.say(a,"[arr]")
-                        def heapSort(arr):
-                            n = len(arr)
-                            for i in range(n // 2, -1, -1):
-                                heapify(arr, n, i)
-                            for i in range(n - 1, 0, -1):
-                                (arr[i], arr[0]) = (arr[0], arr[i]) # swap
-                                heapify(arr, i, 0)
-                        arr = [n1, n2, n3, n4, n5, n6, ]
-                        heapSort(arr)
-                        renpy.say(a,"[arr]")
-                        n = len(arr)
+            $ n1 = renpy.input("", "", allow="0123456789") # the same as $ z = renpy.input(prompt="", default="", allow="0123456789")
+            $ n1 = int(n1)
+            "[n1]"
+            $ n2 = renpy.input("", "", allow="0123456789") # the same as $ a = renpy.input(prompt="", default="", allow="0123456789")
+            $ n2 = int(n2)
+            "[n2]"
+            $ n3 = renpy.input("", "", allow="0123456789") # the same as $ b = renpy.input(prompt="", default="", allow="0123456789")
+            $ n3 = int(n3)
+            "[n3]"
+            $ n4 = renpy.input("", "", allow="0123456789") # the same as $ c = renpy.input(prompt="", default="", allow="0123456789")
+            $ n4 = int(n4)
+            "[n4]"
+            $ n5 = renpy.input("", "", allow="0123456789") # the same as $ d = renpy.input(prompt="", default="", allow="0123456789")
+            $ n5 = int(n5)
+            "[n5]"
+            $ n6 = renpy.input("", "", allow="0123456789") # the same as $ f = renpy.input(prompt="", default="", allow="0123456789")
+            $ n6 = int(n6)
+            "[n6]"
+            python :
+                def heapify(arr, n, i):
+                    renpy.say(x,"[arr]")
+                    largest = i # Initialize largest as root
+                    l = 2 * i + 1 # left = 2*i + 1
+                    r = 2 * i + 2 # right = 2*i + 2
+                    if l < n and arr[i] < arr[l]:
+                        largest = l
+                    if r < n and arr[largest] < arr[r]:
+                        largest = r
+                    if largest != i:
+                        (arr[i], arr[largest]) = (arr[largest], arr[i]) # swap
+                        heapify(arr, n, largest)
+                        renpy.say(x,"[arr]")
+                def heapSort(arr):
+                    n = len(arr)
+                    for i in range(n // 2, -1, -1):
+                        heapify(arr, n, i)
+                    for i in range(n - 1, 0, -1):
+                        (arr[i], arr[0]) = (arr[0], arr[i]) # swap
+                        heapify(arr, i, 0)
+                arr = [n1, n2, n3, n4, n5, n6, ]
+                heapSort(arr)
+                renpy.say(x,"[arr]")
+                n = len(arr)
 
-                    return
+            return
         "normal":
             menu :              #scuffed version of translation , replace with renpy translation feature -E
                 "Deutsch":
@@ -276,7 +267,7 @@ label D_start :
     show rex at half_size , right with dissolve
 
     x "Rex betritt zitternd einen Kleidungsladen in seinem nassen Overall. Nervös sucht er nach passender und stylischer Kleidung."
-    x "He bumps into a tall, imposing man with a neatly trimmed beard and a black tweed jacket. The man raises an eyebrow, looking Rex up and down."
+    x  "Er stößt auf einen großen, imposanten Mann mit einem ordentlich gestutzten Bart und einer schwarzen Tweedjacke. Der Mann zieht eine Augenbraue hoch und mustert Rex von oben bis unten."
     show professor at half_size, left with dissolve
     p "Ich habe dich hier noch nie zuvor gesehen . Bist du einer der neuen Studenten?"
     r "Uh, Ja... sowas in die richtung."
@@ -293,7 +284,7 @@ label D_start :
 
     r  "Nett sie kennen zu lernen , aber ich muss jetzt los"
     x "Rex versucht ungeschickt dem Professor zu folgen."
-    p "Hold on there, Buster! What's the rush?"
+    p "Moment mal, Junge! Wozu die Eile?"
 
     r "Ich .. uh.. "
     p  "falls du das 13.15 Seminar suchst kannst du mir einfach folgen ."
@@ -318,7 +309,10 @@ label D_start :
     b "Rex! Aufpassen! Gleich kommt Heapsort!"
     show professor at half_size, right with dissolve
     x "Rex richtet sich abrupt auf und Fokusiert seinen Blick auf Black."
-    p "Heapsort is an efficient algorithm based on the heap data structure..."
+    p "Heapsort ist ein effizienter Algorithmus, der auf der Heap-Datenstruktur basiert..."
+    x  "Professor Black beginnt, den Algorithmus im Detail zu erklären. Rex kritzelt wütend auf sein Tablet."
+    b "Ja! Ja! Das ist der Schlüssel zur Reparatur von TM-510! Rex, mein Junge, hör gut zu und mach dir Notizen, wie du es schon unzählige Male getan hast, und komm zurück zu unserer guten alten Zeit..."
+    r "...Doc? Doc!... Verdammt noch mal! Das muss das Wasser sein, das das Kommunikationsgerät stört!"
 
 #explenation heapsort
 
@@ -398,12 +392,10 @@ label D_start :
 #Abschluss Monolog (Begleitete Simulation)
 
 
-    x "Professor Black begins to explain the algorithm in detail. Rex scribbles furiously on his tablet."
-    b "Yes! Yes! This is the key to fixing TM-510! Rex, my boy, listen carefully and take notes like you've done countless times before, and get back to our good old time ma-" 
-    r "...Doc? Doc!... Dammit! Must be the water messing with the comms device!"
-    x "Professor Black wraps up his lecture with a broad grin."
-    p "...and that concludes today's lecture on sorting algorithms. They may not seem particularly useful now... but you'll see the day when you need this knowledge, whether it be in your programming career, developing programs as a hobby (with a subtle smirk and a side glance at Rex)... or saving humanity."
-    x "Professor Black exits the lecture hall as the students start packing up to leave."
+    
+    x "Professor Black schließt seine Vorlesung mit einem breiten Grinsen ab."
+    p  "...und damit ist die heutige Vorlesung über Sortieralgorithmen beendet. Sie mögen jetzt nicht besonders nützlich erscheinen... aber du wirst den Tag erleben, an dem du dieses Wissen brauchst, sei es in deiner Programmierkarriere, beim Entwickeln von Programmen als Hobby (mit einem subtilen Grinsen und einem Seitenblick auf Rex)... oder bei der Rettung der Menschheit."
+    x "Professor Black verlässt den Vorlesungssaal, während die Studenten zusammenpacken, um zu gehen."
 
 
 # Scene 6 : Heapsort to the rescue
@@ -411,15 +403,17 @@ label D_start :
     scene time_machine_outside_past
     show rex at half_size, right with dissolve
     # Rex stands before the TM-510
-    r "Okay, Doc mentioned something about Heapsort being the key...let me see if I can't figure that out."  
-    x "Rex approaches the Time Machine. He places his hand on the control panel, and it slides open with a hiss, revealing a dizzying array of futuristic-looking circuits and panels."
-    x "Rex's eyes scan the intricate workings until they land on a section labeled 'Manual Temporal Field Override'."
-    r "Bingo. Looks like this is where the magic happens." 
+    r "Okay, der Doc hat gesagt, dass Heapsort der Schlüssel ist... mal sehen, ob ich das nicht herausfinden kann."
+    x "Rex nähert sich der Zeitmaschine. Er legt seine Hand auf das Bedienfeld, das sich mit einem Zischen öffnet und eine schwindelerregende Anzahl von futuristisch aussehenden Schaltkreisen und Schalttafeln offenbart."
+    x "Rexs Augen scannen die komplizierten Abläufe, bis sie auf einem Abschnitt mit der Aufschrift 'Manuelle Zeitfeld überbrückung' landen."
+    r "Bingo. Sieht so aus, als würde hier die Magie passieren." 
     # [Proceed to the interactive HeapSort ]
 
-    
+
 # jump to interactive heapsort from here
     #English Version------------------------------------------------
+
+
 label E_start :
     scene black
 
