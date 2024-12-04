@@ -304,7 +304,7 @@ label D_start :
     $ name_p = "Professor Black"
 
 
-    #Scene 5: Classroom shenanigans
+#Scene 5: Classroom shenanigans
     scene Classroom
     show rex at half_size, left with dissolve
     show professor at half_size, right with dissolve
@@ -319,6 +319,88 @@ label D_start :
     show professor at half_size, right with dissolve
     x "Rex richtet sich abrupt auf und Fokusiert seinen Blick auf Black."
     p "Heapsort is an efficient algorithm based on the heap data structure..."
+
+#explenation heapsort
+
+    scene Classroom
+    
+    p "Willkommen zum heutigen Thema: Heapsort!"
+
+    show professor at right , half_size with dissolve
+
+    p "Heapsort ist ein effizienter, vergleichsbasierter Sortieralgorithmus, der uns hilft, eine Liste von Zahlen in aufsteigender Reihenfolge zu ordnen."
+    p "Er basiert auf einer speziellen Datenstruktur, dem sogenannten Heap, und unterscheidet sich dadurch von anderen Algorithmen wie Quicksort oder Mergesort."
+    p "Lasst uns zuerst klären, was ein Heap eigentlich ist und wie er funktioniert."
+
+    show professor at left ,half_size with move
+
+    show rex at right, half_size with dissolve
+
+    r "[name_p], was genau ist ein Heap? Ich habe den Begriff schon gehört, aber wie sieht so eine Struktur eigentlich aus?"
+
+    p "Gute Frage,  Rex ! Ein Heap ist eine spezielle Art binärer Baum, der eine feste Struktur einhält: Jeder Elternknoten ist größer als seine Kindknoten. Das bedeutet, dass der größte Wert im Baum immer an der Spitze, also an der Wurzel, steht."
+    p "Wir nennen diese Struktur einen Max-Heap. Das ist wichtig, weil wir beim Heapsort genau diese Max-Heap-Eigenschaft nutzen, um das größte Element im Baum zu identifizieren und an die richtige Stelle im Array zu bringen."
+    p  "Verstanden?"
+
+    show rex at right ,half_size with dissolve
+
+    r "Ja, das hilft schon mal! Aber wie genau können wir diesen Heap dann für die Sortierung verwenden?"
+
+    p "Sehr gute Frage! Der Max-Heap gibt uns die Möglichkeit, in jedem Schritt das größte verbleibende Element schnell zu finden und an die richtige Position im Array zu setzen."
+    p "Ich werde den Ablauf des Heapsort-Algorithmus Schritt für Schritt erklären, damit ihr seht, wie das funktioniert."
+
+    show rex at right , half_size with vpunch
+
+    p "Schritt 1: Aufbau des Max-Heaps."
+    p "Der erste Schritt beim Heapsort besteht darin, das Eingabearray – also die Liste der zu sortierenden Zahlen – in einen Max-Heap umzuwandeln."
+    p  "Das bedeutet, dass wir die Elemente so anordnen, dass der größte Wert an der Wurzel steht und die Max-Heap-Eigenschaft für alle Eltern-Kind-Beziehungen gilt."
+
+    r  "Und wie genau machen wir das? Ist das nicht aufwendig?"
+
+    p  "Gute Beobachtung, r! Um das Array in einen Max-Heap umzuwandeln, verwenden wir eine Methode namens 'Heapify'. Die Heapify-Prozedur überprüft jeden Knoten und stellt sicher, dass die Max-Heap-Eigenschaft für diesen Knoten und seine Kinder erfüllt ist."
+    p  "Wir arbeiten uns dabei von unten nach oben durch den Baum – beginnend bei den Knoten, die Kinder haben, und bewegen uns schrittweise zur Wurzel. Das ermöglicht uns, die Max-Heap-Eigenschaft für den gesamten Baum zu garantieren, ohne alles neu zu ordnen."
+
+# Visualisierung Anzeigen (ungeordneter Heap)
+    p "Hier seht ihr ein Beispiel eines Arrays vor dem Heapify-Prozess. Die Zahlen sind noch ungeordnet."
+    p "Nach dem Heapify-Prozess sieht der Baum jedoch so aus:"
+#Visualisierung Anzeigen (geordneter Heap)
+    show rex at right ,half_size with vpunch
+    r  "Okay, jetzt verstehe ich, wie der Max-Heap aussieht! Aber was machen wir dann damit?"
+
+    p  "Sehr gut, r. Das bringt uns zu Schritt 2."
+    p "Schritt 2: Tauschen und neu aufbauen."
+
+    p "Da der größte Wert nun an der Wurzel steht, tauschen wir ihn mit dem letzten Element des Arrays."
+    p "Dadurch bringen wir das größte Element an die richtige Position im Array."
+    p "Nachdem wir diesen Tausch durchgeführt haben, reduzieren wir die Größe des Heaps um eins, weil das größte Element jetzt sortiert und fest an seiner Position ist."
+
+    r  "Und was passiert dann mit dem Heap? Ist er dann nicht kaputt?"
+
+    p  "Genau, r! Nach dem Tausch kann die Max-Heap-Eigenschaft tatsächlich verletzt sein. Deshalb wenden wir die Heapify-Prozedur erneut auf die Wurzel an, um den Heap zu reparieren und sicherzustellen, dass die Max-Heap-Eigenschaft wiederhergestellt wird."
+
+#Visualisierung Anzeigen (Heapify vorher)
+    p "Hier tauschen wir das Wurzelelement mit dem letzten Element."
+    p "Da die Max-Heap-Eigenschaft dadurch verletzt wurde, wenden wir Heapify auf den Wurzelknoten an, um die Struktur zu reparieren."
+#Visualisierung Anzeigen(Heapify nachher)
+
+    p "Nach dem erneuten Aufrufen von Heapify sieht der Heap wieder korrekt aus, und wir können den nächsten Schritt fortsetzen."
+    p "Schritt 3: Wiederholen, bis das gesamte Array sortiert ist."
+    p "Wir wiederholen den Prozess – das Wurzelelement mit dem letzten Element tauschen, die Heapgröße reduzieren und Heapify auf die Wurzel anwenden – bis das gesamte Array sortiert ist."
+    p "Am Ende ist das Array vollständig sortiert, und wir haben die Zahlen in aufsteigender Reihenfolge angeordnet."
+#Visualisierung Anzeigen (vollständige Sortierung der Liste)
+    r  "Wow, das ist echt clever! Aber warum ist Heapsort eigentlich so effizient?"
+
+    p  "Gute Frage, r! Der Heapsort-Algorithmus hat im besten, durchschnittlichen und schlechtesten Fall eine Zeitkomplexität von O(n log n), was bedeutet, dass er auch bei großen Datenmengen effizient bleibt."
+    p  "Im Gegensatz zu einigen anderen Algorithmen benötigt Heapsort außerdem nur eine konstante Menge an zusätzlichem Speicherplatz, da der gesamte Sortiervorgang direkt im Eingabearray durchgeführt wird. Das nennt man in-situ-Sortierung."
+
+    r  "Das klingt ziemlich nützlich! Gibt es Nachteile im Vergleich zu anderen Algorithmen?"
+
+    p  "Ja, tatsächlich. Ein Nachteil von Heapsort ist, dass er keine stabile Sortierung bietet. Das bedeutet, dass gleiche Werte ihre relative Reihenfolge im Array verlieren können."
+    p  "Außerdem ist Heapsort keine Divide-and-Conquer-Methode wie Quicksort oder Mergesort. Heapsort teilt das Array nicht in kleinere Teile auf, sondern arbeitet durch das kontinuierliche Wiederherstellen der Heap-Struktur, um die Sortierung zu erreichen."
+
+#Abschluss Monolog (Begleitete Simulation)
+
+
     x "Professor Black begins to explain the algorithm in detail. Rex scribbles furiously on his tablet."
     b "Yes! Yes! This is the key to fixing TM-510! Rex, my boy, listen carefully and take notes like you've done countless times before, and get back to our good old time ma-" 
     r "...Doc? Doc!... Dammit! Must be the water messing with the comms device!"
@@ -573,6 +655,88 @@ label E_start :
     show professor at half_size, right with dissolve
     x "Rex sits up abruptly and fixes Professor Black with a focused stare."
     p "Heapsort is an efficient algorithm based on the heap data structure..."
+
+#heapsort explain here
+
+    scene Classroom
+    
+    p "Willkommen zum heutigen Thema: Heapsort!"
+
+    show professor at right , half_size with dissolve
+
+    p "Heapsort ist ein effizienter, vergleichsbasierter Sortieralgorithmus, der uns hilft, eine Liste von Zahlen in aufsteigender Reihenfolge zu ordnen."
+    p "Er basiert auf einer speziellen Datenstruktur, dem sogenannten Heap, und unterscheidet sich dadurch von anderen Algorithmen wie Quicksort oder Mergesort."
+    p "Lasst uns zuerst klären, was ein Heap eigentlich ist und wie er funktioniert."
+
+    show professor at left ,half_size with move
+
+    show rex at right, half_size with dissolve
+
+    r "[name_p], was genau ist ein Heap? Ich habe den Begriff schon gehört, aber wie sieht so eine Struktur eigentlich aus?"
+
+    p "Gute Frage,  Rex ! Ein Heap ist eine spezielle Art binärer Baum, der eine feste Struktur einhält: Jeder Elternknoten ist größer als seine Kindknoten. Das bedeutet, dass der größte Wert im Baum immer an der Spitze, also an der Wurzel, steht."
+    p "Wir nennen diese Struktur einen Max-Heap. Das ist wichtig, weil wir beim Heapsort genau diese Max-Heap-Eigenschaft nutzen, um das größte Element im Baum zu identifizieren und an die richtige Stelle im Array zu bringen."
+    p  "Verstanden?"
+
+    show rex at right ,half_size with dissolve
+
+    r "Ja, das hilft schon mal! Aber wie genau können wir diesen Heap dann für die Sortierung verwenden?"
+
+    p "Sehr gute Frage! Der Max-Heap gibt uns die Möglichkeit, in jedem Schritt das größte verbleibende Element schnell zu finden und an die richtige Position im Array zu setzen."
+    p "Ich werde den Ablauf des Heapsort-Algorithmus Schritt für Schritt erklären, damit ihr seht, wie das funktioniert."
+
+    show rex at right , half_size with vpunch
+
+    p "Schritt 1: Aufbau des Max-Heaps."
+    p "Der erste Schritt beim Heapsort besteht darin, das Eingabearray – also die Liste der zu sortierenden Zahlen – in einen Max-Heap umzuwandeln."
+    p  "Das bedeutet, dass wir die Elemente so anordnen, dass der größte Wert an der Wurzel steht und die Max-Heap-Eigenschaft für alle Eltern-Kind-Beziehungen gilt."
+
+    r  "Und wie genau machen wir das? Ist das nicht aufwendig?"
+
+    p  "Gute Beobachtung, r! Um das Array in einen Max-Heap umzuwandeln, verwenden wir eine Methode namens 'Heapify'. Die Heapify-Prozedur überprüft jeden Knoten und stellt sicher, dass die Max-Heap-Eigenschaft für diesen Knoten und seine Kinder erfüllt ist."
+    p  "Wir arbeiten uns dabei von unten nach oben durch den Baum – beginnend bei den Knoten, die Kinder haben, und bewegen uns schrittweise zur Wurzel. Das ermöglicht uns, die Max-Heap-Eigenschaft für den gesamten Baum zu garantieren, ohne alles neu zu ordnen."
+
+# Visualisierung Anzeigen (ungeordneter Heap)
+    p "Hier seht ihr ein Beispiel eines Arrays vor dem Heapify-Prozess. Die Zahlen sind noch ungeordnet."
+    p "Nach dem Heapify-Prozess sieht der Baum jedoch so aus:"
+#Visualisierung Anzeigen (geordneter Heap)
+    show rex at right ,half_size with vpunch
+    r  "Okay, jetzt verstehe ich, wie der Max-Heap aussieht! Aber was machen wir dann damit?"
+
+    p  "Sehr gut, r. Das bringt uns zu Schritt 2."
+    p "Schritt 2: Tauschen und neu aufbauen."
+
+    p "Da der größte Wert nun an der Wurzel steht, tauschen wir ihn mit dem letzten Element des Arrays."
+    p "Dadurch bringen wir das größte Element an die richtige Position im Array."
+    p "Nachdem wir diesen Tausch durchgeführt haben, reduzieren wir die Größe des Heaps um eins, weil das größte Element jetzt sortiert und fest an seiner Position ist."
+
+    r  "Und was passiert dann mit dem Heap? Ist er dann nicht kaputt?"
+
+    p  "Genau, r! Nach dem Tausch kann die Max-Heap-Eigenschaft tatsächlich verletzt sein. Deshalb wenden wir die Heapify-Prozedur erneut auf die Wurzel an, um den Heap zu reparieren und sicherzustellen, dass die Max-Heap-Eigenschaft wiederhergestellt wird."
+
+#Visualisierung Anzeigen (Heapify vorher)
+    p "Hier tauschen wir das Wurzelelement mit dem letzten Element."
+    p "Da die Max-Heap-Eigenschaft dadurch verletzt wurde, wenden wir Heapify auf den Wurzelknoten an, um die Struktur zu reparieren."
+#Visualisierung Anzeigen(Heapify nachher)
+
+    p "Nach dem erneuten Aufrufen von Heapify sieht der Heap wieder korrekt aus, und wir können den nächsten Schritt fortsetzen."
+    p "Schritt 3: Wiederholen, bis das gesamte Array sortiert ist."
+    p "Wir wiederholen den Prozess – das Wurzelelement mit dem letzten Element tauschen, die Heapgröße reduzieren und Heapify auf die Wurzel anwenden – bis das gesamte Array sortiert ist."
+    p "Am Ende ist das Array vollständig sortiert, und wir haben die Zahlen in aufsteigender Reihenfolge angeordnet."
+#Visualisierung Anzeigen (vollständige Sortierung der Liste)
+    r  "Wow, das ist echt clever! Aber warum ist Heapsort eigentlich so effizient?"
+
+    p  "Gute Frage, r! Der Heapsort-Algorithmus hat im besten, durchschnittlichen und schlechtesten Fall eine Zeitkomplexität von O(n log n), was bedeutet, dass er auch bei großen Datenmengen effizient bleibt."
+    p  "Im Gegensatz zu einigen anderen Algorithmen benötigt Heapsort außerdem nur eine konstante Menge an zusätzlichem Speicherplatz, da der gesamte Sortiervorgang direkt im Eingabearray durchgeführt wird. Das nennt man in-situ-Sortierung."
+
+    r  "Das klingt ziemlich nützlich! Gibt es Nachteile im Vergleich zu anderen Algorithmen?"
+
+    p  "Ja, tatsächlich. Ein Nachteil von Heapsort ist, dass er keine stabile Sortierung bietet. Das bedeutet, dass gleiche Werte ihre relative Reihenfolge im Array verlieren können."
+    p  "Außerdem ist Heapsort keine Divide-and-Conquer-Methode wie Quicksort oder Mergesort. Heapsort teilt das Array nicht in kleinere Teile auf, sondern arbeitet durch das kontinuierliche Wiederherstellen der Heap-Struktur, um die Sortierung zu erreichen."
+
+#Abschluss Monolog (Begleitete Simulation)
+
+    
     x "Professor Black begins to explain the algorithm in detail. Rex scribbles furiously on his tablet."
     b "Yes! Yes! This is the key to fixing TM-510! Rex, my boy, listen carefully and take notes like you've done countless times before, and get back to our good old time ma-" 
     r "...Doc? Doc!... Dammit! Must be the water messing with the comms device!"
@@ -665,115 +829,34 @@ label E_start :
 
 
 
-
-
-
-    play music bm3
-
-    scene milstart
     
-    a "Willkommen zum heutigen Thema: Heapsort!"
-
-    show announcer at right with dissolve
-
-    a "Heapsort ist ein effizienter, vergleichsbasierter Sortieralgorithmus, der uns hilft, eine Liste von Zahlen in aufsteigender Reihenfolge zu ordnen."
-    a "Er basiert auf einer speziellen Datenstruktur, dem sogenannten Heap, und unterscheidet sich dadurch von anderen Algorithmen wie Quicksort oder Mergesort."
-    a "Lasst uns zuerst klären, was ein Heap eigentlich ist und wie er funktioniert."
-
-    show announcer at left with move
-
-    show cont1 at right with dissolve
-
-    c "[name_a], was genau ist ein Heap? Ich habe den Begriff schon gehört, aber wie sieht so eine Struktur eigentlich aus?"
-
-    a "Gute Frage,  [name_c] ! Ein Heap ist eine spezielle Art binärer Baum, der eine feste Struktur einhält: Jeder Elternknoten ist größer als seine Kindknoten. Das bedeutet, dass der größte Wert im Baum immer an der Spitze, also an der Wurzel, steht."
-    a "Wir nennen diese Struktur einen Max-Heap. Das ist wichtig, weil wir beim Heapsort genau diese Max-Heap-Eigenschaft nutzen, um das größte Element im Baum zu identifizieren und an die richtige Stelle im Array zu bringen."
-    a  "Verstanden?"
-
-    show cont1 at right with dissolve
-
-    c "Ja, das hilft schon mal! Aber wie genau können wir diesen Heap dann für die Sortierung verwenden?"
-
-    a "Sehr gute Frage! Der Max-Heap gibt uns die Möglichkeit, in jedem Schritt das größte verbleibende Element schnell zu finden und an die richtige Position im Array zu setzen."
-    a "Ich werde den Ablauf des Heapsort-Algorithmus Schritt für Schritt erklären, damit ihr seht, wie das funktioniert."
-
-    show cont1 at right with vpunch
-
-    a "Schritt 1: Aufbau des Max-Heaps."
-    a "Der erste Schritt beim Heapsort besteht darin, das Eingabearray – also die Liste der zu sortierenden Zahlen – in einen Max-Heap umzuwandeln."
-    a  "Das bedeutet, dass wir die Elemente so anordnen, dass der größte Wert an der Wurzel steht und die Max-Heap-Eigenschaft für alle Eltern-Kind-Beziehungen gilt."
-
-    c  "Und wie genau machen wir das? Ist das nicht aufwendig?"
-
-    a  "Gute Beobachtung, [name_c]! Um das Array in einen Max-Heap umzuwandeln, verwenden wir eine Methode namens 'Heapify'. Die Heapify-Prozedur überprüft jeden Knoten und stellt sicher, dass die Max-Heap-Eigenschaft für diesen Knoten und seine Kinder erfüllt ist."
-    a  "Wir arbeiten uns dabei von unten nach oben durch den Baum – beginnend bei den Knoten, die Kinder haben, und bewegen uns schrittweise zur Wurzel. Das ermöglicht uns, die Max-Heap-Eigenschaft für den gesamten Baum zu garantieren, ohne alles neu zu ordnen."
-
-# Visualisierung Anzeigen (ungeordneter Heap)
-    a "Hier seht ihr ein Beispiel eines Arrays vor dem Heapify-Prozess. Die Zahlen sind noch ungeordnet."
-    a "Nach dem Heapify-Prozess sieht der Baum jedoch so aus:"
-#Visualisierung Anzeigen (geordneter Heap)
-    show cont1 at right with vpunch
-    c  "Okay, jetzt verstehe ich, wie der Max-Heap aussieht! Aber was machen wir dann damit?"
-
-    a  "Sehr gut, [name_c]. Das bringt uns zu Schritt 2."
-    a "Schritt 2: Tauschen und neu aufbauen."
-
-    a "Da der größte Wert nun an der Wurzel steht, tauschen wir ihn mit dem letzten Element des Arrays."
-    a "Dadurch bringen wir das größte Element an die richtige Position im Array."
-    a "Nachdem wir diesen Tausch durchgeführt haben, reduzieren wir die Größe des Heaps um eins, weil das größte Element jetzt sortiert und fest an seiner Position ist."
-
-    c  "Und was passiert dann mit dem Heap? Ist er dann nicht kaputt?"
-
-    a  "Genau, [name_c]! Nach dem Tausch kann die Max-Heap-Eigenschaft tatsächlich verletzt sein. Deshalb wenden wir die Heapify-Prozedur erneut auf die Wurzel an, um den Heap zu reparieren und sicherzustellen, dass die Max-Heap-Eigenschaft wiederhergestellt wird."
-
-#Visualisierung Anzeigen (Heapify vorher)
-    a "Hier tauschen wir das Wurzelelement mit dem letzten Element."
-    a "Da die Max-Heap-Eigenschaft dadurch verletzt wurde, wenden wir Heapify auf den Wurzelknoten an, um die Struktur zu reparieren."
-#Visualisierung Anzeigen(Heapify nachher)
-
-    a "Nach dem erneuten Aufrufen von Heapify sieht der Heap wieder korrekt aus, und wir können den nächsten Schritt fortsetzen."
-    a "Schritt 3: Wiederholen, bis das gesamte Array sortiert ist."
-    a "Wir wiederholen den Prozess – das Wurzelelement mit dem letzten Element tauschen, die Heapgröße reduzieren und Heapify auf die Wurzel anwenden – bis das gesamte Array sortiert ist."
-    a "Am Ende ist das Array vollständig sortiert, und wir haben die Zahlen in aufsteigender Reihenfolge angeordnet."
-#Visualisierung Anzeigen (vollständige Sortierung der Liste)
-    c  "Wow, das ist echt clever! Aber warum ist Heapsort eigentlich so effizient?"
-
-    a  "Gute Frage, [name_c]! Der Heapsort-Algorithmus hat im besten, durchschnittlichen und schlechtesten Fall eine Zeitkomplexität von O(n log n), was bedeutet, dass er auch bei großen Datenmengen effizient bleibt."
-    a  "Im Gegensatz zu einigen anderen Algorithmen benötigt Heapsort außerdem nur eine konstante Menge an zusätzlichem Speicherplatz, da der gesamte Sortiervorgang direkt im Eingabearray durchgeführt wird. Das nennt man in-situ-Sortierung."
-
-    c  "Das klingt ziemlich nützlich! Gibt es Nachteile im Vergleich zu anderen Algorithmen?"
-
-    a  "Ja, tatsächlich. Ein Nachteil von Heapsort ist, dass er keine stabile Sortierung bietet. Das bedeutet, dass gleiche Werte ihre relative Reihenfolge im Array verlieren können."
-    a  "Außerdem ist Heapsort keine Divide-and-Conquer-Methode wie Quicksort oder Mergesort. Heapsort teilt das Array nicht in kleinere Teile auf, sondern arbeitet durch das kontinuierliche Wiederherstellen der Heap-Struktur, um die Sortierung zu erreichen."
-
-#Abschluss Monolog (Begleitete Simulation)
 
 
 
     label intro:
-        scene backcont
-        show announcer at right with dissolve
+        scene Classroom
+        show professor at right ,half_size with dissolve
 
-        a "Im Laufe der Übung könnt ihr die einzelnen Schritte mit den Pfeiltasten durchlaufen, um genau zu beobachten, wie der Heap sich bei jedem Schritt verändert."
-        a "Ich werde bei jedem Schritt erklären, warum wir ihn durchführen und was im Hintergrund passiert."
-        a "Lasst uns also in die Simulation einsteigen und Heapsort in Aktion sehen!"
+        p "Im Laufe der Übung könnt ihr die einzelnen Schritte mit den Pfeiltasten durchlaufen, um genau zu beobachten, wie der Heap sich bei jedem Schritt verändert."
+        p "Ich werde bei jedem Schritt erklären, warum wir ihn durchführen und was im Hintergrund passiert."
+        p "Lasst uns also in die Simulation einsteigen und Heapsort in Aktion sehen!"
 
 # Potenzielle Simulation an einem Beispiel. 
-        a "Jetzt solltet ihr genügend wissen zu dem Heapsort-Algorithmus gesammelt haben, um euch den Kontrollfragen zu stellen."
+        p "Jetzt solltet ihr genügend wissen zu dem Heapsort-Algorithmus gesammelt haben, um euch den Kontrollfragen zu stellen."
         
 
     label q1:
         call lifecount
-        a "Kommen wir zur ersten Frage!"
-        a "Was ist die Hauptidee hinter dem Heapsort-Algorithmus?"
+        p "Kommen wir zur ersten Frage!"
+        p "Was ist die Hauptidee hinter dem Heapsort-Algorithmus?"
 
         menu:
             "Den Eingabedatensatz in einen geordneten Baum umzuwandeln, um das größte Element schnell zu finden.":
-                a "Ja genau, der Eingabedatensatz wird in einen geordneten Baum umgewandelt, um das größte Element schnell zu finden."
+                p "Ja genau, der Eingabedatensatz wird in einen geordneten Baum umgewandelt, um das größte Element schnell zu finden."
                 jump win1
 
             "Den Eingabedatensatz in kleinere Teile aufzuteilen und diese unabhängig zu sortieren.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q1
@@ -781,7 +864,7 @@ label E_start :
                     jump game_over
 
             "Jedes Element mit jedem anderen zu vergleichen und in aufsteigender Reihenfolge anzuordnen.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q1
@@ -789,7 +872,7 @@ label E_start :
                     jump game_over
 
             "Eine Sortierung durch wiederholtes Vergleichen benachbarter Elemente.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q1
@@ -797,7 +880,7 @@ label E_start :
                     jump game_over
 
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q1
     return
 
@@ -808,11 +891,11 @@ label E_start :
         scene backcont
         show announcer at right with dissolve
         call lifecount
-        a "Welche Aussage beschreibt die Max-Heap-Eigenschaft korrekt?"
+        p "Welche Aussage beschreibt die Max-Heap-Eigenschaft korrekt?"
 
         menu:
             "Jeder Kindknoten hat einen größeren Wert als sein Elternknoten.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q2
@@ -820,11 +903,11 @@ label E_start :
                     jump game_over
     
             "Jeder Elternknoten hat einen größeren Wert als seine Kindknoten.":
-                a "Ja genau jeder Elternknoten hat einen größeren Wert als seine Kindknoten."
+                p "Ja genau jeder Elternknoten hat einen größeren Wert als seine Kindknoten."
                 jump q3
 
             "Die Knoten sind in zufälliger Reihenfolge angeordnet.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q2
@@ -832,7 +915,7 @@ label E_start :
                     jump game_over
             
             "Der linke Kindknoten ist immer kleiner als der rechte Kindknoten.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q2
@@ -840,7 +923,7 @@ label E_start :
                     jump game_over
 
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q2
     return
         
@@ -848,11 +931,11 @@ label E_start :
 
 
     label q3:
-        a "Wie lautet die Zeitkomplexität des Heapsort-Algorithmus im besten, durchschnittlichen und schlechtesten Fall?"
+        p "Wie lautet die Zeitkomplexität des Heapsort-Algorithmus im besten, durchschnittlichen und schlechtesten Fall?"
 
         menu:
             "O(n)":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q3
@@ -860,11 +943,11 @@ label E_start :
                     jump game_over
             
             "O(n log (n))":
-                a "Ja genau die Zeitkomplexität beträgt immer O(n log (n))."
+                p "Ja genau die Zeitkomplexität beträgt immer O(n log (n))."
                 jump q4
             
             "O(n^2)":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q3
@@ -872,7 +955,7 @@ label E_start :
                     jump game_over
             
             "O(log n)":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal."
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q3
@@ -880,17 +963,17 @@ label E_start :
                     jump game_over
             
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q3
     return
             
     label q4:
-        a "Welche Aufgabe erfüllt die Heapify-Prozedur im Heapsort-Algorithmus?"
+        p "Welche Aufgabe erfüllt die Heapify-Prozedur im Heapsort-Algorithmus?"
 
         menu:
 
             "Sie vertauscht das größte und kleinste Element im Array.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q4
@@ -898,11 +981,11 @@ label E_start :
                     jump game_over
 
             "Sie vertauscht das größte und kleinste Element im Array.":
-                a "Ja genau die Heapify-Prozedur überprüft und stellt sicher, dass die Max-Heap-Eigenschaft eines Knotens und seinen Kinder gewahrt bleibt."
+                p "Ja genau die Heapify-Prozedur überprüft und stellt sicher, dass die Max-Heap-Eigenschaft eines Knotens und seinen Kinder gewahrt bleibt."
                 jump q5
             
             "Sie teilt das Array in kleinere Unterarrays auf.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q4
@@ -910,7 +993,7 @@ label E_start :
                     jump game_over
             
             "Sie entfernt das kleinste Element aus dem Heap.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q4
@@ -918,17 +1001,17 @@ label E_start :
                     jump game_over
             
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q4
     return
 
     label q5:
-        a "Schritte des Heapsort-Algorithmus"
+        p "Schritte des Heapsort-Algorithmus"
 
         menu:
 
             "Aufbau eines Max-Heaps aus dem Eingabearray.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q5
@@ -936,11 +1019,11 @@ label E_start :
                     jump game_over
             
             "Aufteilen des Arrays in mehrere Teilbäume.":
-                a "Ja genau, das Aufteilen des Arrays in mehrere Teilbäume ist kein Teil des Algorithmus."
+                p "Ja genau, das Aufteilen des Arrays in mehrere Teilbäume ist kein Teil des Algorithmus."
                 jump q6
             
             "Vertauschen des größten Elements mit dem letzten Element des Heaps.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q5
@@ -948,7 +1031,7 @@ label E_start :
                     jump game_over
             
             "Wiederholtes Anwenden von Heapify nach jedem Tausch.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q5
@@ -956,17 +1039,17 @@ label E_start :
                     jump game_over
             
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q5
     return
     
     label q6:
-        a "Welchen Speicherbedarf hat der Heapsort-Algorithmus?"
+        p "Welchen Speicherbedarf hat der Heapsort-Algorithmus?"
 
         menu:
 
             "O(n) zusätzlicher Speicher":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q6
@@ -974,7 +1057,7 @@ label E_start :
                     jump game_over
             
             "O(n^2) zusätzlicher Speicher":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q6
@@ -982,11 +1065,11 @@ label E_start :
                     jump game_over
 
             "O(1) zusätzlicher Speicher":
-                a "Ja genau, das Aufteilen des Arrays in mehrere Teilbäume ist kein Teil des Algorithmus."
+                p "Ja genau, das Aufteilen des Arrays in mehrere Teilbäume ist kein Teil des Algorithmus."
                 jump q7
             
             "O(log n) zusätzlicher Speicher":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q6
@@ -994,21 +1077,21 @@ label E_start :
                     jump game_over
 
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q6
     return
 
     label q7:
-        a "Wann ist es sinnvoll, Heapsort gegenüber Quicksort zu verwenden?"
+        p "Wann ist es sinnvoll, Heapsort gegenüber Quicksort zu verwenden?"
 
         menu:
 
             "Wenn der Speicherverbrauch minimiert werden muss.":
-                a "Ja genau, man sollte Heapsort verwenden, wenn der Speicherverbrauch minimiert werden muss."
+                p "Ja genau, man sollte Heapsort verwenden, wenn der Speicherverbrauch minimiert werden muss."
                 jump q8
             
             "Wenn die Daten bereits fast sortiert sind.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q7
@@ -1016,7 +1099,7 @@ label E_start :
                     jump game_over
 
             "Wenn eine stabile Sortierung notwendig ist.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q7
@@ -1024,7 +1107,7 @@ label E_start :
                     jump game_over
             
             "Wenn die Eingabegröße klein ist.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q7
@@ -1032,13 +1115,13 @@ label E_start :
                     jump game_over
 
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q7
     return
 
     label q8:
-        a "Was ist die richtige Reihenfolge der folgenden Schritte im Heapsort-Algorithmus?"
-        a " 1. Vertausche das Wurzelelement mit dem letzten Element des Heaps.
+        p "Was ist die richtige Reihenfolge der folgenden Schritte im Heapsort-Algorithmus?"
+        p " 1. Vertausche das Wurzelelement mit dem letzten Element des Heaps.
             2. Baue einen Max-Heap aus dem Eingabearray auf.
             3. Wende die Heapify-Prozedur an, um die Max-Heap-Eigenschaft wiederherzustellen.
             4. Reduziere die Heapgröße um eins. "
@@ -1046,7 +1129,7 @@ label E_start :
         menu:
 
             "2 → 1 → 4 → 3":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q8
@@ -1054,7 +1137,7 @@ label E_start :
                     jump game_over
             
             "1 → 2 → 3 → 4":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q8
@@ -1062,11 +1145,11 @@ label E_start :
                     jump game_over
 
             "2 → 1 → 3 → 4":
-                a "Ja genau, genau das ist die richtige Reihenfolge."
+                p "Ja genau, genau das ist die richtige Reihenfolge."
                 jump q9a
 
             "3 → 2 → 1 → 4":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q8
@@ -1074,21 +1157,21 @@ label E_start :
                     jump game_over
             
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q8
     return
         
     label q9a:
-        a "Welche der folgenden Aussagen ist richtig?"
+        p "Welche der folgenden Aussagen ist richtig?"
 
         menu:
 
             "Heapsort benötigt in der Regel weniger Speicher als Quicksort.":
-                a "Ja genau, Heapsort benötigt in der Regel weniger Speicher als Quicksort."
+                p "Ja genau, Heapsort benötigt in der Regel weniger Speicher als Quicksort."
                 jump q9b
             
             "Quicksort ist stabil, Heapsort jedoch nicht.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -1096,7 +1179,7 @@ label E_start :
                     jump game_over
             
             "Heapsort ist im Durchschnitt schneller als Quicksort.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -1104,21 +1187,21 @@ label E_start :
                     jump game_over
             
             "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
-                a "Ja genau, Heapsort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall."
+                p "Ja genau, Heapsort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall."
                 jump q9c
 
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q9a
     return
 
     label q9b:
-        a "Welche Aussage ist wahr?"
+        p "Welche Aussage ist wahr?"
 
         menu:
 
             "Quicksort ist stabil, Heapsort jedoch nicht.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -1126,7 +1209,7 @@ label E_start :
                     jump game_over
             
             "Heapsort ist im Durchschnitt schneller als Quicksort.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -1134,25 +1217,25 @@ label E_start :
                     jump game_over
 
             "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
-                a "Ja genau, Heapsort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall."
+                p "Ja genau, Heapsort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall."
                 jump q9c
 
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q9b
     return
         
     label q9c:
-        a "Welche Aussage stimmt noch?"
+        p "Welche Aussage stimmt noch?"
 
         menu:
 
             "Heapsort benötigt in der Regel weniger Speicher als Quicksort.":
-                a "Ja genau, Heapsort benötigt in der Regel weniger Speicher als Quicksort ."
+                p "Ja genau, Heapsort benötigt in der Regel weniger Speicher als Quicksort ."
                 jump q10
 
             "Quicksort ist stabil, Heapsort jedoch nicht.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -1160,7 +1243,7 @@ label E_start :
                     jump game_over
 
             "Heapsort ist im Durchschnitt schneller als Quicksort.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q9a
@@ -1168,17 +1251,17 @@ label E_start :
                     jump game_over
 
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q9c
     return
 
     label q10:
-        a "Welcher Fehler kann zu einer fehlerhaften Sortierung bei Heapsort führen?"
+        p "Welcher Fehler kann zu einer fehlerhaften Sortierung bei Heapsort führen?"
 
         menu:
 
             "Das Vertauschen des größten Elements mit dem ersten Element statt mit dem letzten.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q10
@@ -1186,11 +1269,11 @@ label E_start :
                     jump game_over
 
             "Das Nicht-Anwenden von Heapify nach dem Tausch der Wurzel.":
-                a "Ja genau, das Nicht-Anwenden von Heapify nach dem Tausch der Wurzel, kann zu einer Fehlerhaften Sortierung führen."
+                p "Ja genau, das Nicht-Anwenden von Heapify nach dem Tausch der Wurzel, kann zu einer Fehlerhaften Sortierung führen."
                 jump win_game
 
             "Das Vertauschen der Kindknoten im Heap während des Heapify-Prozesses.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q10
@@ -1198,7 +1281,7 @@ label E_start :
                     jump game_over
             
             "Das erneute Aufbauen des Heaps nach jedem Sortierschritt.":
-                a "Nein, dass ich leider nicht richtig. Versuch es nochmal"
+                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
                 $ life_counter -= 1
                 if life_counter > 0:
                     jump q10
@@ -1206,7 +1289,7 @@ label E_start :
                     jump game_over
 
             "Ich brauche einen Hinweis!":
-                a "Hast du mir überhaupt zugehört?"
+                p "Hast du mir überhaupt zugehört?"
                 jump q10
     return
 

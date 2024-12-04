@@ -2,13 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 11: expected '=' not found.
-    define TM-510 = Character("TM-510")
-             ^
+File "game/script.rpy", line 681: end of line expected.
+    show rex at right ,half_sizewith dissolve
+                                     ^
 
-File "game/script.rpy", line 1165: expected statement.
-    TM-510: "Warnung: Unbekannte Entität erkannt. Empfehle sofortige Rückkehr zur Zeitmaschine."
-          ^
+File "game/script.rpy", line 688: end of line expected.
+    show rex at right , half_sizewith vpunch
+                                      ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Tue Dec  3 22:27:14 2024
+Wed Dec  4 19:31:44 2024
