@@ -323,9 +323,6 @@ label D_start :
 #explenation heapsort
 
     scene Classroom
-    
-    p "Willkommen zum heutigen Thema: Heapsort!"
-
     show professor at right , half_size with dissolve
 
     p "Heapsort ist ein effizienter, vergleichsbasierter Sortieralgorithmus, der uns hilft, eine Liste von Zahlen in aufsteigender Reihenfolge zu ordnen."
@@ -419,6 +416,8 @@ label D_start :
     x "Rex's eyes scan the intricate workings until they land on a section labeled 'Manual Temporal Field Override'."
     r "Bingo. Looks like this is where the magic happens." 
     # [Proceed to the interactive HeapSort ]
+
+    
 # jump to interactive heapsort from here
     #English Version------------------------------------------------
 label E_start :
