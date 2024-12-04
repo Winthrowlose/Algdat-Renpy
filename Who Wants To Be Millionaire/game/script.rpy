@@ -257,6 +257,87 @@ label D_start :
     b "Du befindest dich genau in der Mitte deines Ziels. Jetzt liegt es nur an ihnen,
     mehr über Heapsort zu lernen."
 
+    r "Ok,Ok. Zuerst muss ich mir neue Kleidung suchen. Dieser Overall ist nicht besonders unaufällig. das wasser hilf auch nich dabei."
+
+    b "Wasser ?"
+
+    r "Ja , Wasser , ich bin auf einer Insel in einem Teich"
+
+    b "Nun , mein vorschlag ist das schwimmen"
+
+    r "wollte ich gerade tun !"
+
+    x "Rex schwimmt durch den Teich und beginnt seine suche"
+
+    #SCENE 4 :
+
+    scene clothing_store
+
+    show rex at half_size , right with dissolve
+
+    x "Rex betritt zitternd einen Kleidungsladen in seinem nassen Overall. Nervös sucht er nach passender und stylischer Kleidung."
+    x "He bumps into a tall, imposing man with a neatly trimmed beard and a black tweed jacket. The man raises an eyebrow, looking Rex up and down."
+    show professor at half_size, left with dissolve
+    p "Ich habe dich hier noch nie zuvor gesehen . Bist du einer der neuen Studenten?"
+    r "Uh, Ja... sowas in die richtung."
+    p "Haben wir us verlaufen? Keine Angst , das passiert selbst den besten. sag mal , das ist aber ein sehr interessantes outfit das du da trägst."
+    hide professor
+    x "Rexs Kommunikationsgerät fängt plötzlich an zu brummen . ein Hologram von Bolt erscheint."
+    show bolt at half_size, left with dissolve
+    b "Rex! das ist er , das ist der Professor!"
+    $ [name_p] == "Professor"
+    r  "DoK, nicht so laut!"
+    b "Oh, richtig. Ahem. Folge ihm, Rex! Er ist der Schlüssel zum Heapsort wissen!"
+    hide bolt
+    show professor  at half_size, left with dissolve
+
+    r  "Nett sie kennen zu lernen , aber ich muss jetzt los"
+    x "Rex versucht ungeschickt dem Professor zu folgen."
+    p "Hold on there, Buster! What's the rush?"
+
+    r "Ich .. uh.. "
+    p  "falls du das 13.15 Seminar suchst kannst du mir einfach folgen ."
+
+    r "roger roger!"
+
+    p " Professor Black ist der Name. Remington Black."
+    $ [name_p] == "Professor Black"
+
+
+    #Scene 5: Classroom shenanigans
+    scene Classroom
+    show rex at half_size, left with dissolve
+    show professor at half_size, right with dissolve
+
+
+    x "Rex Folgt Professor Black in eine große vorlesungshalle voller gelangweilter Studenten."
+    x "Rex setzt sich in der letzten reihe um unauffällig zu bleiben . Professor Black lauft energetisch zum pult und beginnt seine vorlesung."
+    p "Guten morgen herren und damen! in der heutigen vorlesung befassen wir uns mit der spannenden welt der Algorithmen, Heapsort um genauer zu sein"
+    x "Rex gähn und seine blick wandert duch den raum. Plötzlich ertönt Bolts stimme in seinem Ohr."
+    hide professor with dissolve
+    b "Rex! Aufpassen! Gleich kommt Heapsort!"
+    show professor at half_size, right with dissolve
+    x "Rex richtet sich abrupt auf und Fokusiert seinen Blick auf Black."
+    p "Heapsort is an efficient algorithm based on the heap data structure..."
+    x "Professor Black begins to explain the algorithm in detail. Rex scribbles furiously on his tablet."
+    b "Yes! Yes! This is the key to fixing TM-510! Rex, my boy, listen carefully and take notes like you've done countless times before, and get back to our good old time ma-" 
+    r "...Doc? Doc!... Dammit! Must be the water messing with the comms device!"
+    x "Professor Black wraps up his lecture with a broad grin."
+    p "...and that concludes today's lecture on sorting algorithms. They may not seem particularly useful now... but you'll see the day when you need this knowledge, whether it be in your programming career, developing programs as a hobby (with a subtle smirk and a side glance at Rex)... or saving humanity."
+    x "Professor Black exits the lecture hall as the students start packing up to leave."
+
+
+# Scene 6 : Heapsort to the rescue
+
+    scene time_machine_outside_past
+    show rex at half_size, right with dissolve
+    # Rex stands before the TM-510
+    r "Okay, Doc mentioned something about Heapsort being the key...let me see if I can't figure that out."  
+    x "Rex approaches the Time Machine. He places his hand on the control panel, and it slides open with a hiss, revealing a dizzying array of futuristic-looking circuits and panels."
+    x "Rex's eyes scan the intricate workings until they land on a section labeled 'Manual Temporal Field Override'."
+    r "Bingo. Looks like this is where the magic happens." 
+    # [Proceed to the interactive HeapSort ]
+# jump to interactive heapsort from here
     #English Version------------------------------------------------
 label E_start :
     scene black
