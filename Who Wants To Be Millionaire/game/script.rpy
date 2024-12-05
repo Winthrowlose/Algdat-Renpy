@@ -298,7 +298,7 @@ label D_start :
 
 
 #Scene 5: Classroom shenanigans
-    scene Classroom
+    scene classroom
     show rex at half_size, left with dissolve
     show professor at half_size, right with dissolve
 
@@ -318,7 +318,7 @@ label D_start :
 
 #explenation heapsort
 
-    scene Classroom
+    scene classroom
     show professor at right , half_size with dissolve
 
     p "Zunächst sollten wir klären, was ein Heap überhaupt ist."
@@ -407,7 +407,11 @@ label D_start :
 
     
     x "Professor Black schließt seine Vorlesung mit einem breiten Grinsen ab."
-    p  "...und damit ist die heutige Vorlesung über Sortieralgorithmen beendet. Sie mögen jetzt nicht besonders nützlich erscheinen... aber du wirst den Tag erleben, an dem du dieses Wissen brauchst, sei es in deiner Programmierkarriere, beim Entwickeln von Programmen als Hobby (mit einem subtilen Grinsen und einem Seitenblick auf Rex)... oder bei der Rettung der Menschheit."
+    p  "...und damit ist die heutige Vorlesung über Sortieralgorithmen beendet. "
+    p  "Sie mögen jetzt nicht besonders nützlich erscheinen... "
+    p  "aber du wirst den Tag erleben, an dem du dieses Wissen brauchst, "
+    p  "sei es in deiner Programmierkarriere, beim Entwickeln von Programmen als Hobby... "
+    p  "(mit einem subtilen Grinsen und einem Seitenblick auf Rex)... oder bei der Rettung der Menschheit."
     x "Professor Black verlässt den Vorlesungssaal, während die Studenten zusammenpacken, um zu gehen."
 
 
@@ -648,7 +652,7 @@ label E_start :
 
 
 #Scene 5: Classroom shenanigans
-    scene Classroom
+    scene classroom
     show rex at half_size, left with dissolve
     show professor at half_size, right with dissolve
 
@@ -664,7 +668,7 @@ label E_start :
 
 #heapsort explain here
 
-    scene Classroom
+    scene classroom
     
     p "Willkommen zum heutigen Thema: Heapsort!"
 
@@ -917,28 +921,27 @@ label victory :
 label minigame:
     show rex
     scene time_machine_outside_past_02 #time machine outside 2024
-    r "lets go home"
+    r "auf nach Hause"
     scene timemachine #time machine inside scene
     # boom sound effect
     scene timemachine02_alarm
-    r "um... bolt, you might want to take a look at this"
-    b "great scotts... the heapsortinator is broken, you have to fix it"
-    r "cringe but ok"
-    r "i guess i gotta look on the heapsortinator"
-    b "sort it based on max heap"
+    r "um... Bolt, du solltest dir das mal anschauen"
+    b "mein Gott... der Heapsortinator ist kaputt , du musst ihn reparieren"
+    r "dann muss ich wohl den Heapsortinator überprüfen "
+    b "sortiere es mit Maxheap !"
 
+
+    scene mg1_n #minigame scrambled
+    b "Setze die Zahlen auf einen Heap-Baum!"
+    scene mg2_n #minigame heaptree
+    b "Gut , danach noch das Heapify"
     label mg1:
         call lifecount2 from _call_lifecount2
-        scene mg1_n #minigame scrambled
-        b "put the stuff on a heaptree"
-        scene mg2_n #minigame heaptree
-        b "now do the steps for heapify"
-
         menu:
             "6 to 0":
                 #scene mg60_n  #minigame heaptree 6 to 0
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg1
@@ -948,7 +951,7 @@ label minigame:
             "1 to 3":
                 #scene mg13_n #minigame heaptree 1 to 3
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg1
@@ -958,12 +961,12 @@ label minigame:
             "7 to 0":
                 scene mg70_n #minigame heaptree 7 to 0
                 #play correct ding"
-                b "that seems right me boi"
+                b "Das klappt !"
                 jump mg2
 
-            "This seems correct already":
+            "Es sieht schon korrekt aus.":
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg1
@@ -973,13 +976,13 @@ label minigame:
 
     label mg2:
         call lifecount2 from _call_lifecount2_1
-        b "what's next"
+        b "Und dann ... ?"
 
         menu:
             "6 to 7":
                 #scene mg76_n #minigame heaptree 7 to 6
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg2
@@ -989,7 +992,7 @@ label minigame:
             "3 to 1":
                 #scene mg31_n #minigame heaptree 3 to 1
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg2
@@ -999,12 +1002,12 @@ label minigame:
             "3 to 7":
                 scene mg37_n #minigame heaptree 3 to 7
                 #play correct ding"
-                b "that seems right me boi"
+                b "Das klappt !"
                 jump mg3
 
-            "This seems correct already":
+            "Es sieht schon korrekt aus.":
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg2
@@ -1014,13 +1017,13 @@ label minigame:
 
     label mg3:
         call lifecount2 from _call_lifecount2_2
-        b "what's next"
+        b "Und dann ... ?"
 
         menu:
             "3 to 0":
                 #scene mg03_n #minigame heaptree 0 to 3
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg3
@@ -1030,7 +1033,7 @@ label minigame:
             " 1 to 7":
                 #scene mg17_n #minigame heaptree 1 to 7
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg3
@@ -1040,12 +1043,12 @@ label minigame:
             "6 to 3":
                 scene mg63_n #minigame heaptree 6 to 3
                 #play correct ding"
-                b "that seems right me boi"
+                b "Das klappt !"
                 jump mg4
 
-            "This seems correct already":
+            "Es sieht schon korrekt aus.":
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg3
@@ -1055,13 +1058,13 @@ label minigame:
 
     label mg4:
         call lifecount2 from _call_lifecount2_3
-        b "what's next"
+        b "Und dann ... ?"
 
         menu:
             "1 to 7":
                 #scene mg17 #minigame heaptree 1 to 7
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg4
@@ -1071,7 +1074,7 @@ label minigame:
             "3 to 6":
                 #scene mg36 #minigame heaptree 3 to 6
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg4
@@ -1080,12 +1083,12 @@ label minigame:
 
             "0 to 7":
                 scene mg07_n #minigame heaptree 0 to 7
-                b "that seems right me boi"
+                b "Das klappt !"
                 jump mg5   
 
-            "This seems correct already":
+            "Es sieht schon korrekt aus.":
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg4
@@ -1095,12 +1098,12 @@ label minigame:
 
     label mg5:
         call lifecount2 from _call_lifecount2_4
-        b "what's next"
+        b "Und dann ... ?"
         menu:
             "0 to 1":
                 #scene mg01w #minigame heaptree 1 to 0
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg5
@@ -1110,7 +1113,7 @@ label minigame:
             "7 to 6":
                 #scene mg76_n #minigame heaptree 7 to 6
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg5
@@ -1119,12 +1122,12 @@ label minigame:
 
             "0 to 6":
                 scene mg06_n #minigame heaptree 0 to 6
-                b "that seems right me boi"
+                b "Das klappt !"
                 jump mg6   
 
-            "This seems correct already":
+            "Es sieht schon korrekt aus.":
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg5
@@ -1134,12 +1137,12 @@ label minigame:
 
     label mg6:
         call lifecount2 from _call_lifecount2_5
-        b "what's next"
+        b "Und dann ... ?"
         menu:
             "7 to 0":
                 #scene mg70w #minigame heaptree 1 to 0
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg6
@@ -1149,7 +1152,7 @@ label minigame:
             "1 to 6":
                 #scene mg16w #minigame heaptree 7 to 6
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg6
@@ -1158,12 +1161,12 @@ label minigame:
 
             "0 to 3":
                 scene mg03_n #minigame heaptree 0 to 3
-                b "that seems right me boi"
+                b "Das klappt !"
                 jump mg7   
 
-            "This seems correct already":
+            "Es sieht schon korrekt aus.":
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg6
@@ -1173,12 +1176,12 @@ label minigame:
 
     label mg7:
         call lifecount2 from _call_lifecount2_6
-        b "what's next"
+        b "Und dann ... ?"
         menu:
             "1 to 6":
                 #scene mg16_n #minigame heaptree 1 to 6
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg7
@@ -1188,7 +1191,7 @@ label minigame:
             "7 to 3":
                 #scene mg73_n #minigame heaptree 3 to 7
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg7
@@ -1197,12 +1200,12 @@ label minigame:
 
             "0 to 6":
                 scene mg062_n #minigame heaptree 0 to 
-                b "that seems right me boi"
+                b "Das klappt !"
                 jump mg8   
 
-            "This seems correct already":
+            "Es sieht schon korrekt aus.":
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg7
@@ -1212,12 +1215,12 @@ label minigame:
 
     label mg8:
         call lifecount2 from _call_lifecount2_7
-        b "what's next"
+        b "Und dann ... ?"
         menu:
             "1 to 0":
                 #scene mg10_n #minigame heaptree 1 to 0
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg8
@@ -1227,7 +1230,7 @@ label minigame:
             "6 to 1":
                 #scene mg61_n #minigame heaptree 6 to 1
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg8
@@ -1236,12 +1239,12 @@ label minigame:
 
             "0 to 3":
                 scene mg032_n #minigame heaptree 0 to 
-                b "that seems right me boi"
+                b "Das klappt !"
                 jump mg9   
 
-            "This seems correct already":
+            "Es sieht schon korrekt aus.":
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg8
@@ -1251,12 +1254,12 @@ label minigame:
 
     label mg9:
         call lifecount2 from _call_lifecount2_8
-        b "what's next"
+        b "Und dann ... ?"
         menu:
             "6 to 0":
                 #scene mg60w #minigame heaptree 1 to 0
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg9
@@ -1266,7 +1269,7 @@ label minigame:
             "7 to 0":
                 #scene mg70w2 #minigame heaptree 7 to 6
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg9
@@ -1275,12 +1278,12 @@ label minigame:
 
             "1 to 3":
                 scene mg13_n #minigame heaptree 0 to 
-                b "that seems right me boi"
+                b "Das klappt !"
                 jump mg10   
 
-            "This seems correct already":
+            "Es sieht schon korrekt aus.":
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg5
@@ -1290,12 +1293,12 @@ label minigame:
 
     label mg10:
         call lifecount2 from _call_lifecount2_9
-        b "what's next"
+        b "Und dann ... ?"
         menu:
             "6 to 7":
                 #scene mg67w2 #minigame heaptree 1 to 0
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg10
@@ -1305,7 +1308,7 @@ label minigame:
             "3 to 1":
                 #scene mg31w #minigame heaptree 7 to 6
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg10
@@ -1314,12 +1317,12 @@ label minigame:
 
             "0 to 1":
                 scene mg01_n #minigame heaptree 0 to 
-                b "that seems right me boi"
+                b "Das klappt !"
                 jump mg11   
 
-            "This seems correct already":
+            "Es sieht schon korrekt aus.":
                 #play explosion sound effect
-                b "i don't think that's right, careful now"
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
                     jump mg10
@@ -1329,7 +1332,7 @@ label minigame:
 
     label mg11:
         call lifecount2 from _call_lifecount2_10
-        r "the correct array is"
+        r "Das korrekte Arry ist ..."
         menu:
             "7, 6, 3, 1, 0":
                 $ life_counter1 -= 1
