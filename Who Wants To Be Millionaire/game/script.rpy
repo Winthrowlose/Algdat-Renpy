@@ -8,13 +8,15 @@ define r = Character("Rex", color ="#eb3000")
 define b = Character("Bolt", color="#03f0fc")
 define T = Character("TM-510")
 define p = Character("[name_p]")
-default life_counter = 3
+default life_counter1 = 3
 default name_a = "Lehrer"
 default name_c = "Mitschüler"
 default name_p = "???"
 default hint_counter = 3
 transform half_size: 
     zoom 0.5 #adjust as required
+transform quater_size:
+    zoom 0.25 #adjust as required
 # The game starts here.
 
 label start:
@@ -319,75 +321,86 @@ label D_start :
     scene Classroom
     show professor at right , half_size with dissolve
 
-    p "Heapsort ist ein effizienter, vergleichsbasierter Sortieralgorithmus, der uns hilft, eine Liste von Zahlen in aufsteigender Reihenfolge zu ordnen."
-    p "Er basiert auf einer speziellen Datenstruktur, dem sogenannten Heap, und unterscheidet sich dadurch von anderen Algorithmen wie Quicksort oder Mergesort."
-    p "Lasst uns zuerst klären, was ein Heap eigentlich ist und wie er funktioniert."
+    p "Zunächst sollten wir klären, was ein Heap überhaupt ist."
+
+    p "Ein Heap ist eine Art binärer Baum – eine Struktur, in der jeder Elternknoten zwei Kindknoten hat."
+
+    p "Besonders interessant für uns ist der sogenannte Max-Heap."
+
+    p "In einem Max-Heap gilt die Regel: Jeder Elternknoten ist größer als seine beiden Kindknoten. "
+
+    p "Das bedeutet, dass der größte Wert im Baum immer an der Spitze – der Wurzel – zu finden ist. "
+
+    p "Warum nutzen wir diesen Heap? Nun, die Max-Heap-Eigenschaft ermöglicht es uns, in jedem Schritt das größte verbleibende Element schnell zu finden. "
+
+    p "Das ist der Schlüssel zu Heapsort. "
 
     show professor at left ,half_size with move
 
-    show rex at right, half_size with dissolve
+    p "Schauen wir uns die drei Schritte von Heapsort an. "
 
-    r "[name_p], was genau ist ein Heap? Ich habe den Begriff schon gehört, aber wie sieht so eine Struktur eigentlich aus?"
+    p "Schritt 1: Aufbau eines Max-Heaps "
+    p "Der erste Schritt besteht darin, das Eingabearray in einen Max-Heap umzuwandeln. Dafür verwenden wir eine Methode namens Heapify. "
 
-    p "Gute Frage,  Rex ! Ein Heap ist eine spezielle Art binärer Baum, der eine feste Struktur einhält: Jeder Elternknoten ist größer als seine Kindknoten. Das bedeutet, dass der größte Wert im Baum immer an der Spitze, also an der Wurzel, steht."
-    p "Wir nennen diese Struktur einen Max-Heap. Das ist wichtig, weil wir beim Heapsort genau diese Max-Heap-Eigenschaft nutzen, um das größte Element im Baum zu identifizieren und an die richtige Stelle im Array zu bringen."
-    p  "Verstanden?"
+    p "Stellen Sie sich vor, wir überprüfen jeden Knoten und stellen sicher, dass die Max-Heap-Eigenschaft erfüllt ist. "
 
-    show rex at right ,half_size with dissolve
+    p "Falls ein Elternknoten kleiner ist als eines seiner Kinder, vertauschen wir die beiden und setzen die Überprüfung fort."
 
-    r "Ja, das hilft schon mal! Aber wie genau können wir diesen Heap dann für die Sortierung verwenden?"
+    p "Wir arbeiten uns dabei von unten nach oben durch den Baum. Warum? "
 
-    p "Sehr gute Frage! Der Max-Heap gibt uns die Möglichkeit, in jedem Schritt das größte verbleibende Element schnell zu finden und an die richtige Position im Array zu setzen."
-    p "Ich werde den Ablauf des Heapsort-Algorithmus Schritt für Schritt erklären, damit ihr seht, wie das funktioniert."
+    p "Weil ein Problem bei den unteren Knoten sofort Auswirkungen auf die darüberliegenden hat. Indem wir von unten beginnen, stellen wir sicher, dass die Struktur stabil bleibt."
+   
+#schritt 2
+    p "Schritt 2: Tauschen und Neuaufbau "
+    p "Sobald wir einen Max-Heap haben, können wir mit dem Sortieren beginnen. "
 
-    show rex at right , half_size with vpunch
+    p "Das größte Element – das Wurzelelement – wird mit dem letzten Element des Arrays getauscht. "
 
-    p "Schritt 1: Aufbau des Max-Heaps."
-    p "Der erste Schritt beim Heapsort besteht darin, das Eingabearray – also die Liste der zu sortierenden Zahlen – in einen Max-Heap umzuwandeln."
-    p  "Das bedeutet, dass wir die Elemente so anordnen, dass der größte Wert an der Wurzel steht und die Max-Heap-Eigenschaft für alle Eltern-Kind-Beziehungen gilt."
+    p "Dadurch bringen wir das größte Element an die richtige Position. "
 
-    r  "Und wie genau machen wir das? Ist das nicht aufwendig?"
+    p "Aber Achtung: Nach dem Tausch ist die Max-Heap-Eigenschaft verletzt. Deshalb wenden wir Heapify erneut an, diesmal auf den verkleinerten Heap, um die Struktur zu reparieren. "
 
-    p  "Gute Beobachtung, r! Um das Array in einen Max-Heap umzuwandeln, verwenden wir eine Methode namens 'Heapify'. Die Heapify-Prozedur überprüft jeden Knoten und stellt sicher, dass die Max-Heap-Eigenschaft für diesen Knoten und seine Kinder erfüllt ist."
-    p  "Wir arbeiten uns dabei von unten nach oben durch den Baum – beginnend bei den Knoten, die Kinder haben, und bewegen uns schrittweise zur Wurzel. Das ermöglicht uns, die Max-Heap-Eigenschaft für den gesamten Baum zu garantieren, ohne alles neu zu ordnen."
 
-# Visualisierung Anzeigen (ungeordneter Heap)
-    p "Hier seht ihr ein Beispiel eines Arrays vor dem Heapify-Prozess. Die Zahlen sind noch ungeordnet."
-    p "Nach dem Heapify-Prozess sieht der Baum jedoch so aus:"
-#Visualisierung Anzeigen (geordneter Heap)
-    show rex at right ,half_size with vpunch
-    r  "Okay, jetzt verstehe ich, wie der Max-Heap aussieht! Aber was machen wir dann damit?"
+    p "Schritt 2: Tauschen und Neuaufbau "
+    p "Sobald wir einen Max-Heap haben, können wir mit dem Sortieren beginnen. "
 
-    p  "Sehr gut, r. Das bringt uns zu Schritt 2."
-    p "Schritt 2: Tauschen und neu aufbauen."
+    p "Das größte Element – das Wurzelelement – wird mit dem letzten Element des Arrays getauscht. "
 
-    p "Da der größte Wert nun an der Wurzel steht, tauschen wir ihn mit dem letzten Element des Arrays."
-    p "Dadurch bringen wir das größte Element an die richtige Position im Array."
-    p "Nachdem wir diesen Tausch durchgeführt haben, reduzieren wir die Größe des Heaps um eins, weil das größte Element jetzt sortiert und fest an seiner Position ist."
+    p "Dadurch bringen wir das größte Element an die richtige Position. "
 
-    r  "Und was passiert dann mit dem Heap? Ist er dann nicht kaputt?"
+    p "Aber Achtung: Nach dem Tausch ist die Max-Heap-Eigenschaft verletzt. Deshalb wenden wir Heapify erneut an, diesmal auf den verkleinerten Heap, um die Struktur zu reparieren. "
 
-    p  "Genau, r! Nach dem Tausch kann die Max-Heap-Eigenschaft tatsächlich verletzt sein. Deshalb wenden wir die Heapify-Prozedur erneut auf die Wurzel an, um den Heap zu reparieren und sicherzustellen, dass die Max-Heap-Eigenschaft wiederhergestellt wird."
+#schritt 3
+    p "Schritt 3: Wiederholen bis zur vollständigen Sortierung "
+    p "Diesen Prozess – Tauschen, Reparieren und Verkleinern des Heaps – wiederholen wir so lange, bis alle Elemente sortiert sind. "
 
-#Visualisierung Anzeigen (Heapify vorher)
-    p "Hier tauschen wir das Wurzelelement mit dem letzten Element."
-    p "Da die Max-Heap-Eigenschaft dadurch verletzt wurde, wenden wir Heapify auf den Wurzelknoten an, um die Struktur zu reparieren."
-#Visualisierung Anzeigen(Heapify nachher)
+    p "Am Ende erhalten wir eine Liste in aufsteigender Reihenfolge. "
 
-    p "Nach dem erneuten Aufrufen von Heapify sieht der Heap wieder korrekt aus, und wir können den nächsten Schritt fortsetzen."
-    p "Schritt 3: Wiederholen, bis das gesamte Array sortiert ist."
-    p "Wir wiederholen den Prozess – das Wurzelelement mit dem letzten Element tauschen, die Heapgröße reduzieren und Heapify auf die Wurzel anwenden – bis das gesamte Array sortiert ist."
-    p "Am Ende ist das Array vollständig sortiert, und wir haben die Zahlen in aufsteigender Reihenfolge angeordnet."
-#Visualisierung Anzeigen (vollständige Sortierung der Liste)
-    r  "Wow, das ist echt clever! Aber warum ist Heapsort eigentlich so effizient?"
+    p "Vielleicht fragen Sie sich, warum Heapsort eine gute Wahl ist. Nun, Heapsort hat im besten, durchschnittlichen und schlechtesten Fall eine Zeitkomplexität von O(n log n). "
 
-    p  "Gute Frage, r! Der Heapsort-Algorithmus hat im besten, durchschnittlichen und schlechtesten Fall eine Zeitkomplexität von O(n log n), was bedeutet, dass er auch bei großen Datenmengen effizient bleibt."
-    p  "Im Gegensatz zu einigen anderen Algorithmen benötigt Heapsort außerdem nur eine konstante Menge an zusätzlichem Speicherplatz, da der gesamte Sortiervorgang direkt im Eingabearray durchgeführt wird. Das nennt man in-situ-Sortierung."
+    p "Das liegt daran, dass jeder Schritt – sei es der Aufbau des Heaps oder das Heapify – proportional zur Höhe des Baums arbeitet, was logarithmisch wächst. "
 
-    r  "Das klingt ziemlich nützlich! Gibt es Nachteile im Vergleich zu anderen Algorithmen?"
+    p "Ein weiterer Vorteil von Heapsort ist, dass er nur eine konstante Menge an zusätzlichem Speicherplatz benötigt. "
 
-    p  "Ja, tatsächlich. Ein Nachteil von Heapsort ist, dass er keine stabile Sortierung bietet. Das bedeutet, dass gleiche Werte ihre relative Reihenfolge im Array verlieren können."
-    p  "Außerdem ist Heapsort keine Divide-and-Conquer-Methode wie Quicksort oder Mergesort. Heapsort teilt das Array nicht in kleinere Teile auf, sondern arbeitet durch das kontinuierliche Wiederherstellen der Heap-Struktur, um die Sortierung zu erreichen."
+    p "Der gesamte Sortiervorgang erfolgt direkt im Eingabearray. Dies nennt man in-situ-Sortierung, und es unterscheidet Heapsort von vielen anderen Algorithmen wie Mergesort. "
+
+    p "Aber nichts ist perfekt. Heapsort hat auch Schwächen. "
+
+    p "Eine davon ist, dass der Algorithmus nicht stabil ist. Das bedeutet, dass gleiche Werte ihre relative Reihenfolge verlieren können. "
+
+    p "Außerdem ist Heapsort keine Divide-and-Conquer-Methode wie Quicksort oder Mergesort. "
+
+    p "Statt das Array in kleinere Teile zu zerlegen, arbeiten wir direkt mit der Heap-Struktur. "
+
+    p "Zusammengefasst: Heapsort basiert auf drei Schritten – dem Aufbau eines Max-Heaps, dem Tauschen des größten Elements und dem Wiederherstellen der Max-Heap-Eigenschaft, bis das Array vollständig sortiert ist. "
+
+    p "Mit diesem Wissen sollten Sie in der Lage sein, Heapsort eigenständig zu implementieren und seine Effizienz zu verstehen. "
+
+    p "Aber denken Sie daran, der Schlüssel liegt im Verständnis der Max-Heap-Eigenschaft und der korrekten Anwendung von Heapify. "
+
+
+
+
 
 #Abschluss Monolog (Begleitete Simulation)
 
@@ -407,7 +420,7 @@ label D_start :
     x "Rex nähert sich der Zeitmaschine. Er legt seine Hand auf das Bedienfeld, das sich mit einem Zischen öffnet und eine schwindelerregende Anzahl von futuristisch aussehenden Schaltkreisen und Schalttafeln offenbart."
     x "Rexs Augen scannen die komplizierten Abläufe, bis sie auf einem Abschnitt mit der Aufschrift 'Manuelle Zeitfeld überbrückung' landen."
     r "Bingo. Sieht so aus, als würde hier die Magie passieren." 
-    # [Proceed to the interactive HeapSort ]
+    jump minigame
 
 
 # jump to interactive heapsort from here
@@ -747,7 +760,7 @@ label E_start :
     x "Rex approaches the Time Machine. He places his hand on the control panel, and it slides open with a hiss, revealing a dizzying array of futuristic-looking circuits and panels."
     x "Rex's eyes scan the intricate workings until they land on a section labeled 'Manual Temporal Field Override'."
     r "Bingo. Looks like this is where the magic happens." 
-    # [Proceed to the interactive HeapSort ]
+    jump minigame
 
 
 
@@ -821,485 +834,6 @@ label E_start :
 #Bolt Spiral: (lachend) "Natürlich. Aber mach dich darauf gefasst, dass die nächste Mission bald beginnt. Wissen ruht nie!"
 
 
-
-    
-
-
-
-    label intro:
-        scene Classroom
-        show professor at right ,half_size with dissolve
-
-        p "Im Laufe der Übung könnt ihr die einzelnen Schritte mit den Pfeiltasten durchlaufen, um genau zu beobachten, wie der Heap sich bei jedem Schritt verändert."
-        p "Ich werde bei jedem Schritt erklären, warum wir ihn durchführen und was im Hintergrund passiert."
-        p "Lasst uns also in die Simulation einsteigen und Heapsort in Aktion sehen!"
-
-# Potenzielle Simulation an einem Beispiel. 
-        p "Jetzt solltet ihr genügend wissen zu dem Heapsort-Algorithmus gesammelt haben, um euch den Kontrollfragen zu stellen."
-        
-
-    label q1:
-        call lifecount
-        p "Kommen wir zur ersten Frage!"
-        p "Was ist die Hauptidee hinter dem Heapsort-Algorithmus?"
-
-        menu:
-            "Den Eingabedatensatz in einen geordneten Baum umzuwandeln, um das größte Element schnell zu finden.":
-                p "Ja genau, der Eingabedatensatz wird in einen geordneten Baum umgewandelt, um das größte Element schnell zu finden."
-                jump win1
-
-            "Den Eingabedatensatz in kleinere Teile aufzuteilen und diese unabhängig zu sortieren.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q1
-                else: 
-                    jump game_over
-
-            "Jedes Element mit jedem anderen zu vergleichen und in aufsteigender Reihenfolge anzuordnen.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q1
-                else: 
-                    jump game_over
-
-            "Eine Sortierung durch wiederholtes Vergleichen benachbarter Elemente.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q1
-                else: 
-                    jump game_over
-
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q1
-    return
-
-    label win1:
-        jump q2
-
-    label q2:
-        scene backcont
-        show announcer at right with dissolve
-        call lifecount
-        p "Welche Aussage beschreibt die Max-Heap-Eigenschaft korrekt?"
-
-        menu:
-            "Jeder Kindknoten hat einen größeren Wert als sein Elternknoten.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q2
-                else: 
-                    jump game_over
-    
-            "Jeder Elternknoten hat einen größeren Wert als seine Kindknoten.":
-                p "Ja genau jeder Elternknoten hat einen größeren Wert als seine Kindknoten."
-                jump q3
-
-            "Die Knoten sind in zufälliger Reihenfolge angeordnet.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q2
-                else: 
-                    jump game_over
-            
-            "Der linke Kindknoten ist immer kleiner als der rechte Kindknoten.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q2
-                else: 
-                    jump game_over
-
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q2
-    return
-        
-
-
-
-    label q3:
-        p "Wie lautet die Zeitkomplexität des Heapsort-Algorithmus im besten, durchschnittlichen und schlechtesten Fall?"
-
-        menu:
-            "O(n)":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q3
-                else: 
-                    jump game_over
-            
-            "O(n log (n))":
-                p "Ja genau die Zeitkomplexität beträgt immer O(n log (n))."
-                jump q4
-            
-            "O(n^2)":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q3
-                else: 
-                    jump game_over
-            
-            "O(log n)":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal."
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q3
-                else: 
-                    jump game_over
-            
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q3
-    return
-            
-    label q4:
-        p "Welche Aufgabe erfüllt die Heapify-Prozedur im Heapsort-Algorithmus?"
-
-        menu:
-
-            "Sie vertauscht das größte und kleinste Element im Array.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q4
-                else: 
-                    jump game_over
-
-            "Sie vertauscht das größte und kleinste Element im Array.":
-                p "Ja genau die Heapify-Prozedur überprüft und stellt sicher, dass die Max-Heap-Eigenschaft eines Knotens und seinen Kinder gewahrt bleibt."
-                jump q5
-            
-            "Sie teilt das Array in kleinere Unterarrays auf.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q4
-                else: 
-                    jump game_over
-            
-            "Sie entfernt das kleinste Element aus dem Heap.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q4
-                else: 
-                    jump game_over
-            
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q4
-    return
-
-    label q5:
-        p "Schritte des Heapsort-Algorithmus"
-
-        menu:
-
-            "Aufbau eines Max-Heaps aus dem Eingabearray.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q5
-                else: 
-                    jump game_over
-            
-            "Aufteilen des Arrays in mehrere Teilbäume.":
-                p "Ja genau, das Aufteilen des Arrays in mehrere Teilbäume ist kein Teil des Algorithmus."
-                jump q6
-            
-            "Vertauschen des größten Elements mit dem letzten Element des Heaps.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q5
-                else: 
-                    jump game_over
-            
-            "Wiederholtes Anwenden von Heapify nach jedem Tausch.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q5
-                else: 
-                    jump game_over
-            
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q5
-    return
-    
-    label q6:
-        p "Welchen Speicherbedarf hat der Heapsort-Algorithmus?"
-
-        menu:
-
-            "O(n) zusätzlicher Speicher":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q6
-                else: 
-                    jump game_over
-            
-            "O(n^2) zusätzlicher Speicher":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q6
-                else: 
-                    jump game_over
-
-            "O(1) zusätzlicher Speicher":
-                p "Ja genau, das Aufteilen des Arrays in mehrere Teilbäume ist kein Teil des Algorithmus."
-                jump q7
-            
-            "O(log n) zusätzlicher Speicher":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q6
-                else: 
-                    jump game_over
-
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q6
-    return
-
-    label q7:
-        p "Wann ist es sinnvoll, Heapsort gegenüber Quicksort zu verwenden?"
-
-        menu:
-
-            "Wenn der Speicherverbrauch minimiert werden muss.":
-                p "Ja genau, man sollte Heapsort verwenden, wenn der Speicherverbrauch minimiert werden muss."
-                jump q8
-            
-            "Wenn die Daten bereits fast sortiert sind.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q7
-                else: 
-                    jump game_over
-
-            "Wenn eine stabile Sortierung notwendig ist.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q7
-                else: 
-                    jump game_over
-            
-            "Wenn die Eingabegröße klein ist.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q7
-                else: 
-                    jump game_over
-
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q7
-    return
-
-    label q8:
-        p "Was ist die richtige Reihenfolge der folgenden Schritte im Heapsort-Algorithmus?"
-        p " 1. Vertausche das Wurzelelement mit dem letzten Element des Heaps.
-            2. Baue einen Max-Heap aus dem Eingabearray auf.
-            3. Wende die Heapify-Prozedur an, um die Max-Heap-Eigenschaft wiederherzustellen.
-            4. Reduziere die Heapgröße um eins. "
-
-        menu:
-
-            "2 → 1 → 4 → 3":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q8
-                else: 
-                    jump game_over
-            
-            "1 → 2 → 3 → 4":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q8
-                else: 
-                    jump game_over
-
-            "2 → 1 → 3 → 4":
-                p "Ja genau, genau das ist die richtige Reihenfolge."
-                jump q9a
-
-            "3 → 2 → 1 → 4":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q8
-                else: 
-                    jump game_over
-            
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q8
-    return
-        
-    label q9a:
-        p "Welche der folgenden Aussagen ist richtig?"
-
-        menu:
-
-            "Heapsort benötigt in der Regel weniger Speicher als Quicksort.":
-                p "Ja genau, Heapsort benötigt in der Regel weniger Speicher als Quicksort."
-                jump q9b
-            
-            "Quicksort ist stabil, Heapsort jedoch nicht.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q9a
-                else: 
-                    jump game_over
-            
-            "Heapsort ist im Durchschnitt schneller als Quicksort.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q9a
-                else: 
-                    jump game_over
-            
-            "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
-                p "Ja genau, Heapsort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall."
-                jump q9c
-
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q9a
-    return
-
-    label q9b:
-        p "Welche Aussage ist wahr?"
-
-        menu:
-
-            "Quicksort ist stabil, Heapsort jedoch nicht.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q9a
-                else: 
-                    jump game_over
-            
-            "Heapsort ist im Durchschnitt schneller als Quicksort.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q9a
-                else: 
-                    jump game_over
-
-            "Quicksort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall.":
-                p "Ja genau, Heapsort hat eine schlechtere Zeitkomplexität als Heapsort im schlechtesten Fall."
-                jump q9c
-
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q9b
-    return
-        
-    label q9c:
-        p "Welche Aussage stimmt noch?"
-
-        menu:
-
-            "Heapsort benötigt in der Regel weniger Speicher als Quicksort.":
-                p "Ja genau, Heapsort benötigt in der Regel weniger Speicher als Quicksort ."
-                jump q10
-
-            "Quicksort ist stabil, Heapsort jedoch nicht.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q9a
-                else: 
-                    jump game_over
-
-            "Heapsort ist im Durchschnitt schneller als Quicksort.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q9a
-                else: 
-                    jump game_over
-
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q9c
-    return
-
-    label q10:
-        p "Welcher Fehler kann zu einer fehlerhaften Sortierung bei Heapsort führen?"
-
-        menu:
-
-            "Das Vertauschen des größten Elements mit dem ersten Element statt mit dem letzten.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q10
-                else: 
-                    jump game_over
-
-            "Das Nicht-Anwenden von Heapify nach dem Tausch der Wurzel.":
-                p "Ja genau, das Nicht-Anwenden von Heapify nach dem Tausch der Wurzel, kann zu einer Fehlerhaften Sortierung führen."
-                jump win_game
-
-            "Das Vertauschen der Kindknoten im Heap während des Heapify-Prozesses.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q10
-                else: 
-                    jump game_over
-            
-            "Das erneute Aufbauen des Heaps nach jedem Sortierschritt.":
-                p "Nein, dass ich leider nicht richtig. Versuch es nochmal"
-                $ life_counter -= 1
-                if life_counter > 0:
-                    jump q10
-                else: 
-                    jump game_over
-
-            "Ich brauche einen Hinweis!":
-                p "Hast du mir überhaupt zugehört?"
-                jump q10
-    return
-
-    label lifecount:
-        if life_counter == 3:
-            show three at right with dissolve
-        elif life_counter == 2:
-            show two at right with dissolve
-        elif life_counter == 1:
-            show one at right with dissolve
-        else:
-            show zero at right with dissolve
-        return
-
-    label hint_counter:
-        if hint_counter == 3:
-            show text""    # there is something missing here
             
 label game_over:
     # Scene 7 : Too far into the future
@@ -1324,6 +858,9 @@ label game_over:
     b "Rex, du musst sofort die Zeitmaschine reaktivieren! Die Maschinen in dieser Zeit könnten feindlich sein!"
 
     r  "Ich hasse es, wenn du recht hast, Doc! Los geht's, TM-510, bring mich hier raus!"
+
+    return
+
 
     #Scene 7: Too Far back in the past
 
@@ -1353,7 +890,7 @@ label game_over:
 
 #Scene 8: Happy Ending
 
-label win_game :
+label victory :
 
     x "Die Zeitreise hat geklappt "
     scene command center 3670
@@ -1373,3 +910,462 @@ label win_game :
     r "Ich? Ein Held? Na, wenn das so ist… können wir jetzt endlich eine Pause machen? Ich brauche ein Sandwich."
 
     b "Natürlich. Aber mach dich darauf gefasst, dass die nächste Mission bald beginnt. Wissen ruht nie!"
+
+    return
+
+
+label minigame:
+    show rex
+    scene time_machine_outside_past_02 #time machine outside 2024
+    r "lets go home"
+    scene timemachine #time machine inside scene
+    # boom sound effect
+    scene timemachine02_alarm
+    r "um... bolt, you might want to take a look at this"
+    b "great scotts... the heapsortinator is broken, you have to fix it"
+    r "cringe but ok"
+    r "i guess i gotta look on the heapsortinator"
+    b "sort it based on max heap"
+
+    label mg1:
+        call lifecount2
+        scene mg1_n #minigame scrambled
+        b "put the stuff on a heaptree"
+        scene mg2_n #minigame heaptree
+        b "now do the steps for heapify"
+
+        menu:
+            "6 to 0":
+                #scene mg60_n  #minigame heaptree 6 to 0
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg1
+                else: 
+                    jump game_over
+    
+            "1 to 3":
+                #scene mg13_n #minigame heaptree 1 to 3
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg1
+                else: 
+                    jump game_over
+
+            "7 to 0":
+                scene mg70_n #minigame heaptree 7 to 0
+                #play correct ding"
+                b "that seems right me boi"
+                jump mg2
+
+            "This seems correct already":
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg1
+                else: 
+                    jump game_over
+    return
+
+    label mg2:
+        call lifecount2
+        b "what's next"
+
+        menu:
+            "6 to 7":
+                #scene mg76_n #minigame heaptree 7 to 6
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg2
+                else: 
+                    jump game_over
+    
+            "3 to 1":
+                #scene mg31_n #minigame heaptree 3 to 1
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg2
+                else: 
+                    jump game_over
+
+            "3 to 7":
+                scene mg37_n #minigame heaptree 3 to 7
+                #play correct ding"
+                b "that seems right me boi"
+                jump mg3
+
+            "This seems correct already":
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg2
+                else:
+                    jump game_over
+    return
+
+    label mg3:
+        call lifecount2
+        b "what's next"
+
+        menu:
+            "3 to 0":
+                #scene mg03_n #minigame heaptree 0 to 3
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg3
+                else: 
+                    jump game_over
+    
+            " 1 to 7":
+                #scene mg17_n #minigame heaptree 1 to 7
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg3
+                else: 
+                    jump game_over
+
+            "6 to 3":
+                scene mg63_n #minigame heaptree 6 to 3
+                #play correct ding"
+                b "that seems right me boi"
+                jump mg4
+
+            "This seems correct already":
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg3
+                else: 
+                    jump game_over
+    return
+
+    label mg4:
+        call lifecount2
+        b "what's next"
+
+        menu:
+            "1 to 7":
+                #scene mg17 #minigame heaptree 1 to 7
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg4
+                else: 
+                    jump game_over
+    
+            "3 to 6":
+                #scene mg36 #minigame heaptree 3 to 6
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg4
+                else: 
+                    jump game_over
+
+            "0 to 7":
+                scene mg07_n #minigame heaptree 0 to 7
+                b "that seems right me boi"
+                jump mg5   
+
+            "This seems correct already":
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg4
+                else: 
+                    jump game_over          
+    return
+
+    label mg5:
+        call lifecount2
+        b "what's next"
+        menu:
+            "0 to 1":
+                #scene mg01w #minigame heaptree 1 to 0
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg5
+                else: 
+                    jump game_over
+    
+            "7 to 6":
+                #scene mg76_n #minigame heaptree 7 to 6
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg5
+                else: 
+                    jump game_over
+
+            "0 to 6":
+                scene mg06_n #minigame heaptree 0 to 6
+                b "that seems right me boi"
+                jump mg6   
+
+            "This seems correct already":
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg5
+                else: 
+                    jump game_over          
+    return
+
+    label mg6:
+        call lifecount2
+        b "what's next"
+        menu:
+            "7 to 0":
+                #scene mg70w #minigame heaptree 1 to 0
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg6
+                else: 
+                    jump game_over
+    
+            "1 to 6":
+                #scene mg16w #minigame heaptree 7 to 6
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg6
+                else: 
+                    jump game_over
+
+            "0 to 3":
+                scene mg03_n #minigame heaptree 0 to 3
+                b "that seems right me boi"
+                jump mg7   
+
+            "This seems correct already":
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg6
+                else: 
+                    jump game_over          
+    return
+
+    label mg7:
+        call lifecount2
+        b "what's next"
+        menu:
+            "1 to 6":
+                #scene mg16_n #minigame heaptree 1 to 6
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg7
+                else: 
+                    jump game_over
+    
+            "7 to 3":
+                #scene mg73_n #minigame heaptree 3 to 7
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg7
+                else: 
+                    jump game_over
+
+            "0 to 6":
+                scene mg062_n #minigame heaptree 0 to 
+                b "that seems right me boi"
+                jump mg8   
+
+            "This seems correct already":
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg7
+                else: 
+                    jump game_over          
+    return
+
+    label mg8:
+        call lifecount2
+        b "what's next"
+        menu:
+            "1 to 0":
+                #scene mg10_n #minigame heaptree 1 to 0
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg8
+                else: 
+                    jump game_over
+    
+            "6 to 1":
+                #scene mg61_n #minigame heaptree 6 to 1
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg8
+                else: 
+                    jump game_over
+
+            "0 to 3":
+                scene mg032_n #minigame heaptree 0 to 
+                b "that seems right me boi"
+                jump mg9   
+
+            "This seems correct already":
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg8
+                else: 
+                    jump game_over          
+    return
+
+    label mg9:
+        call lifecount2
+        b "what's next"
+        menu:
+            "6 to 0":
+                #scene mg60w #minigame heaptree 1 to 0
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg9
+                else: 
+                    jump game_over
+    
+            "7 to 0":
+                #scene mg70w2 #minigame heaptree 7 to 6
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg9
+                else: 
+                    jump game_over
+
+            "1 to 3":
+                scene mg13_n #minigame heaptree 0 to 
+                b "that seems right me boi"
+                jump mg10   
+
+            "This seems correct already":
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg5
+                else: 
+                    jump game_over          
+    return
+
+    label mg10:
+        call lifecount2
+        b "what's next"
+        menu:
+            "6 to 7":
+                #scene mg67w2 #minigame heaptree 1 to 0
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg10
+                else: 
+                    jump game_over
+    
+            "3 to 1":
+                #scene mg31w #minigame heaptree 7 to 6
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg10
+                else: 
+                    jump game_over
+
+            "0 to 1":
+                scene mg01_n #minigame heaptree 0 to 
+                b "that seems right me boi"
+                jump mg11   
+
+            "This seems correct already":
+                #play explosion sound effect
+                b "i don't think that's right, careful now"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg10
+                else: 
+                    jump game_over          
+    return
+
+    label mg11:
+        call lifecount2
+        r "the correct array is"
+        menu:
+            "7, 6, 3, 1, 0":
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg11
+                else: 
+                    jump game_over
+    
+            "6, 1, 0, 3, 7":
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg11
+                else: 
+                    jump game_over
+
+            "0, 1, 3, 6, 7":
+                jump victory   
+
+            "7, 6, 1, 3, 0":
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg11
+                else: 
+                    jump game_over          
+    return
+
+    label lifecount2:
+            if life_counter1 == 3:
+                show three at right with dissolve
+            elif life_counter1 == 2:
+                show two at right with dissolve
+            elif life_counter1 == 1:
+                show one at right with dissolve
+            else:
+                show zero at right with dissolve
+            return
+
+
+    return
