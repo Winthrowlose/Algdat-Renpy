@@ -928,7 +928,7 @@ label minigame:
     b "sort it based on max heap"
 
     label mg1:
-        call lifecount2 from _call_lifecount2
+        call lifecount2
         scene mg1_n #minigame scrambled
         b "put the stuff on a heaptree"
         scene mg2_n #minigame heaptree
@@ -972,7 +972,7 @@ label minigame:
     return
 
     label mg2:
-        call lifecount2 from _call_lifecount2_1
+        call lifecount2
         b "what's next"
 
         menu:
@@ -1013,7 +1013,7 @@ label minigame:
     return
 
     label mg3:
-        call lifecount2 from _call_lifecount2_2
+        call lifecount2
         b "what's next"
 
         menu:
@@ -1054,7 +1054,7 @@ label minigame:
     return
 
     label mg4:
-        call lifecount2 from _call_lifecount2_3
+        call lifecount2
         b "what's next"
 
         menu:
@@ -1094,7 +1094,7 @@ label minigame:
     return
 
     label mg5:
-        call lifecount2 from _call_lifecount2_4
+        call lifecount2
         b "what's next"
         menu:
             "0 to 1":
@@ -1133,7 +1133,7 @@ label minigame:
     return
 
     label mg6:
-        call lifecount2 from _call_lifecount2_5
+        call lifecount2
         b "what's next"
         menu:
             "7 to 0":
@@ -1172,7 +1172,7 @@ label minigame:
     return
 
     label mg7:
-        call lifecount2 from _call_lifecount2_6
+        call lifecount2
         b "what's next"
         menu:
             "1 to 6":
@@ -1211,7 +1211,7 @@ label minigame:
     return
 
     label mg8:
-        call lifecount2 from _call_lifecount2_7
+        call lifecount2
         b "what's next"
         menu:
             "1 to 0":
@@ -1250,7 +1250,7 @@ label minigame:
     return
 
     label mg9:
-        call lifecount2 from _call_lifecount2_8
+        call lifecount2
         b "what's next"
         menu:
             "6 to 0":
@@ -1289,7 +1289,7 @@ label minigame:
     return
 
     label mg10:
-        call lifecount2 from _call_lifecount2_9
+        call lifecount2
         b "what's next"
         menu:
             "6 to 7":
@@ -1328,7 +1328,7 @@ label minigame:
     return
 
     label mg11:
-        call lifecount2 from _call_lifecount2_10
+        call lifecount2
         r "the correct array is"
         menu:
             "7, 6, 3, 1, 0":
