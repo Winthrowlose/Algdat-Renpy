@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 934: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    scene mg1_n 
-    ^
+File "game/script.rpy", line 452: end of line expected.
+    show rex at tiny, righ 0.8 with dissolve
+                           ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Dec  5 10:13:08 2024
+Thu Dec 12 11:28:22 2024

@@ -17,6 +17,8 @@ transform half_size:
     zoom 0.5 #adjust as required
 transform quater_size:
     zoom 0.25 #adjust as required
+transform tiny: 
+    zoom 0.1 #adjust as required
 # The game starts here.
 
 label start:
@@ -178,8 +180,9 @@ label D_start :
     #Music missing
 
     scene time_machine_outside
+    show rex at quater_size, left with dissolve
 
-    r "Ist das?"
+    r "Ist das?"    #Rex Soyface pointing 
 
     b "Ja, das ist es tatsächlich, ein Ort, den die meisten Menschen meiden, perfekt,
     um eine Zeitmaschine zu verstecken"
@@ -191,11 +194,18 @@ label D_start :
     Cloaking Device auf 2024 stellen, kurz bevor wir ankommen."
 
     b "Okay, Rex, alles sieht gut aus und scheint in Ordnung zu sein. Viel Glück bei deiner
-    Mission und vergiss nicht, dein Tarngerät einzuschalten."    
+    Mission und vergiss nicht, dein Tarngerät einzuschalten."  
+
+    hide rex
+    show rex_happy at half_size,left with dissolve 
 
     r "Wird gemacht, Doc!"
 
     x "Und damit verlässt Doctor Bolt Spiral die TM510 und Rex setzt seinen Weg fort."
+    hide rex_happy
+
+    scene timemachine 
+    show rex at half_size,left 
 
     x "Etwa eine Stunde nach Beginn der Reise..."
 
@@ -206,17 +216,22 @@ label D_start :
 
     r "...schlafen"
 
+    hide rex
+
     x "Und so kam es auch, Rex schlief während der Reise durch Raum und Zeit ein."
 
     #Alarmgeräusche
 
     x "Zielort nähert sich. Tarnvorrichtung akiviert!"
 
+    show rex at half_size, right with dissolve
+
     r "Mist, ich muss eingeschlafen sein. Ich habe vergessen meine Tarnung zu aktivieren."
     
     r "Anscheinend gibt es aber eine automatische Funktion, danke Doc!"
 
     scene time_machine_outside_past_02
+    show rex at right,tiny with dissolve
 
     r "Moment mal, der Doc hat diese Autofunktion nie erwähnt, ist die überhaupt sicher?"
 
@@ -254,11 +269,16 @@ label D_start :
 
     b "Wasser ?"
 
+    hide rex
+    show rex_angry at right,tiny
+
     r "Ja , Wasser , ich bin auf einer Insel in einem Teich"
 
     b "Nun , mein vorschlag ist das schwimmen"
 
     r "wollte ich gerade tun !"
+
+    hide rex_angry with dissolve
 
     x "Rex schwimmt durch den Teich und beginnt seine suche"
 
@@ -266,10 +286,12 @@ label D_start :
 
     scene clothing_store
 
-    show rex at half_size , right with dissolve
+    show rex_angry at half_size , right with dissolve
 
     x "Rex betritt zitternd einen Kleidungsladen in seinem nassen Overall. Nervös sucht er nach passender und stylischer Kleidung."
     x  "Er stößt auf einen großen, imposanten Mann mit einem ordentlich gestutzten Bart und einer schwarzen Tweedjacke. Der Mann zieht eine Augenbraue hoch und mustert Rex von oben bis unten."
+    hide rex_angry 
+    show rex at half_size , right 
     show professor at half_size, left with dissolve
     p "Ich habe dich hier noch nie zuvor gesehen . Bist du einer der neuen Studenten?"
     r "Uh, Ja... sowas in die richtung."
@@ -279,14 +301,23 @@ label D_start :
     show bolt at half_size, left with dissolve
     b "Rex! das ist er , das ist der Professor!"
     $ name_p = "Professor"
-    r  "DoK, nicht so laut!"
+    hide rex
+    show rex_angry at half_size , right
+    r  "Dok, nicht so laut!"
     b "Oh, richtig. Ahem. Folge ihm, Rex! Er ist der Schlüssel zum Heapsort wissen!"
     hide bolt
     show professor  at half_size, left with dissolve
+    hide rex_angry
+    show rex at half_size , right
 
     r  "Nett sie kennen zu lernen , aber ich muss jetzt los"
     x "Rex versucht ungeschickt dem Professor zu folgen."
+    hide rex
+    show rex_sithlord at half_size , right with dissolve
     p "Moment mal, Junge! Wozu die Eile?"
+
+    hide rex_sithlord
+    show rex at half_size , right with dissolve
 
     r "Ich .. uh.. "
     p  "falls du das 13.15 Seminar suchst kannst du mir einfach folgen ."
@@ -405,7 +436,7 @@ label D_start :
 #Abschluss Monolog (Begleitete Simulation)
 
 
-    
+    show professor_happy at left ,half_size with move
     x "Professor Black schließt seine Vorlesung mit einem breiten Grinsen ab."
     p  "...und damit ist die heutige Vorlesung über Sortieralgorithmen beendet. "
     p  "Sie mögen jetzt nicht besonders nützlich erscheinen... "
@@ -418,7 +449,7 @@ label D_start :
 # Scene 6 : Heapsort to the rescue
 
     scene time_machine_outside_past
-    show rex at half_size, right with dissolve
+    show rex at tiny, right with dissolve
     # Rex stands before the TM-510
     r "Okay, der Doc hat gesagt, dass Heapsort der Schlüssel ist... mal sehen, ob ich das nicht herausfinden kann."
     x "Rex nähert sich der Zeitmaschine. Er legt seine Hand auf das Bedienfeld, das sich mit einem Zischen öffnet und eine schwindelerregende Anzahl von futuristisch aussehenden Schaltkreisen und Schalttafeln offenbart."
@@ -841,7 +872,7 @@ label E_start :
             
 label game_over:
     # Scene 7 : Too far into the future
-    scene game_over
+    scene game_over_future
     show rex  at right , half_size with dissolve
 
 
@@ -850,6 +881,8 @@ label game_over:
     r  "Was… was ist hier passiert? Das ist nicht 3670!"
 
     T   "Fehler bei der Zielzeit. Angekommen: Jahr 5000."
+
+    show rex_sithlord  at right , half_size with dissolve
 
     b  "Rex, was hast du getan?! Du bist zu weit in die Zukunft gereist! Unsere Berechnungen zeigen, dass die Menschheit in dieser Zeit vollständig durch Maschinen ersetzt wurde."
 

@@ -1,32 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 914, in script call
-    call lifecount2
-  File "game/script.rpy", line 1343, in script
-    if life_counter1 == 3:
-  File "game/script.rpy", line 1343, in <module>
-    if life_counter1 == 3:
-NameError: name 'life_counter1' is not defined
+  File "game/script.rpy", line 452, in script
+    show rex at tiny, 0.8 with dissolve
+TypeError: 'float' object is not callable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 914, in script call
-    call lifecount2
-  File "game/script.rpy", line 1343, in script
-    if life_counter1 == 3:
-  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 1843, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 1343, in <module>
-    if life_counter1 == 3:
-NameError: name 'life_counter1' is not defined
+  File "game/script.rpy", line 452, in script
+    show rex at tiny, 0.8 with dissolve
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 1074, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\exports\displayexports.py", line 489, in show
+    img = i(img) # type: ignore
+TypeError: 'float' object is not callable
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 Heapsort 1.0
-Thu Dec  5 06:07:39 2024
+Thu Dec 12 11:28:07 2024
