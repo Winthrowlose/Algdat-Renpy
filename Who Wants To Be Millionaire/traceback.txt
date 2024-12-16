@@ -1,24 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 452, in script
-    show rex at tiny, 0.8 with dissolve
-TypeError: 'float' object is not callable
+  File "game/script.rpy", line 910, in script
+    t  "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
+Exception: Sayer 't' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 452, in script
-    show rex at tiny, 0.8 with dissolve
-  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 1111, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 1074, in show_imspec
-    renpy.config.show(name,
-  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\exports\displayexports.py", line 489, in show
-    img = i(img) # type: ignore
-TypeError: 'float' object is not callable
+  File "game/script.rpy", line 910, in script
+    t  "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 575, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 464, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 't' is not defined.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 Heapsort 1.0
-Thu Dec 12 11:28:07 2024
+Mon Dec 16 14:51:03 2024
