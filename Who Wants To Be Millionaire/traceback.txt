@@ -1,22 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 71, in script
-    jump end
-ScriptError: could not find label 'end'.
+  File "game/script.rpy", line 452, in script
+    show rex at tiny, 0.8 with dissolve
+TypeError: 'float' object is not callable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 71, in script
-    jump end
-  File "C:\Users\Castra\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1699, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\Castra\Downloads\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'end'.
+  File "game/script.rpy", line 452, in script
+    show rex at tiny, 0.8 with dissolve
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 1074, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\exports\displayexports.py", line 489, in show
+    img = i(img) # type: ignore
+TypeError: 'float' object is not callable
 
-Windows-10-10.0.22631 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
-Who Wants To Be Millionaire 1.0
-Mon Oct 28 11:30:38 2024
+Heapsort 1.0
+Thu Dec 12 11:28:07 2024

@@ -1,0 +1,73 @@
+
+define config.developer = True
+
+init python:
+    import random
+
+    class HeapSortGame:
+        def __init__(self):
+            # Generate a random array to sort
+            self.original_heap = [random.randint(1, 99) for _ in range(7)]
+            self.heap = list(self.original_heap)
+            self.correct_heap = sorted(self.original_heap, reverse=True)  # Max-Heap
+
+        def is_sorted(self):
+            return self.heap == self.correct_heap
+
+
+init python:
+    class DraggableItem(Drag):
+        def __init__(self, index, value, **kwargs):
+            Drag.__init__(self, draggable=True, **kwargs)
+            self.index = index
+            self.value = value
+
+        def drag_handle(self, drags, drop):
+            self.draggable = True
+            return True
+
+    class DropTarget(Drop):
+        def __init__(self, index, game, **kwargs):
+            Drop.__init__(self, **kwargs)
+            self.index = index
+            self.game = game
+
+        def drag_handle(self, drags):
+            if len(drags) == 1:
+                drag = drags[0]
+                # Swap the dragged item with the one at this index
+                self.game.heap[self.index], self.game.heap[drag.index] = (
+                    self.game.heap[drag.index],
+                    self.game.heap[self.index],
+                )
+                return True
+            return False
+
+label start:
+    scene bg room
+
+    python:
+        game = HeapSortGame()
+
+    label heap_sort_game:
+        $ game = HeapSortGame()
+
+        
+        screen heap_sort_screen():
+            text "Rearrange the numbers to form a max-heap!" at truecenter
+            frame:
+                xalign 0.5
+                yalign 0.6
+                has hbox
+
+                for i, value in enumerate(game.heap):
+                    drag:
+                        drag_name "item{}".format(i)
+                        drag_child Text(str(value), size=40, xalign=0.5, yalign=0.5)
+                        draggable True
+
+                    drop:
+                        drop_name "slot{}".format(i)
+                        child Text(str(game.heap[i]), size=40, xalign=0.5)
+
+    return
