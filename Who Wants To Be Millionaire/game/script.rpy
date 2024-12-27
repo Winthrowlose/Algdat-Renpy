@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -695,85 +695,82 @@ label E_start :
     b "Rex! Pay attention! Here comes Heapsort!"
     show professor at half_size, right with dissolve
     x "Rex sits up abruptly and fixes Professor Black with a focused stare."
-    p "Heapsort is an efficient algorithm based on the heap data structure..."
 
 #heapsort explain here
 
     scene classroom
-    
-    p "Willkommen zum heutigen Thema: Heapsort!"
 
     show professor at right , half_size with dissolve
 
-    p "Heapsort ist ein effizienter, vergleichsbasierter Sortieralgorithmus, der uns hilft, eine Liste von Zahlen in aufsteigender Reihenfolge zu ordnen."
-    p "Er basiert auf einer speziellen Datenstruktur, dem sogenannten Heap, und unterscheidet sich dadurch von anderen Algorithmen wie Quicksort oder Mergesort."
-    p "Lasst uns zuerst klären, was ein Heap eigentlich ist und wie er funktioniert."
+    p "Heapsort is an efficient, comparison-based sorting algorithm that helps us organise a list of numbers in ascending order."
+    p "It is based on a special data structure, the so-called heap, and thus differs from other algorithms such as Quicksort or Mergesort."
+    p "First, let's clarify what a heap actually is and how it works."
 
     show professor at left ,half_size with move
 
     show rex at right, half_size with dissolve
 
-    r "[name_p], was genau ist ein Heap? Ich habe den Begriff schon gehört, aber wie sieht so eine Struktur eigentlich aus?"
+    r "[name_p], What exactly is a heap? I've heard the term before, but what does such a structure actually look like?"
 
-    p "Gute Frage,  Rex ! Ein Heap ist eine spezielle Art binärer Baum, der eine feste Struktur einhält: Jeder Elternknoten ist größer als seine Kindknoten. Das bedeutet, dass der größte Wert im Baum immer an der Spitze, also an der Wurzel, steht."
-    p "Wir nennen diese Struktur einen Max-Heap. Das ist wichtig, weil wir beim Heapsort genau diese Max-Heap-Eigenschaft nutzen, um das größte Element im Baum zu identifizieren und an die richtige Stelle im Array zu bringen."
-    p  "Verstanden?"
+    p "Good question, Rex! A heap is a special type of binary tree that maintains a fixed structure: each parent node is larger than its child nodes. This means that the largest value in the tree is always at the top, at the root."
+    p "We call this structure a max heap. This is important because we use exactly this max heap property when heapsorting to identify the largest element in the tree and to put it in the correct place in the array."
+    p  "Got it?"
 
     show rex at right ,half_size with dissolve
 
-    r "Ja, das hilft schon mal! Aber wie genau können wir diesen Heap dann für die Sortierung verwenden?"
+    r "Yes, that helps! But how exactly can we use this heap for sorting?"
 
-    p "Sehr gute Frage! Der Max-Heap gibt uns die Möglichkeit, in jedem Schritt das größte verbleibende Element schnell zu finden und an die richtige Position im Array zu setzen."
-    p "Ich werde den Ablauf des Heapsort-Algorithmus Schritt für Schritt erklären, damit ihr seht, wie das funktioniert."
+    p "Very good question! The max heap gives us the opportunity to quickly find the largest remaining element at each step and place it in the correct position in the array."
+    p "I'll explain the process of the heapsort algorithm step by step so that you can see how it works."
 
     show rex at right , half_size with vpunch
 
-    p "Schritt 1: Aufbau des Max-Heaps."
-    p "Der erste Schritt beim Heapsort besteht darin, das Eingabearray – also die Liste der zu sortierenden Zahlen – in einen Max-Heap umzuwandeln."
-    p  "Das bedeutet, dass wir die Elemente so anordnen, dass der größte Wert an der Wurzel steht und die Max-Heap-Eigenschaft für alle Eltern-Kind-Beziehungen gilt."
+    p "Step 1: Construct the max heaps."
+    p "The first step in heapsort is to convert the input array – that is, the list of numbers to be sorted – into a max heap."
+    p  "This means that we arrange the elements so that the largest value is at the root and the max heap property applies to all parent-child relationships."
 
-    r  "Und wie genau machen wir das? Ist das nicht aufwendig?"
+    r  "And how exactly do we do that? Isn't it costly?"
 
-    p  "Gute Beobachtung, r! Um das Array in einen Max-Heap umzuwandeln, verwenden wir eine Methode namens 'Heapify'. Die Heapify-Prozedur überprüft jeden Knoten und stellt sicher, dass die Max-Heap-Eigenschaft für diesen Knoten und seine Kinder erfüllt ist."
-    p  "Wir arbeiten uns dabei von unten nach oben durch den Baum – beginnend bei den Knoten, die Kinder haben, und bewegen uns schrittweise zur Wurzel. Das ermöglicht uns, die Max-Heap-Eigenschaft für den gesamten Baum zu garantieren, ohne alles neu zu ordnen."
+    p  "Good observation, Rex! To convert the array to a max heap, we use a method called “heapify”. The heapify procedure checks each node and ensures that the max heap property is satisfied for that node and its children."
+    p  "We work our way up through the tree from the bottom, starting with the nodes that have children, and gradually move towards the root. This enables us to guarantee the max heap property for the entire tree without resorting to a complete reordering."
 
 # Visualisierung Anzeigen (ungeordneter Heap)
-    p "Hier seht ihr ein Beispiel eines Arrays vor dem Heapify-Prozess. Die Zahlen sind noch ungeordnet."
-    p "Nach dem Heapify-Prozess sieht der Baum jedoch so aus:"
+    p "Here you can see an example of an array before the heapify process. The numbers are still in disorder."
+    p "After the heapify process, however, the tree looks like this:"
 #Visualisierung Anzeigen (geordneter Heap)
     show rex at right ,half_size with vpunch
-    r  "Okay, jetzt verstehe ich, wie der Max-Heap aussieht! Aber was machen wir dann damit?"
+    r  "Okay, now I understand what the max heap looks like! But what do we do with it?"
 
-    p  "Sehr gut, r. Das bringt uns zu Schritt 2."
-    p "Schritt 2: Tauschen und neu aufbauen."
+    p  "Very good, Rex. That brings us to step 2."
+    p "Step 2: Swap and rebuild."
 
-    p "Da der größte Wert nun an der Wurzel steht, tauschen wir ihn mit dem letzten Element des Arrays."
-    p "Dadurch bringen wir das größte Element an die richtige Position im Array."
-    p "Nachdem wir diesen Tausch durchgeführt haben, reduzieren wir die Größe des Heaps um eins, weil das größte Element jetzt sortiert und fest an seiner Position ist."
+    p "Since the largest value is now at the root, we swap it with the last element of the array."
+    p "This is how we bring the largest element to the correct position in the array."
+    p "After we have made this swap, we reduce the size of the heap by one, because the largest element is now sorted and firmly in its position."
 
-    r  "Und was passiert dann mit dem Heap? Ist er dann nicht kaputt?"
+    r  "And what happens to the heap then? Isn't it broken then?"
 
-    p  "Genau, r! Nach dem Tausch kann die Max-Heap-Eigenschaft tatsächlich verletzt sein. Deshalb wenden wir die Heapify-Prozedur erneut auf die Wurzel an, um den Heap zu reparieren und sicherzustellen, dass die Max-Heap-Eigenschaft wiederhergestellt wird."
+    p  "Exactly, Rex! After the swap, the max heap property may actually be violated. Therefore, we reapply the heapify procedure to the root to repair the heap and ensure that the max heap property is restored."
 
 #Visualisierung Anzeigen (Heapify vorher)
-    p "Hier tauschen wir das Wurzelelement mit dem letzten Element."
-    p "Da die Max-Heap-Eigenschaft dadurch verletzt wurde, wenden wir Heapify auf den Wurzelknoten an, um die Struktur zu reparieren."
+    p "Here we swap the root element with the last element."
+    p "Since the max heap property has been violated, we apply Heapify to the root node to repair the structure."
 #Visualisierung Anzeigen(Heapify nachher)
 
-    p "Nach dem erneuten Aufrufen von Heapify sieht der Heap wieder korrekt aus, und wir können den nächsten Schritt fortsetzen."
-    p "Schritt 3: Wiederholen, bis das gesamte Array sortiert ist."
-    p "Wir wiederholen den Prozess – das Wurzelelement mit dem letzten Element tauschen, die Heapgröße reduzieren und Heapify auf die Wurzel anwenden – bis das gesamte Array sortiert ist."
-    p "Am Ende ist das Array vollständig sortiert, und wir haben die Zahlen in aufsteigender Reihenfolge angeordnet."
+    p "After rerunning Heapify, the heap looks correct again and we can continue to the next step."
+    p "Step 3: Repeat until the entire array is sorted."
+    p "We repeat the process – swapping the root element with the last element, reducing the heap size and applying Heapify to the root – until the entire array is sorted."
+    p "At the end, the array is completely sorted, and we have arranged the numbers in ascending order."
 #Visualisierung Anzeigen (vollständige Sortierung der Liste)
-    r  "Wow, das ist echt clever! Aber warum ist Heapsort eigentlich so effizient?"
+    r  "Wow, that's really clever! But why is Heapsort so efficient?"
 
-    p  "Gute Frage, r! Der Heapsort-Algorithmus hat im besten, durchschnittlichen und schlechtesten Fall eine Zeitkomplexität von O(n log n), was bedeutet, dass er auch bei großen Datenmengen effizient bleibt."
-    p  "Im Gegensatz zu einigen anderen Algorithmen benötigt Heapsort außerdem nur eine konstante Menge an zusätzlichem Speicherplatz, da der gesamte Sortiervorgang direkt im Eingabearray durchgeführt wird. Das nennt man in-situ-Sortierung."
+    p  "Good question, Rex! The heapsort algorithm has a time complexity of O(n log n) in the best, average and worst case, which means that it remains efficient even with large amounts of data."
+    p  "Unlike some other algorithms, Heapsort also only requires a constant amount of additional memory, since the entire sorting process is carried out directly in the input array. This is called in-situ sorting."
 
-    r  "Das klingt ziemlich nützlich! Gibt es Nachteile im Vergleich zu anderen Algorithmen?"
+    r  "That sounds pretty useful! Are there any disadvantages compared to other algorithms?"
 
-    p  "Ja, tatsächlich. Ein Nachteil von Heapsort ist, dass er keine stabile Sortierung bietet. Das bedeutet, dass gleiche Werte ihre relative Reihenfolge im Array verlieren können."
-    p  "Außerdem ist Heapsort keine Divide-and-Conquer-Methode wie Quicksort oder Mergesort. Heapsort teilt das Array nicht in kleinere Teile auf, sondern arbeitet durch das kontinuierliche Wiederherstellen der Heap-Struktur, um die Sortierung zu erreichen."
+    p  "Yes, indeed. One disadvantage of heapsort is that it does not provide stable sorting. This means that equal values can lose their relative order in the array."
+    p  "Furthermore, heapsort is not a divide-and-conquer method like quicksort or mergesort. Heapsort does not divide the array into smaller parts, but works by continuously restoring the heap structure to achieve the sorting."
 
 #Abschluss Monolog (Begleitete Simulation)
 
