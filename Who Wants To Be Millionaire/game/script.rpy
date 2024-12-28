@@ -1056,6 +1056,12 @@ label minigame:
         b "Und dann ... ?"
 
         menu:
+            "6 to 3":
+                scene mg63_n #minigame heaptree 6 to 3
+                #play correct ding"
+                b "Das klappt !"
+                jump mg4
+
             "3 to 0":
                 scene mg03 #minigame heaptree 0 to 3
                 #play explosion sound effect
@@ -1075,12 +1081,6 @@ label minigame:
                     jump mg3
                 else: 
                     jump game_over
-
-            "6 to 3":
-                scene mg63_n #minigame heaptree 6 to 3
-                #play correct ding"
-                b "Das klappt !"
-                jump mg4
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
@@ -1106,6 +1106,11 @@ label minigame:
                     jump mg4
                 else: 
                     jump game_over
+            
+            "0 to 7":
+                scene mg07_n #minigame heaptree 0 to 7
+                b "Das klappt !"
+                jump mg5  
     
             "3 to 6":
                 scene mg36 #minigame heaptree 3 to 6
@@ -1116,12 +1121,7 @@ label minigame:
                     jump mg4
                 else: 
                     jump game_over
-
-            "0 to 7":
-                scene mg07_n #minigame heaptree 0 to 7
-                b "Das klappt !"
-                jump mg5   
-
+ 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
@@ -1175,6 +1175,11 @@ label minigame:
         call lifecount2 from _call_lifecount2_5
         b "Und dann ... ?"
         menu:
+            "0 to 3":
+                scene mg03_n #minigame heaptree 0 to 3
+                b "Das klappt !"
+                jump mg7 
+
             "7 to 0":
                 scene mg70w #minigame heaptree 1 to 0
                 #play explosion sound effect
@@ -1193,12 +1198,7 @@ label minigame:
                 if life_counter1 > 0:
                     jump mg6
                 else: 
-                    jump game_over
-
-            "0 to 3":
-                scene mg03_n #minigame heaptree 0 to 3
-                b "Das klappt !"
-                jump mg7   
+                    jump game_over  
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
@@ -1253,6 +1253,11 @@ label minigame:
         call lifecount2 from _call_lifecount2_7
         b "Und dann ... ?"
         menu:
+            "0 to 3":
+                scene mg032_n #minigame heaptree 0 to 
+                b "Das klappt !"
+                jump mg9 
+
             "1 to 0":
                 scene mg10 #minigame heaptree 1 to 0
                 #play explosion sound effect
@@ -1272,12 +1277,7 @@ label minigame:
                     jump mg8
                 else: 
                     jump game_over
-
-            "0 to 3":
-                scene mg032_n #minigame heaptree 0 to 
-                b "Das klappt !"
-                jump mg9   
-
+  
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
