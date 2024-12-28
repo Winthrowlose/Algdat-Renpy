@@ -772,7 +772,7 @@ label E_start :
     p  "Yes, indeed. One disadvantage of heapsort is that it does not provide stable sorting. This means that equal values can lose their relative order in the array."
     p  "Furthermore, heapsort is not a divide-and-conquer method like quicksort or mergesort. Heapsort does not divide the array into smaller parts, but works by continuously restoring the heap structure to achieve the sorting."
 
-#Abschluss Monolog (Begleitete Simulation)
+#Abschluss Monolog (Begleitete Simulation) Syncing....
 
     
     x "Professor Black begins to explain the algorithm in detail. Rex scribbles furiously on his tablet."
