@@ -1,60 +1,60 @@
-2024-12-04 19:46:24 UTC
-Windows-10-10.0.22631
+2024-12-16 12:37:29 UTC
+Windows-10-10.0.19045
 Ren'Py 8.3.2.24090902
 
-Early init took 0.10s
-Loading error handling took 0.10s
-Loading script took 2.99s
-Loading save slot metadata took 0.00s
+Early init took 0.05s
+Loading error handling took 0.04s
+Loading script took 0.63s
+Loading save slot metadata took 0.05s
 Loading persistent took 0.00s
-Running init code took 0.27s
-Loading analysis data took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.04s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.00s
+Reloading save slot metadata took 0.04s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Castra\\AppData\\Roaming/RenPy/backups\\Mini Game Algodat':
 Dump and make backups took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.250000
+Initial gc took 0.02s
+DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.28s
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.01s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.01s
-Prepare screens took 0.10s
-Save pyanalysis. took 0.02s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.12s
+Interface start took 0.05s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 556.13'
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 24.8.1.240822'
 Display Info: None
-Screen sizes: virtual=(800, 600) physical=(1000, 750) drawable=(1000, 750)
-Could not open 'cache/shaders.txt':
+Screen sizes: virtual=(800, 600) physical=(800, 600) drawable=(800, 600)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(800, 600) physical=(1920, 1017) drawable=(1920, 1017)
 Maximum texture size: 4096x4096
 
 Full traceback:
-  File "game/script.rpy", line 134, in script
+  File "game/script.rpy", line 83, in script
     jump game_over
-  File "C:\Users\Castra\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1699, in execute
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 1699, in execute
     rv = renpy.game.script.lookup(target)
-  File "C:\Users\Castra\Downloads\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
 ScriptError: could not find label 'game_over'.
 
 While running game code:
-  File "game/script.rpy", line 134, in script
+  File "game/script.rpy", line 83, in script
     jump game_over
 ScriptError: could not find label 'game_over'.

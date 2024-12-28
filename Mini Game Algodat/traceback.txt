@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 134, in script
+  File "game/script.rpy", line 83, in script
     jump game_over
 ScriptError: could not find label 'game_over'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 134, in script
+  File "game/script.rpy", line 83, in script
     jump game_over
-  File "C:\Users\Castra\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1699, in execute
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 1699, in execute
     rv = renpy.game.script.lookup(target)
-  File "C:\Users\Castra\Downloads\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
 ScriptError: could not find label 'game_over'.
 
-Windows-10-10.0.22631 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
  
-Wed Dec  4 20:46:52 2024
+Mon Dec 16 13:37:52 2024

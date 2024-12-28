@@ -1,36 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 43, in script
-    python :
-  File "game/script.rpy", line 65, in <module>
-    heapSort(arr)
-  File "game/script.rpy", line 60, in heapSort
-    heapify(arr, n, i)
-  File "game/script.rpy", line 45, in heapify
-    renpy.say(a,"[arr]")
-TypeError: 'int' object is not callable
+  File "game/script.rpy", line 910, in script
+    t  "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
+Exception: Sayer 't' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 43, in script
-    python :
-  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 65, in <module>
-    heapSort(arr)
-  File "game/script.rpy", line 60, in heapSort
-    heapify(arr, n, i)
-  File "game/script.rpy", line 45, in heapify
-    renpy.say(a,"[arr]")
-  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-TypeError: 'int' object is not callable
+  File "game/script.rpy", line 910, in script
+    t  "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 575, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Erik\renpy-8.3.2-sdk\renpy\ast.py", line 464, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 't' is not defined.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
-Who Wants To Be Millionaire 1.0
-Wed Nov  6 20:56:23 2024
+Heapsort 1.0
+Mon Dec 16 14:51:03 2024
