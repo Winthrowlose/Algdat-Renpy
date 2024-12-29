@@ -2,17 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1212: choice menuitem expects a non-empty block.
-    "6 to 0":
-             ^
+The label lifecount2 is defined twice, at File "game/script.rpy", line 1675:
+    label lifecount2:
+and File "game/script.rpy", line 1690:
+    label lifecount2:
 
-File "game/script.rpy", line 1293: choice menuitem expects a non-empty block.
-    "1 to 3":
-             ^
-
-File "game/script.rpy", line 1419: choice menuitem expects a non-empty block.
-    "3 to 0":
-             ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sun Dec 29 05:37:28 2024
+Sun Dec 29 10:19:12 2024
