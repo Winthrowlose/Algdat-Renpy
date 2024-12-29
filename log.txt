@@ -1,16 +1,15 @@
-2024-12-29 12:14:51 UTC
+2024-12-29 16:17:05 UTC
 Windows-10-10.0.19045
 Ren'Py 8.3.4.24120703
 
 Early init took 0.06s
-Loading error handling took 0.20s
-Loading script took 5.17s
-Loading save slot metadata took 0.03s
+Loading error handling took 0.16s
+Loading script took 0.33s
+Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 Set script version to: None (alternate path)
- - Init at launcher/game/download.rpy:22 took 0.74020 s.
-Running init code took 1.30s
-Loading analysis data took 0.02s
+Running init code took 0.26s
+Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.01s
 Index archives took 0.00s
@@ -21,7 +20,7 @@ Initial gc took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.32s
+Creating interface object took 0.27s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s

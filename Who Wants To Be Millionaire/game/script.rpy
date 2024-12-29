@@ -3,11 +3,20 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define x = Character("", color = "#eb3200")
-define r = Character("Rex", color ="#eb3000")
+define x = Character("", color = "#eb3200", voice_tag="narrator")
+define r = Character("Rex", color ="#eb3000", voice_tag="rex")
 define b = Character("Bolt", color="#03f0fc")
-define T = Character("TM-510")
-define p = Character("[name_p]")
+define T = Character("TM-510", voice_tag="tm-510")
+define p = Character("[name_p]", voice_tag="black")
+
+screen voice_toggle:
+    vbox:
+        textbutton "Mute Narrator" action ToggleVoiceMute("narrator")
+        textbutton "Mute Rex" action ToggleVoiceMute("rex")
+        textbutton "Mute Bolt" action ToggleVoiceMute("bolt")
+        textbutton "Mute TM-510" action ToggleVoiceMute("tm-510")
+        textbutton "Mute The Professor" action ToggleVoiceMute("black")
+
 default life_counter1 = 3
 default life_counter = 3
 default name_a = "Lehrer"
@@ -83,36 +92,46 @@ label start:
 label D_start :
     scene black
 
+    voice "Narrator DE line1.ogg"
     x "Wissen beruht nicht nur auf Wahrheit, sondern auch auf Irrtum. - Carl Jung"
     
     scene future #idk what picture
 
+    voice "Narrator DE line2.ogg"
     x "Jahr 3670"
+
+    voice "Narrator DE line3.ogg"
     x "Bevölkerung {color=#f00}25%%{/color}"
 
-    x "Was von den größten Errungenschaften der Menschheit übrig blieb, waren längst
-    waren längst vergessene Erinnerungen in Schutt und Asche"
+    voice "Narrator DE line4.ogg"
+    x "Was von den größten Errungenschaften der Menschheit übrig blieb, waren längst vergessene Erinnerungen in Schutt und Asche."
 
-    x "Manche geben dem Übermut der Menschen die Schuld: Sie dachten, sie könnten alles haben
+    voice "Narrator DE line5.ogg"
+    x "Manche geben dem Übermut der Menschen die Schuld: Sie dachten, sie könnten alles haben,
     erkannten dann aber, dass das Einzige, dass zwischen uns und allem was wir haben wollten stand,
     die Menschheit selbst war."
 
+    voice "Narrator DE line6.ogg"
     x "Andere gaben den Maschinen die Schuld."
 
-    x "Die Menscheit trug die Sünden derer, die für den Bau schreklicher Massenvernichtungswaffen
+    voice "Narrator DE line7.ogg"
+    x "Die Menschheit trug die Sünden derer, die für den Bau schreklicher Massenvernichtungswaffen
     verantwortlich waren. Sie setzten alles aufs Spiel."
 
+    voice "Narrator DE line8.ogg"
     x "Und damit besiegelte sich das Schicksal der Menschen, in einem zweiten dunklen
     Zeitalter zu leben, in dem das Streben nach Wissen Ketzerei ist."
 
+    voice "Narrator DE line9.ogg"
     x "Doch in einer Geschichte, die so alt ist wie die Menschheit selbst, gibt es immer
-    Induviduen, die sich dem Griff der Ungewissheit entziehen."
+    Individuen, die sich dem Griff der Ungewissheit entziehen."
     scene command center 3670
     
     #picture missing
 
     show rex at half_size, right with dissolve
 
+    voice "Rex DE line1.ogg"
     r "Was zur Hölle? Ein Wecker so früh nach der gestrigen Aufgabe?
     Der Arzt ist diese Woche absolut in Höchstform."
 
@@ -127,6 +146,8 @@ label D_start :
 
     show rex at half_size, right
     with dissolve
+
+    voice "Rex DE line2.ogg"
     r "Morgen Doc, ich dachte wir hätten das Sortieren mit Informationen geknackt, die ich
     gestern von Goldstein und von Neumann im Jahr 1948 stehlen musste?"
 
@@ -134,6 +155,7 @@ label D_start :
     heute hier finden müssen, ist Heapsort. Man könnte sagen, ein Verwandter von Mergesort,
     aber in vielerei Hinsicht einzigartig."
     
+    voice "Rex DE line3.ogg"
     r "Das ist ja alles cool Doc, aber müssen wir wirklich alle Sortieralgorithmen verstehen?
     Reicht das, was wir bis jetzt haben nicht aus?"
 
@@ -141,6 +163,7 @@ label D_start :
     Unsere Kollegen aus der Versorgung könnten eine bessere Methode gebrauchen, um die
     Lebensmittelkisten nach ihrem Gewicht zu stapeln."
 
+    voice "Rex DE line4.ogg"
     r "Sie haben Recht, Doc."
 
     b "Außerdem ist das der Zweck des Kodex, das Wissen aus unserer Vergangenheit
@@ -148,11 +171,13 @@ label D_start :
     über unsere Geschichte und ehemalige Technologien auszulöschen, damit wir nach einer besseren
     Zukunft streben können."
 
+    voice "Rex DE line5.ogg"
     r "Ja, ja, die edle Vision"
 
     b "Rex, mein Junge. Für die nächste Mission wirst du ins Jahr 2024 transportiert.
     An einen Ort namens Estinien Applied University of Technology"
 
+    voice "Rex DE line6.ogg"
     r "Moment. Anfang 2000? Sie sagten doch, jeder Moment zwischen 1999 und 2500 sei
     aufgrund der Zeitfeld-Interferenz tabu?"
 
@@ -162,6 +187,7 @@ label D_start :
     b "Aber sieh doch, aufgrund ihrer Vergangenheit glauben wir Zugang zu diesem zeitlichen
     Feld gefunden zu haben."
 
+    voice "Rex DE line7.ogg"
     r "Ein Hoch auf die Wissenschaft!"
 
     b "Die Wissenschaft ist wirklich wunderbar."
@@ -183,14 +209,17 @@ label D_start :
     scene time_machine_outside
     show rex at quater_size, left with dissolve
 
+    voice "Rex DE line8.ogg"
     r "Ist das?"    #Rex Soyface pointing 
 
     b "Ja, das ist es tatsächlich, ein Ort, den die meisten Menschen meiden, perfekt,
     um eine Zeitmaschine zu verstecken"
 
+    voice "Rex DE line9.ogg"
     r "Okay, los geht's! Basierend auf dem, was der Arzt gesagt hat, müssen wir nur
     die Zeit auswählen, die wir brauchen. Plus/Minus eine Woche. "
 
+    voice "Rex DE line10.ogg"
     r "Lass uns den 02.08.2024 daraus machen und dann müssen wir nur noch das Temporal
     Cloaking Device auf 2024 stellen, kurz bevor wir ankommen."
 
@@ -200,45 +229,53 @@ label D_start :
     hide rex
     show rex_happy at half_size,left with dissolve 
 
+    voice "Rex DE line11.ogg"
     r "Wird gemacht, Doc!"
 
+    voice "Narrator DE line10.ogg"
     x "Und damit verlässt Doctor Bolt Spiral die TM510 und Rex setzt seinen Weg fort."
     hide rex_happy
 
     scene timemachine 
     show rex at half_size,left 
 
+    voice "Narrator DE line11.ogg"
     x "Etwa eine Stunde nach Beginn der Reise..."
 
+    voice "Rex DE line12.ogg"
     r "Sie haben viel Arbeit in dieses neue Modell gesteckt. Sie haben die Austattung definitiv
     verbessert. Ich könnte hier sogar..."
 
+    voice "Rex DE line13.ogg"
     r "...hier sogar"
 
+    voice "Rex DE line14.ogg"
     r "...schlafen"
 
     hide rex
 
-    x "Und so kam es auch, Rex schlief während der Reise durch Raum und Zeit ein."
 
     #Alarmgeräusche
 
-    x "Zielort nähert sich. Tarnvorrichtung akiviert!"
+    T "Zielort nähert sich. Tarnvorrichtung akiviert!"
 
     show rex at half_size, right with dissolve
 
+    voice "Rex DE line15.ogg"
     r "Mist, ich muss eingeschlafen sein. Ich habe vergessen meine Tarnung zu aktivieren."
     
+    voice "Rex DE line16.ogg"
     r "Anscheinend gibt es aber eine automatische Funktion, danke Doc!"
 
     scene time_machine_outside_past_02
     show rex at right,tiny with dissolve
 
+    voice "Rex DE line17.ogg"
     r "Moment mal, der Doc hat diese Autofunktion nie erwähnt, ist die überhaupt sicher?"
 
     x "Rex drückt die Taste für die Tarnfunktion"
 
-    x "Manuelle Übersteuerung erkannt! Tarnfunktion abgeschaltet. Zeitreise wird beendet."
+    T "Manuelle Übersteuerung erkannt! Tarnfunktion abgeschaltet. Zeitreise wird beendet."
 
     #Alarm Zeitmaschine, Absturz dieser
 
@@ -246,13 +283,16 @@ label D_start :
 
     b "Was ist los, Rex? Ich empfange eine kritische Störung."
 
+    voice "Rex DE line18.ogg"
     r "Die Zeitmaschine ist abgestürzt!"
 
     b "Mit dir ist es immer ein Abenteuer oder? Bleib wo du bist. Ich werde den Schaden
     analysieren und sehen was ich tun kann."
 
+    voice "Rex DE line19.ogg"
     r "Naja wenigstens ist die Landschaft nicht schlecht. Sachsen, was? Ich war hier noch nie."
 
+    voice "Rex DE line20.ogg"
     r "Und was soll ich tun während ich warte?"
 
     b "Rex, ich hab gute und schlechte Neuigkeiten."
@@ -261,11 +301,13 @@ label D_start :
 
     b "Nimm bitte dein Kommunikationsgerät mit!"
 
+    voice "Rex DE line21.ogg"
     r "Und die guten Nachrichten?"
 
     b "Du befindest dich genau in der Mitte deines Ziels. Jetzt liegt es nur an ihnen,
     mehr über Heapsort zu lernen."
 
+    voice "Rex DE line22.ogg"
     r "Ok,Ok. Zuerst muss ich mir neue Kleidung suchen. Dieser Overall ist nicht besonders unaufällig. das wasser hilf auch nich dabei."
 
     b "Wasser ?"
@@ -273,14 +315,17 @@ label D_start :
     hide rex
     show rex_angry at right,tiny
 
+    voice "Rex DE line23.ogg"
     r "Ja , Wasser , ich bin auf einer Insel in einem Teich"
 
     b "Nun , mein vorschlag ist das schwimmen"
 
+    voice "Rex DE line24.ogg"
     r "wollte ich gerade tun !"
 
     hide rex_angry with dissolve
 
+    voice "Narrator DE line12.ogg"
     x "Rex schwimmt durch den Teich und beginnt seine suche"
 
     #SCENE 4 :
@@ -289,21 +334,34 @@ label D_start :
 
     show rex_angry at half_size , right with dissolve
 
+    voice "Narrator DE line13.ogg"
     x "Rex betritt zitternd einen Kleidungsladen in seinem nassen Overall. Nervös sucht er nach passender und stylischer Kleidung."
-    x  "Er stößt auf einen großen, imposanten Mann mit einem ordentlich gestutzten Bart und einer schwarzen Tweedjacke. Der Mann zieht eine Augenbraue hoch und mustert Rex von oben bis unten."
+
+    voice "Narrator DE line14.ogg"
+    x "Er stößt auf einen großen, imposanten Mann mit einem ordentlich gestutzten Bart und einer schwarzen Tweedjacke. Der Mann zieht eine Augenbraue hoch und mustert Rex von oben bis unten."
     hide rex_angry 
     show rex at half_size , right 
     show professor at half_size, left with dissolve
+
+    
     p "Ich habe dich hier noch nie zuvor gesehen . Bist du einer der neuen Studenten?"
+
+    voice "Rex DE line25.ogg"
     r "Uh, Ja... sowas in die richtung."
+
+    
     p "Haben wir us verlaufen? Keine Angst , das passiert selbst den besten. sag mal , das ist aber ein sehr interessantes outfit das du da trägst."
     hide professor
+
+    voice "Narrator DE line15.ogg"
     x "Rexs Kommunikationsgerät fängt plötzlich an zu brummen . ein Hologram von Bolt erscheint."
     show bolt at half_size, left with dissolve
     b "Rex! das ist er , das ist der Professor!"
     $ name_p = "Professor"
     hide rex
     show rex_angry at half_size , right
+
+    voice "Rex DE line26.ogg"
     r  "Dok, nicht so laut!"
     b "Oh, richtig. Ahem. Folge ihm, Rex! Er ist der Schlüssel zum Heapsort wissen!"
     hide bolt
@@ -311,20 +369,29 @@ label D_start :
     hide rex_angry
     show rex at half_size , right
 
+    voice "Rex DE line27.ogg"
     r  "Nett sie kennen zu lernen , aber ich muss jetzt los"
+
+    voice "Narrator DE line16.ogg"
     x "Rex versucht ungeschickt dem Professor zu folgen."
     hide rex
     show rex_sithlord at half_size , right with dissolve
+
+    voice "Black DE line1.ogg"
     p "Moment mal, Junge! Wozu die Eile?"
 
     hide rex_sithlord
     show rex at half_size , right with dissolve
 
+    voice "Rex DE line28.ogg"
     r "Ich .. uh.. "
+
     p  "falls du das 13.15 Seminar suchst kannst du mir einfach folgen ."
 
+    voice "Rex DE line29.ogg"
     r "roger roger!"
 
+    voice "Black DE line3.ogg"
     p " Professor Black ist der Name. Remington Black."
     $ name_p = "Professor Black"
 
@@ -334,18 +401,29 @@ label D_start :
     show rex at half_size, left with dissolve
     show professor at half_size, right with dissolve
 
-
+    voice "Narrator DE line17.ogg"
     x "Rex Folgt Professor Black in eine große vorlesungshalle voller gelangweilter Studenten."
+
+    voice "Narrator DE line18.ogg"
     x "Rex setzt sich in der letzten reihe um unauffällig zu bleiben . Professor Black lauft energetisch zum pult und beginnt seine vorlesung."
+
+    voice "Black DE line4.ogg"
     p "Guten morgen herren und damen! in der heutigen vorlesung befassen wir uns mit der spannenden welt der Algorithmen, Heapsort um genauer zu sein"
-    x "Rex gähn und seine blick wandert duch den raum. Plötzlich ertönt Bolts stimme in seinem Ohr."
+
+    voice "Narrator DE line19.ogg"
+    x "Rex gähnt und sein Blick wandert duch den Raum. Plötzlich ertönt Bolts Stimme in seinem Ohr."
     hide professor with dissolve
     b "Rex! Aufpassen! Gleich kommt Heapsort!"
     show professor at half_size, right with dissolve
+    voice "Narrator DE line20.ogg"
     x "Rex richtet sich abrupt auf und Fokusiert seinen Blick auf Black."
     p "Heapsort ist ein effizienter Algorithmus, der auf der Heap-Datenstruktur basiert..."
+
+    voice "Narrator DE line21.ogg"
     x  "Professor Black beginnt, den Algorithmus im Detail zu erklären. Rex kritzelt wütend auf sein Tablet."
     b "Ja! Ja! Das ist der Schlüssel zur Reparatur von TM-510! Rex, mein Junge, hör gut zu und mach dir Notizen, wie du es schon unzählige Male getan hast, und komm zurück zu unserer guten alten Zeit..."
+
+    voice "Rex DE line30.ogg"
     r "...Doc? Doc!... Verdammt noch mal! Das muss das Wasser sein, das das Kommunikationsgerät stört!"
 
 #explenation heapsort
@@ -438,12 +516,16 @@ label D_start :
 
 
     show professor_happy at left ,half_size with move
+
+    voice "Narrator DE line22.ogg"
     x "Professor Black schließt seine Vorlesung mit einem breiten Grinsen ab."
     p  "...und damit ist die heutige Vorlesung über Sortieralgorithmen beendet. "
     p  "Sie mögen jetzt nicht besonders nützlich erscheinen... "
     p  "aber du wirst den Tag erleben, an dem du dieses Wissen brauchst, "
     p  "sei es in deiner Programmierkarriere, beim Entwickeln von Programmen als Hobby... "
     p  "(mit einem subtilen Grinsen und einem Seitenblick auf Rex)... oder bei der Rettung der Menschheit."
+
+    voice "Narrator DE line23.ogg"
     x "Professor Black verlässt den Vorlesungssaal, während die Studenten zusammenpacken, um zu gehen."
 
 
@@ -452,9 +534,17 @@ label D_start :
     scene time_machine_outside_past
     show rex at tiny, right with dissolve
     # Rex stands before the TM-510
+
+    voice "Rex DE line31.ogg"
     r "Okay, der Doc hat gesagt, dass Heapsort der Schlüssel ist... mal sehen, ob ich das nicht herausfinden kann."
+
+    voice "Narrator DE line24.ogg"
     x "Rex nähert sich der Zeitmaschine. Er legt seine Hand auf das Bedienfeld, das sich mit einem Zischen öffnet und eine schwindelerregende Anzahl von futuristisch aussehenden Schaltkreisen und Schalttafeln offenbart."
+
+    voice "Narrator DE line25.ogg"
     x "Rexs Augen scannen die komplizierten Abläufe, bis sie auf einem Abschnitt mit der Aufschrift 'Manuelle Zeitfeld überbrückung' landen."
+
+    voice "Rex DE line32.ogg"
     r "Bingo. Sieht so aus, als würde hier die Magie passieren." 
     jump minigame
 # jump to interactive heapsort from here
@@ -1060,6 +1150,7 @@ label game_over_0:
     show rex  at right , half_size with dissolve
     #Jahr 5000. Die Zeitmaschine landet in einer verwüsteten Landschaft. Rex steigt aus und sieht gigantische Maschinen und eine unheimlich stille Umgebung.
 
+    voice "Rex Bad Ending Future DE line1.ogg"
     r  "Was… was ist hier passiert? Das ist nicht 3670!"
 
     T   "Fehler bei der Zielzeit. Angekommen: Jahr 5000."
@@ -1068,6 +1159,7 @@ label game_over_0:
 
     b  "Rex, was hast du getan?! Du bist zu weit in die Zukunft gereist! Unsere Berechnungen zeigen, dass die Menschheit in dieser Zeit vollständig durch Maschinen ersetzt wurde."
 
+    voice "Rex Bad Ending Future DE line2.ogg"
     r "Das kann nicht wahr sein. Alles ist… so leer. Und diese Maschinen, sie sehen aus, als wären sie lebendig."
 
     x "(Plötzlich beginnt eine der Maschinen sich zu bewegen und nähert sich Rex.)"
@@ -1076,6 +1168,7 @@ label game_over_0:
 
     b "Rex, du musst sofort die Zeitmaschine reaktivieren! Die Maschinen in dieser Zeit könnten feindlich sein!"
 
+    voice "Rex Bad Ending Future DE line3.ogg"
     r  "Ich hasse es, wenn du recht hast, Doc! Los geht's, TM-510, bring mich hier raus!"
 
 return
@@ -1085,22 +1178,27 @@ label game_over_1:
     scene game_over_past
     show rex  at right , half_size with dissolve
 
-    r"Okay, das hier sieht definitiv nicht nach Sachsen aus. Oder nach 3670. Wo bin ich?!"
+    voice "Rex Bad Ending Past DE line1.ogg"
+    r   "Okay, das hier sieht definitiv nicht nach Sachsen aus. Oder nach 3670. Wo bin ich?!"
 
-    T "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
+    T   "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
 
-    r  "Was?! Das ist die Kreidezeit! Ich bin bei den Dinosauriern gelandet!"
+    voice "Rex Bad Ending Past DE line2.ogg"
+    r   "Was?! Das ist die Kreidezeit! Ich bin bei den Dinosauriern gelandet!"
 
     x   "(Ein lautes Brüllen ertönt in der Ferne, und der Boden bebt leicht.)"
 
-    b "Rex! Was hast du gemacht?! Du bist in der Kreidezeit! Wir haben keine Daten darüber, wie lange du hier sicher bleiben kannst!"
+    b   "Rex! Was hast du gemacht?! Du bist in der Kreidezeit! Wir haben keine Daten darüber, wie lange du hier sicher bleiben kannst!"
 
-    r "Oh, keine Sorge, Doc, ich bin sicher, die Dinosaurier sind freundlich. Oder… auch nicht?"
+    voice "Rex Bad Ending Past DE line3.ogg"
+    r   "Oh, keine Sorge, Doc, ich bin sicher, die Dinosaurier sind freundlich. Oder… auch nicht?"
 
+    voice "Tyrannosaurus Sound.mp3"
     x   "(Ein riesiger Tyrannosaurus Rex tritt in Sichtweite und richtet seinen Blick auf Rex.)"
 
     b   "Rex, steig sofort zurück in die Zeitmaschine! Und vergiss nicht, die Koordinaten zu korrigieren!"
 
+    voice "Rex Bad Ending Past DE line4.ogg"
     r   "Wusste ich doch, dass das schiefgeht! TM-510, bring mich hier raus, bevor ich auf der Speisekarte lande!"
 
     x   "(Die Zeitmaschine startet im letzten Moment, und der T-Rex bleibt verwirrt zurück.)"
@@ -1111,6 +1209,7 @@ return
 
 label victory :
 
+    voice "Narrator DE line26.ogg"
     x "Die Zeitreise hat geklappt "
     scene command center 3670
     show rex at right , half_size with dissolve
@@ -1118,14 +1217,18 @@ label victory :
     b  "Rex! Du hast es geschafft! Die TM-510 zeigt die korrekten Koordinaten an – willkommen zurück in 3670."
 
     x "Rex (springt erleichtert aus der Zeitmaschine)"
+
+    voice "Rex Good Ending DE line1.ogg"
     r "Puh, ich dachte, das würde schiefgehen. Aber hey, Heapsort hat mich gerettet!"
 
     b  "Heapsort und deine Fähigkeit, sich anzupassen. Das Wissen, das du zurückgebracht hast, wird der Schlüssel zur Wiederherstellung unseres Fortschritts sein."
 
+    voice "Rex Good Ending DE line2.ogg"
     r "Na ja, ich hatte meine Zweifel, ob ich das hinbekomme. Aber es hat sich gelohnt. Also, was jetzt?"
 
     b "Jetzt, mein Junge, werden wir das Wissen über Heapsort analysieren und in die Codex-Datenbank aufnehmen. Du hast Geschichte geschrieben, Rex!"
 
+    voice "Rex Good Ending DE line3.ogg"
     r "Ich? Ein Held? Na, wenn das so ist… können wir jetzt endlich eine Pause machen? Ich brauche ein Sandwich."
 
     b "Natürlich. Aber mach dich darauf gefasst, dass die nächste Mission bald beginnt. Wissen ruht nie!"
@@ -1159,12 +1262,17 @@ label victory :
 label minigame:
     show rex
     scene time_machine_outside_past_02 #time machine outside 2024
+    voice "Rex DE line33.ogg"
     r "auf nach Hause"
     scene timemachine #time machine inside scene
     # boom sound effect
     scene timemachine02_alarm
+
+    voice "Rex DE line34.ogg"
     r "um... Bolt, du solltest dir das mal anschauen"
     b "mein Gott... der Heapsortinator ist kaputt , du musst ihn reparieren"
+
+    voice "Rex DE line35.ogg"
     r "dann muss ich wohl den Heapsortinator überprüfen "
     b "sortiere es mit Maxheap !"
 
