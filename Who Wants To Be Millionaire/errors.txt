@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 452: end of line expected.
-    show rex at tiny, righ 0.8 with dissolve
-                           ^
+File "game/script.rpy", line 1212: choice menuitem expects a non-empty block.
+    "6 to 0":
+             ^
 
-Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Dec 12 11:28:22 2024
+File "game/script.rpy", line 1293: choice menuitem expects a non-empty block.
+    "1 to 3":
+             ^
+
+File "game/script.rpy", line 1419: choice menuitem expects a non-empty block.
+    "3 to 0":
+             ^
+
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Sun Dec 29 05:37:28 2024
