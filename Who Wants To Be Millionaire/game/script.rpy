@@ -10,8 +10,11 @@ define T = Character("TM-510")
 define p = Character("[name_p]")
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 default life_counter1 = 3
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 default life_counter = 3
@@ -466,7 +469,10 @@ label D_start :
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -808,6 +814,7 @@ label E_start :
     jump minigame
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
 
@@ -870,6 +877,69 @@ label E_start :
 
 #Rex Purplewoman: (springt erleichtert aus der Zeitmaschine) "Puh, ich dachte, das würde schiefgehen. Aber hey, Heapsort hat mich gerettet!"
 
+=======
+
+
+# Scene 7 : Too far into the future
+
+
+#Jahr 5000. Die Zeitmaschine landet in einer verwüsteten Landschaft. Rex steigt aus und sieht gigantische Maschinen und eine unheimlich stille Umgebung.
+
+#Rex Purplewoman: (erschrocken) "Was… was ist hier passiert? Das ist nicht 3670!"
+
+#TM-510 (Automatische Stimme): "Fehler bei der Zielzeit. Angekommen: Jahr 5000."
+
+#Bolt Spiral: (erscheint als Hologramm) "Rex, was hast du getan?! Du bist zu weit in die Zukunft gereist! Unsere Berechnungen zeigen, dass die Menschheit in dieser Zeit vollständig durch Maschinen ersetzt wurde."
+
+#Rex Purplewoman: "Das kann nicht wahr sein. Alles ist… so leer. Und diese Maschinen, sie sehen aus, als wären sie lebendig."
+
+#(Plötzlich beginnt eine der Maschinen sich zu bewegen und nähert sich Rex.)
+
+#TM-510: "Warnung: Unbekannte Entität erkannt. Empfehle sofortige Rückkehr zur Zeitmaschine."
+
+#Bolt Spiral: "Rex, du musst sofort die Zeitmaschine reaktivieren! Die Maschinen in dieser Zeit könnten feindlich sein!"
+
+#Rex Purplewoman: (rennt zurück zur Zeitmaschine) "Ich hasse es, wenn du recht hast, Doc! Los geht's, TM-510, bring mich hier raus!"
+
+    #Scene 7: Too Far back in the past
+
+#Jahr 65 Millionen v. Chr. Die Zeitmaschine landet in einem dichten Dschungel. Rex tritt vorsichtig heraus und hört seltsame Geräusche.
+
+#Rex Purplewoman: (sich umblickend) "Okay, das hier sieht definitiv nicht nach Sachsen aus. Oder nach 3670. Wo bin ich?!"
+
+#TM-510 (Automatische Stimme): "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
+
+#Rex Purplewoman: (panisch) "Was?! Das ist die Kreidezeit! Ich bin bei den Dinosauriern gelandet!"
+
+#(Ein lautes Brüllen ertönt in der Ferne, und der Boden bebt leicht.)
+
+#Bolt Spiral: (erscheint als Hologramm) "Rex! Was hast du gemacht?! Du bist in der Kreidezeit! Wir haben keine Daten darüber, wie lange du hier sicher bleiben kannst!"
+
+#Rex Purplewoman: (nervös) "Oh, keine Sorge, Doc, ich bin sicher, die Dinosaurier sind freundlich. Oder… auch nicht?"
+
+#(Ein riesiger Tyrannosaurus Rex tritt in Sichtweite und richtet seinen Blick auf Rex.)
+
+#Bolt Spiral: "Rex, steig sofort zurück in die Zeitmaschine! Und vergiss nicht, die Koordinaten zu korrigieren!"
+
+#Rex Purplewoman: (rennt zur Zeitmaschine) "Wusste ich doch, dass das schiefgeht! TM-510, bring mich hier raus, bevor ich auf der Speisekarte lande!"
+
+#(Die Zeitmaschine startet im letzten Moment, und der T-Rex bleibt verwirrt zurück.)
+
+
+
+#Scene 8: Happy Ending
+
+
+
+#Die Zeitreise hat geklappt (Zurück in die richtige Zeit)
+
+#Szene: Ankunft in der Kommandozentrale im Jahr 3670. Rex steigt aus der Zeitmaschine aus.
+
+#Bolt Spiral: "Rex! Du hast es geschafft! Die TM-510 zeigt die korrekten Koordinaten an – willkommen zurück in 3670."
+
+#Rex Purplewoman: (springt erleichtert aus der Zeitmaschine) "Puh, ich dachte, das würde schiefgehen. Aber hey, Heapsort hat mich gerettet!"
+
+>>>>>>> Stashed changes
 =======
 
 
@@ -1009,6 +1079,7 @@ label E_start :
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             
 label game_over:
     # Scene 7 : Too far into the future
@@ -1017,6 +1088,8 @@ label game_over:
 
 
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
@@ -1028,6 +1101,9 @@ label game_over_0:
 # Scene 7 : Too far into the future
     show rex  at right , half_size with dissolve
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1052,7 +1128,10 @@ label game_over_0:
     r  "Ich hasse es, wenn du recht hast, Doc! Los geht's, TM-510, bring mich hier raus!"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
@@ -1108,6 +1187,9 @@ label victory :
 
     b "Natürlich. Aber mach dich darauf gefasst, dass die nächste Mission bald beginnt. Wissen ruht nie!"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1115,6 +1197,7 @@ label victory :
     return
 
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     #Scene 7: Too Far back in the past
@@ -1241,6 +1324,31 @@ label minigame:
             "6 to 7":
                 scene mg67
 >>>>>>> Stashed changes
+=======
+label minigame:
+    show rex
+    scene time_machine_outside_past_02 #time machine outside 2024
+    r "auf nach Hause"
+    scene timemachine #time machine inside scene
+    # boom sound effect
+    scene timemachine02_alarm
+    r "um... Bolt, du solltest dir das mal anschauen"
+    b "mein Gott... der Heapsortinator ist kaputt , du musst ihn reparieren"
+    r "dann muss ich wohl den Heapsortinator überprüfen "
+    b "sortiere es mit Maxheap !"
+
+
+    scene mg1 #minigame scrambled
+    b "Setze die Zahlen auf einen Heap-Baum!"
+    scene mg2 #minigame heaptree
+    b "Gut , danach noch das Heapify"
+    label mg1:
+        scene mg70
+        call lifecount2 from _call_lifecount2
+        menu:
+            "6 to 7":
+                scene mg67
+>>>>>>> Stashed changes
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1251,10 +1359,13 @@ label minigame:
     
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "1 to 3":
                 #scene mg13_n #minigame heaptree 1 to 3
                 #play explosion sound effect
 =======
+=======
+>>>>>>> Stashed changes
             #"1 to 3":
                 #scene mg13_n #minigame heaptree 1 to 3
                 #play explosion sound effect
@@ -1273,6 +1384,9 @@ label minigame:
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1280,6 +1394,7 @@ label minigame:
                     jump mg1
                 else: 
                     jump game_over
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
             #"1 to 3":
@@ -1307,6 +1422,8 @@ label minigame:
                     jump mg1
                 else: 
                     jump game_over
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     return
@@ -1319,7 +1436,11 @@ label minigame:
             "6 to 7":
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 #scene mg76_n #minigame heaptree 7 to 6
+=======
+                scene mg67 #minigame heaptree 6 to 7
+>>>>>>> Stashed changes
 =======
                 scene mg67 #minigame heaptree 6 to 7
 >>>>>>> Stashed changes
@@ -1334,6 +1455,7 @@ label minigame:
                 else: 
                     jump game_over
     
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
             "3 to 1":
@@ -1348,6 +1470,8 @@ label minigame:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
             #"3 to 1":
             #    scene mg31 #minigame heaptree 3 to 1
             #    #play explosion sound effect
@@ -1358,6 +1482,9 @@ label minigame:
             #    else: 
             #        jump game_over
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1385,9 +1512,12 @@ label minigame:
         menu:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "3 to 0":
                 #scene mg03_n #minigame heaptree 0 to 3
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
             "6 to 3":
@@ -1399,6 +1529,9 @@ label minigame:
             "3 to 0":
                 scene mg03 #minigame heaptree 0 to 3
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1413,7 +1546,11 @@ label minigame:
             " 1 to 7":
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 #scene mg17_n #minigame heaptree 1 to 7
+=======
+                scene mg17 #minigame heaptree 1 to 7
+>>>>>>> Stashed changes
 =======
                 scene mg17 #minigame heaptree 1 to 7
 >>>>>>> Stashed changes
@@ -1430,12 +1567,15 @@ label minigame:
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "6 to 3":
                 scene mg63_n #minigame heaptree 6 to 3
                 #play correct ding"
                 b "Das klappt !"
                 jump mg4
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -1450,6 +1590,9 @@ label minigame:
                     jump game_over
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     return
@@ -1460,6 +1603,7 @@ label minigame:
 
         menu:
             "1 to 7":
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
                 #scene mg17 #minigame heaptree 1 to 7
                 #play explosion sound effect
@@ -1780,6 +1924,8 @@ label minigame:
 
         menu:
             "1 to 7":
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
                 scene mg17 #minigame heaptree 1 to 7
