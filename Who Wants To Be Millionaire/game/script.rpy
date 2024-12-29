@@ -1169,16 +1169,16 @@ label minigame:
     b "sortiere es mit Maxheap !"
 
 
-    scene mg1 #minigame scrambled
+    scene mg1_n #minigame scrambled
     b "Setze die Zahlen auf einen Heap-Baum!"
-    scene mg2 #minigame heaptree
+    scene mg2_n #minigame heaptree
     b "Gut , danach noch das Heapify"
     label mg1:
-        scene mg70
+        scene mg70_n
         call lifecount2 from _call_lifecount2
         menu:
             "6 to 7":
-                scene mg67
+                scene mg67_n
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1186,9 +1186,6 @@ label minigame:
                     jump mg1
                 else: 
                     jump game_over
-            #"1 to 3":
-                #scene mg13_n #minigame heaptree 1 to 3
-                #play explosion sound effect
 
             #"1 to 3":
                 #scene mg13_n #minigame heaptree 1 to 3
@@ -1216,31 +1213,6 @@ label minigame:
                 else: 
                     jump game_over
 
-            #"1 to 3":
-                #scene mg13_n #minigame heaptree 1 to 3
-                #play explosion sound effect
-                #b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
-                #$ life_counter1 -= 1
-                #if life_counter1 > 0:
-                #    jump mg1
-                #else: 
-                #    jump game_over
-
-
-            "7 to 0":
-                scene mg70_n #minigame heaptree 7 to 0
-                #play correct ding"
-                b "Das klappt !"
-                jump mg2
-
-            "Es sieht schon korrekt aus.":
-                #play explosion sound effect
-                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
-                $ life_counter1 -= 1
-                if life_counter1 > 0:
-                    jump mg1
-                else: 
-                    jump game_over
 
     return
 
@@ -1252,14 +1224,7 @@ label minigame:
             "6 to 7":
 
                 #scene mg76_n #minigame heaptree 7 to 6
-
-                scene mg67 #minigame heaptree 6 to 7
-
-
-                scene mg67 #minigame heaptree 6 to 7
-
-                scene mg67 #minigame heaptree 6 to 7
-
+                scene mg67_n #minigame heaptree 6 to 7
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1268,17 +1233,6 @@ label minigame:
                 else: 
                     jump game_over
     
-
-            "3 to 1":
-                #scene mg31_n #minigame heaptree 3 to 1
-                #play explosion sound effect
-                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
-                $ life_counter1 -= 1
-                if life_counter1 > 0:
-                    jump mg2
-                else: 
-                    jump game_over
-
             #"3 to 1":
             #    scene mg31 #minigame heaptree 3 to 1
             #    #play explosion sound effect
@@ -1322,7 +1276,7 @@ label minigame:
                 jump mg4
 
             "3 to 0":
-                scene mg03 #minigame heaptree 0 to 3
+                scene mg03_n #minigame heaptree 0 to 3
 
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
@@ -1334,14 +1288,7 @@ label minigame:
     
             " 1 to 7":
 
-                #scene mg17_n #minigame heaptree 1 to 7
-
-                scene mg17 #minigame heaptree 1 to 7
-
-                scene mg17 #minigame heaptree 1 to 7
-
-                scene mg17 #minigame heaptree 1 to 7
-
+                scene mg17_n #minigame heaptree 1 to 7
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1349,13 +1296,6 @@ label minigame:
                     jump mg3
                 else: 
                     jump game_over
-
-
-            "6 to 3":
-                scene mg63_n #minigame heaptree 6 to 3
-                #play correct ding"
-                b "Das klappt !"
-                jump mg4
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
@@ -1375,7 +1315,7 @@ label minigame:
         menu:
             "1 to 7":
 
-                #scene mg17 #minigame heaptree 1 to 7
+                scene mg17_n #minigame heaptree 1 to 7
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1385,7 +1325,7 @@ label minigame:
                     jump game_over
     
             "3 to 6":
-                #scene mg36 #minigame heaptree 3 to 6
+                scene mg36_n #minigame heaptree 3 to 6
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1414,7 +1354,7 @@ label minigame:
         b "Und dann ... ?"
         menu:
             "0 to 1":
-                #scene mg01w #minigame heaptree 1 to 0
+                scene mg01w_n #minigame heaptree 1 to 0
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1424,7 +1364,7 @@ label minigame:
                     jump game_over
     
             "7 to 6":
-                #scene mg76_n #minigame heaptree 7 to 6
+                scene mg76_n #minigame heaptree 7 to 6
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1453,7 +1393,7 @@ label minigame:
         b "Und dann ... ?"
         menu:
             "7 to 0":
-                #scene mg70w #minigame heaptree 1 to 0
+                scene mg70w_n #minigame heaptree 1 to 0
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1463,7 +1403,7 @@ label minigame:
                     jump game_over
     
             "1 to 6":
-                #scene mg16w #minigame heaptree 7 to 6
+                scene mg16w_n #minigame heaptree 7 to 6
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1492,7 +1432,7 @@ label minigame:
         b "Und dann ... ?"
         menu:
             "1 to 6":
-                #scene mg16_n #minigame heaptree 1 to 6
+                scene mg16_n #minigame heaptree 1 to 6
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1502,7 +1442,7 @@ label minigame:
                     jump game_over
     
             "7 to 3":
-                #scene mg73_n #minigame heaptree 3 to 7
+                scene mg73_n #minigame heaptree 3 to 7
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1531,7 +1471,7 @@ label minigame:
         b "Und dann ... ?"
         menu:
             "1 to 0":
-                #scene mg10_n #minigame heaptree 1 to 0
+                scene mg10_n #minigame heaptree 1 to 0
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1541,7 +1481,7 @@ label minigame:
                     jump game_over
     
             "6 to 1":
-                #scene mg61_n #minigame heaptree 6 to 1
+                scene mg61_n #minigame heaptree 6 to 1
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1570,7 +1510,7 @@ label minigame:
         b "Und dann ... ?"
         menu:
             "6 to 0":
-                #scene mg60w #minigame heaptree 1 to 0
+                scene mg60w_n #minigame heaptree 1 to 0
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1580,7 +1520,7 @@ label minigame:
                     jump game_over
     
             "7 to 0":
-                #scene mg70w2 #minigame heaptree 7 to 6
+                scene mg70w2_n #minigame heaptree 7 to 6
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1609,7 +1549,7 @@ label minigame:
         b "Und dann ... ?"
         menu:
             "6 to 7":
-                #scene mg67w2 #minigame heaptree 1 to 0
+                scene mg67w2_n #minigame heaptree 1 to 0
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1619,7 +1559,7 @@ label minigame:
                     jump game_over
     
             "3 to 1":
-                #scene mg31w #minigame heaptree 7 to 6
+                scene mg31w_n #minigame heaptree 7 to 6
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
