@@ -8,7 +8,11 @@ define r = Character("Rex", color ="#eb3000")
 define b = Character("Bolt", color="#03f0fc")
 define T = Character("TM-510")
 define p = Character("[name_p]")
+<<<<<<< Updated upstream
 default life_counter1 = 3
+=======
+default life_counter = 3
+>>>>>>> Stashed changes
 default name_a = "Lehrer"
 default name_c = "Mitschüler"
 default name_p = "???"
@@ -457,7 +461,10 @@ label D_start :
     r "Bingo. Sieht so aus, als würde hier die Magie passieren." 
     jump minigame
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 # jump to interactive heapsort from here
     #English Version------------------------------------------------
 
@@ -793,6 +800,7 @@ label E_start :
     x "Rex's eyes scan the intricate workings until they land on a section labeled 'Manual Temporal Field Override'."
     r "Bingo. Looks like this is where the magic happens." 
     jump minigame
+<<<<<<< Updated upstream
 
 
 
@@ -855,6 +863,69 @@ label E_start :
 
 #Rex Purplewoman: (springt erleichtert aus der Zeitmaschine) "Puh, ich dachte, das würde schiefgehen. Aber hey, Heapsort hat mich gerettet!"
 
+=======
+
+
+# Scene 7 : Too far into the future
+
+
+#Jahr 5000. Die Zeitmaschine landet in einer verwüsteten Landschaft. Rex steigt aus und sieht gigantische Maschinen und eine unheimlich stille Umgebung.
+
+#Rex Purplewoman: (erschrocken) "Was… was ist hier passiert? Das ist nicht 3670!"
+
+#TM-510 (Automatische Stimme): "Fehler bei der Zielzeit. Angekommen: Jahr 5000."
+
+#Bolt Spiral: (erscheint als Hologramm) "Rex, was hast du getan?! Du bist zu weit in die Zukunft gereist! Unsere Berechnungen zeigen, dass die Menschheit in dieser Zeit vollständig durch Maschinen ersetzt wurde."
+
+#Rex Purplewoman: "Das kann nicht wahr sein. Alles ist… so leer. Und diese Maschinen, sie sehen aus, als wären sie lebendig."
+
+#(Plötzlich beginnt eine der Maschinen sich zu bewegen und nähert sich Rex.)
+
+#TM-510: "Warnung: Unbekannte Entität erkannt. Empfehle sofortige Rückkehr zur Zeitmaschine."
+
+#Bolt Spiral: "Rex, du musst sofort die Zeitmaschine reaktivieren! Die Maschinen in dieser Zeit könnten feindlich sein!"
+
+#Rex Purplewoman: (rennt zurück zur Zeitmaschine) "Ich hasse es, wenn du recht hast, Doc! Los geht's, TM-510, bring mich hier raus!"
+
+    #Scene 7: Too Far back in the past
+
+#Jahr 65 Millionen v. Chr. Die Zeitmaschine landet in einem dichten Dschungel. Rex tritt vorsichtig heraus und hört seltsame Geräusche.
+
+#Rex Purplewoman: (sich umblickend) "Okay, das hier sieht definitiv nicht nach Sachsen aus. Oder nach 3670. Wo bin ich?!"
+
+#TM-510 (Automatische Stimme): "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
+
+#Rex Purplewoman: (panisch) "Was?! Das ist die Kreidezeit! Ich bin bei den Dinosauriern gelandet!"
+
+#(Ein lautes Brüllen ertönt in der Ferne, und der Boden bebt leicht.)
+
+#Bolt Spiral: (erscheint als Hologramm) "Rex! Was hast du gemacht?! Du bist in der Kreidezeit! Wir haben keine Daten darüber, wie lange du hier sicher bleiben kannst!"
+
+#Rex Purplewoman: (nervös) "Oh, keine Sorge, Doc, ich bin sicher, die Dinosaurier sind freundlich. Oder… auch nicht?"
+
+#(Ein riesiger Tyrannosaurus Rex tritt in Sichtweite und richtet seinen Blick auf Rex.)
+
+#Bolt Spiral: "Rex, steig sofort zurück in die Zeitmaschine! Und vergiss nicht, die Koordinaten zu korrigieren!"
+
+#Rex Purplewoman: (rennt zur Zeitmaschine) "Wusste ich doch, dass das schiefgeht! TM-510, bring mich hier raus, bevor ich auf der Speisekarte lande!"
+
+#(Die Zeitmaschine startet im letzten Moment, und der T-Rex bleibt verwirrt zurück.)
+
+
+
+#Scene 8: Happy Ending
+
+
+
+#Die Zeitreise hat geklappt (Zurück in die richtige Zeit)
+
+#Szene: Ankunft in der Kommandozentrale im Jahr 3670. Rex steigt aus der Zeitmaschine aus.
+
+#Bolt Spiral: "Rex! Du hast es geschafft! Die TM-510 zeigt die korrekten Koordinaten an – willkommen zurück in 3670."
+
+#Rex Purplewoman: (springt erleichtert aus der Zeitmaschine) "Puh, ich dachte, das würde schiefgehen. Aber hey, Heapsort hat mich gerettet!"
+
+>>>>>>> Stashed changes
 #Bolt Spiral: (lacht) "Heapsort und deine Fähigkeit, sich anzupassen. Das Wissen, das du zurückgebracht hast, wird der Schlüssel zur Wiederherstellung unseres Fortschritts sein."
 
 #Rex Purplewoman: "Na ja, ich hatte meine Zweifel, ob ich das hinbekomme. Aber es hat sich gelohnt. Also, was jetzt?"
@@ -866,6 +937,7 @@ label E_start :
 #Bolt Spiral: (lachend) "Natürlich. Aber mach dich darauf gefasst, dass die nächste Mission bald beginnt. Wissen ruht nie!"
 
 
+<<<<<<< Updated upstream
             
 label game_over:
     # Scene 7 : Too far into the future
@@ -873,6 +945,16 @@ label game_over:
     show rex  at right , half_size with dissolve
 
 
+=======
+
+label game_over:
+    jump expression renpy.random.choice(("game_over_0","game_over_1"))
+
+label game_over_0:
+    scene game_over_future
+# Scene 7 : Too far into the future
+    show rex  at right , half_size with dissolve
+>>>>>>> Stashed changes
     #Jahr 5000. Die Zeitmaschine landet in einer verwüsteten Landschaft. Rex steigt aus und sieht gigantische Maschinen und eine unheimlich stille Umgebung.
 
     r  "Was… was ist hier passiert? Das ist nicht 3670!"
@@ -892,10 +974,66 @@ label game_over:
     b "Rex, du musst sofort die Zeitmaschine reaktivieren! Die Maschinen in dieser Zeit könnten feindlich sein!"
 
     r  "Ich hasse es, wenn du recht hast, Doc! Los geht's, TM-510, bring mich hier raus!"
+<<<<<<< Updated upstream
+=======
+
+return
+label game_over_1:
+
+#Scene 7: Too Far back in the past
+    scene game_over_past
+    show rex  at right , half_size with dissolve
+
+    r"Okay, das hier sieht definitiv nicht nach Sachsen aus. Oder nach 3670. Wo bin ich?!"
+
+    T "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
+
+    r  "Was?! Das ist die Kreidezeit! Ich bin bei den Dinosauriern gelandet!"
+
+    x   "(Ein lautes Brüllen ertönt in der Ferne, und der Boden bebt leicht.)"
+
+    b "Rex! Was hast du gemacht?! Du bist in der Kreidezeit! Wir haben keine Daten darüber, wie lange du hier sicher bleiben kannst!"
+
+    r "Oh, keine Sorge, Doc, ich bin sicher, die Dinosaurier sind freundlich. Oder… auch nicht?"
+
+    x   "(Ein riesiger Tyrannosaurus Rex tritt in Sichtweite und richtet seinen Blick auf Rex.)"
+
+    b   "Rex, steig sofort zurück in die Zeitmaschine! Und vergiss nicht, die Koordinaten zu korrigieren!"
+
+    r   "Wusste ich doch, dass das schiefgeht! TM-510, bring mich hier raus, bevor ich auf der Speisekarte lande!"
+
+    x   "(Die Zeitmaschine startet im letzten Moment, und der T-Rex bleibt verwirrt zurück.)"
+
+return
+
+#Scene 8: Happy Ending
+
+label victory :
+
+    x "Die Zeitreise hat geklappt "
+    scene command center 3670
+    show rex at right , half_size with dissolve
+
+    b  "Rex! Du hast es geschafft! Die TM-510 zeigt die korrekten Koordinaten an – willkommen zurück in 3670."
+
+    x "Rex (springt erleichtert aus der Zeitmaschine)"
+    r "Puh, ich dachte, das würde schiefgehen. Aber hey, Heapsort hat mich gerettet!"
+
+    b  "Heapsort und deine Fähigkeit, sich anzupassen. Das Wissen, das du zurückgebracht hast, wird der Schlüssel zur Wiederherstellung unseres Fortschritts sein."
+
+    r "Na ja, ich hatte meine Zweifel, ob ich das hinbekomme. Aber es hat sich gelohnt. Also, was jetzt?"
+
+    b "Jetzt, mein Junge, werden wir das Wissen über Heapsort analysieren und in die Codex-Datenbank aufnehmen. Du hast Geschichte geschrieben, Rex!"
+
+    r "Ich? Ein Held? Na, wenn das so ist… können wir jetzt endlich eine Pause machen? Ich brauche ein Sandwich."
+
+    b "Natürlich. Aber mach dich darauf gefasst, dass die nächste Mission bald beginnt. Wissen ruht nie!"
+>>>>>>> Stashed changes
 
     return
 
 
+<<<<<<< Updated upstream
     #Scene 7: Too Far back in the past
 
 #Jahr 65 Millionen v. Chr. Die Zeitmaschine landet in einem dichten Dschungel. Rex tritt vorsichtig heraus und hört seltsame Geräusche.
@@ -970,6 +1108,31 @@ label minigame:
         menu:
             "6 to 0":
                 #scene mg60_n  #minigame heaptree 6 to 0
+=======
+label minigame:
+    show rex
+    scene time_machine_outside_past_02 #time machine outside 2024
+    r "auf nach Hause"
+    scene timemachine #time machine inside scene
+    # boom sound effect
+    scene timemachine02_alarm
+    r "um... Bolt, du solltest dir das mal anschauen"
+    b "mein Gott... der Heapsortinator ist kaputt , du musst ihn reparieren"
+    r "dann muss ich wohl den Heapsortinator überprüfen "
+    b "sortiere es mit Maxheap !"
+
+
+    scene mg1 #minigame scrambled
+    b "Setze die Zahlen auf einen Heap-Baum!"
+    scene mg2 #minigame heaptree
+    b "Gut , danach noch das Heapify"
+    label mg1:
+        scene mg70
+        call lifecount2 from _call_lifecount2
+        menu:
+            "6 to 7":
+                scene mg67
+>>>>>>> Stashed changes
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -978,6 +1141,7 @@ label minigame:
                 else: 
                     jump game_over
     
+<<<<<<< Updated upstream
             "1 to 3":
                 #scene mg13_n #minigame heaptree 1 to 3
                 #play explosion sound effect
@@ -987,6 +1151,17 @@ label minigame:
                     jump mg1
                 else: 
                     jump game_over
+=======
+            #"1 to 3":
+                #scene mg13_n #minigame heaptree 1 to 3
+                #play explosion sound effect
+                #b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                #$ life_counter1 -= 1
+                #if life_counter1 > 0:
+                #    jump mg1
+                #else: 
+                #    jump game_over
+>>>>>>> Stashed changes
 
             "7 to 0":
                 scene mg70_n #minigame heaptree 7 to 0
@@ -1010,7 +1185,11 @@ label minigame:
 
         menu:
             "6 to 7":
+<<<<<<< Updated upstream
                 #scene mg76_n #minigame heaptree 7 to 6
+=======
+                scene mg67 #minigame heaptree 6 to 7
+>>>>>>> Stashed changes
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1019,6 +1198,7 @@ label minigame:
                 else: 
                     jump game_over
     
+<<<<<<< Updated upstream
             "3 to 1":
                 #scene mg31_n #minigame heaptree 3 to 1
                 #play explosion sound effect
@@ -1028,6 +1208,17 @@ label minigame:
                     jump mg2
                 else: 
                     jump game_over
+=======
+            #"3 to 1":
+            #    scene mg31 #minigame heaptree 3 to 1
+            #    #play explosion sound effect
+            #   b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+            #    $ life_counter1 -= 1
+            #    if life_counter1 > 0:
+            #        jump mg2
+            #    else: 
+            #        jump game_over
+>>>>>>> Stashed changes
 
             "3 to 7":
                 scene mg37_n #minigame heaptree 3 to 7
@@ -1050,8 +1241,19 @@ label minigame:
         b "Und dann ... ?"
 
         menu:
+<<<<<<< Updated upstream
             "3 to 0":
                 #scene mg03_n #minigame heaptree 0 to 3
+=======
+            "6 to 3":
+                scene mg63_n #minigame heaptree 6 to 3
+                #play correct ding"
+                b "Das klappt !"
+                jump mg4
+
+            "3 to 0":
+                scene mg03 #minigame heaptree 0 to 3
+>>>>>>> Stashed changes
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1061,7 +1263,11 @@ label minigame:
                     jump game_over
     
             " 1 to 7":
+<<<<<<< Updated upstream
                 #scene mg17_n #minigame heaptree 1 to 7
+=======
+                scene mg17 #minigame heaptree 1 to 7
+>>>>>>> Stashed changes
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
@@ -1070,12 +1276,15 @@ label minigame:
                 else: 
                     jump game_over
 
+<<<<<<< Updated upstream
             "6 to 3":
                 scene mg63_n #minigame heaptree 6 to 3
                 #play correct ding"
                 b "Das klappt !"
                 jump mg4
 
+=======
+>>>>>>> Stashed changes
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
@@ -1084,6 +1293,7 @@ label minigame:
                     jump mg3
                 else: 
                     jump game_over
+<<<<<<< Updated upstream
     return
 
     label mg4:
@@ -1363,6 +1573,325 @@ label minigame:
     label mg11:
         call lifecount2 from _call_lifecount2_10
         r "Das korrekte Arry ist ..."
+        menu:
+            "7, 6, 3, 1, 0":
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg11
+                else: 
+                    jump game_over
+    
+            "6, 1, 0, 3, 7":
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg11
+                else: 
+                    jump game_over
+
+            "0, 1, 3, 6, 7":
+                jump victory   
+
+            "7, 6, 1, 3, 0":
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg11
+                else: 
+                    jump game_over          
+    return
+
+    label lifecount2:
+            if life_counter1 == 3:
+                show three at right with dissolve
+            elif life_counter1 == 2:
+                show two at right with dissolve
+            elif life_counter1 == 1:
+                show one at right with dissolve
+            else:
+                show zero at right with dissolve
+            return
+
+
+=======
+>>>>>>> Stashed changes
+    return
+
+    label mg4:
+        call lifecount2 from _call_lifecount2_3
+        b "Und dann ... ?"
+
+        menu:
+            "1 to 7":
+                scene mg17 #minigame heaptree 1 to 7
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg4
+                else: 
+                    jump game_over
+            
+            "0 to 7":
+                scene mg07_n #minigame heaptree 0 to 7
+                b "Das klappt !"
+                jump mg5  
+    
+            "3 to 6":
+                scene mg36 #minigame heaptree 3 to 6
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg4
+                else: 
+                    jump game_over
+ 
+            "Es sieht schon korrekt aus.":
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg4
+                else: 
+                    jump game_over          
+    return
+
+    label mg5:
+        call lifecount2 from _call_lifecount2_4
+        b "Und dann ... ?"
+        menu:
+            "0 to 1":
+                scene mg01w #minigame heaptree 1 to 0
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg5
+                else: 
+                    jump game_over
+    
+            "7 to 6":
+                scene mg76 #minigame heaptree 7 to 6
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg5
+                else: 
+                    jump game_over
+
+            "0 to 6":
+                scene mg06_n #minigame heaptree 0 to 6
+                b "Das klappt !"
+                jump mg6   
+
+            "Es sieht schon korrekt aus.":
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg5
+                else: 
+                    jump game_over          
+    return
+
+    label mg6:
+        call lifecount2 from _call_lifecount2_5
+        b "Und dann ... ?"
+        menu:
+            "0 to 3":
+                scene mg03_n #minigame heaptree 0 to 3
+                b "Das klappt !"
+                jump mg7 
+
+            "7 to 0":
+                scene mg70w #minigame heaptree 1 to 0
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg6
+                else: 
+                    jump game_over
+    
+            "1 to 6":
+                scene mg16w #minigame heaptree 7 to 6
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg6
+                else: 
+                    jump game_over  
+
+            "Es sieht schon korrekt aus.":
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg6
+                else: 
+                    jump game_over          
+    return
+
+    label mg7:
+        call lifecount2 from _call_lifecount2_6
+        b "Und dann ... ?"
+        menu:
+            "1 to 6":
+                scene mg16 #minigame heaptree 1 to 6
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg7
+                else: 
+                    jump game_over
+    
+            "7 to 3":
+                scene mg73 #minigame heaptree 3 to 7
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg7
+                else: 
+                    jump game_over
+
+            "0 to 6":
+                scene mg062_n #minigame heaptree 0 to 
+                b "Das klappt !"
+                jump mg8   
+
+            "Es sieht schon korrekt aus.":
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg7
+                else: 
+                    jump game_over          
+    return
+
+    label mg8:
+        call lifecount2 from _call_lifecount2_7
+        b "Und dann ... ?"
+        menu:
+            "0 to 3":
+                scene mg032_n #minigame heaptree 0 to 
+                b "Das klappt !"
+                jump mg9 
+
+            "1 to 0":
+                scene mg10 #minigame heaptree 1 to 0
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg8
+                else: 
+                    jump game_over
+    
+            "6 to 1":
+                scene mg61 #minigame heaptree 6 to 1
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg8
+                else: 
+                    jump game_over
+  
+            "Es sieht schon korrekt aus.":
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg8
+                else: 
+                    jump game_over          
+    return
+
+    label mg9:
+        call lifecount2 from _call_lifecount2_8
+        b "Und dann ... ?"
+        menu:
+            "6 to 0":
+                scene mg60w #minigame heaptree 1 to 0
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg9
+                else: 
+                    jump game_over
+    
+            "7 to 0":
+                scene mg70w2 #minigame heaptree 7 to 6
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg9
+                else: 
+                    jump game_over
+
+            "1 to 3":
+                scene mg13_n #minigame heaptree 0 to 
+                b "Das klappt !"
+                jump mg10   
+
+            "Es sieht schon korrekt aus.":
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg5
+                else: 
+                    jump game_over          
+    return
+
+    label mg10:
+        call lifecount2 from _call_lifecount2_9
+        b "Und dann ... ?"
+        menu:
+            "6 to 7":
+                scene mg67w2 #minigame heaptree 1 to 0
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg10
+                else: 
+                    jump game_over
+    
+            #"3 to 1":
+            #    scene mg31w #minigame heaptree 7 to 6
+            #    #play explosion sound effect
+            #    b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+            #    $ life_counter1 -= 1
+            #    if life_counter1 > 0:
+            #        jump mg10
+            #    else: 
+            #        jump game_over
+
+            "0 to 1":
+                scene mg01_n #minigame heaptree 0 to 
+                b "Das klappt !"
+                jump mg11   
+
+            "Es sieht schon korrekt aus.":
+                #play explosion sound effect
+                b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
+                $ life_counter1 -= 1
+                if life_counter1 > 0:
+                    jump mg10
+                else: 
+                    jump game_over          
+    return
+
+    label mg11:
+        call lifecount2 from _call_lifecount2_10
+        r "Das korrekte Array ist ..."
         menu:
             "7, 6, 3, 1, 0":
                 $ life_counter1 -= 1
