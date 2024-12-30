@@ -313,7 +313,7 @@ label D_start :
     voice "Bolt_Spiral13.mp3"
     b "Rex, ich hab gute und schlechte Neuigkeiten."
 
-    
+    voice "Bolt_Spiral13_0.mp3"
     b "Zuerst die schlechten. Es wird wohl eine Weile dauern, bis die Maschine repariert ist."
 
     voice "Bolt_Spiral13_1.mp3"
@@ -364,13 +364,13 @@ label D_start :
     show rex at half_size , right 
     show professor at half_size, left with dissolve
 
-    
-    p "Ich habe dich hier noch nie zuvor gesehen . Bist du einer der neuen Studenten?"
+    voice "Prof1.mp3"
+    p    "Ich habe dich hier noch nie zuvor gesehen . Bist du einer der neuen Studenten?"
 
     voice "Rex DE line25.ogg"
     r "Uh, Ja... sowas in die richtung."
 
-    
+    voice "Prof2.mp3"
     p "Haben wir us verlaufen? Keine Angst , das passiert selbst den besten. sag mal , das ist aber ein sehr interessantes outfit das du da trägst."
     hide professor
 
@@ -402,7 +402,8 @@ label D_start :
     hide rex
     show rex_sithlord at half_size , right with dissolve
 
-    voice "Black DE line1.ogg"
+    
+    voice "Prof3.mp3"
     p "Moment mal, Junge! Wozu die Eile?"
 
     hide rex_sithlord
@@ -411,12 +412,15 @@ label D_start :
     voice "Rex DE line28.ogg"
     r "Ich .. uh.. "
 
+    voice "Prof4.mp3"
     p  "falls du das 13.15 Seminar suchst kannst du mir einfach folgen ."
 
     voice "Rex DE line29.ogg"
     r "roger roger!"
 
     voice "Black DE line3.ogg"
+
+    voice "Prof5.mp3"
     p " Professor Black ist der Name. Remington Black."
     $ name_p = "Professor Black"
 
@@ -432,7 +436,7 @@ label D_start :
     voice "Narrator DE line18.ogg"
     x "Rex setzt sich in der letzten reihe um unauffällig zu bleiben . Professor Black lauft energetisch zum pult und beginnt seine vorlesung."
 
-    voice "Black DE line4.ogg"
+    voice "Prof6.mp3"
     p "Guten morgen herren und damen! in der heutigen vorlesung befassen wir uns mit der spannenden welt der Algorithmen, Heapsort um genauer zu sein"
 
     voice "Narrator DE line19.ogg"
@@ -444,6 +448,8 @@ label D_start :
     show professor at half_size, right with dissolve
     voice "Narrator DE line20.ogg"
     x "Rex richtet sich abrupt auf und Fokusiert seinen Blick auf Black."
+
+    voice "Prof7.mp3"
     p "Heapsort ist ein effizienter Algorithmus, der auf der Heap-Datenstruktur basiert..."
 
     voice "Narrator DE line21.ogg"
@@ -460,81 +466,108 @@ label D_start :
     scene classroom
     show professor at right , half_size with dissolve
 
+    voice "Prof8.mp3"
     p "Zunächst sollten wir klären, was ein Heap überhaupt ist."
 
+    voice "Prof9.mp3"
     p "Ein Heap ist eine Art binärer Baum – eine Struktur, in der jeder Elternknoten zwei Kindknoten hat."
 
+    voice "Prof10.mp3"
     p "Besonders interessant für uns ist der sogenannte Max-Heap."
 
+    voice "Prof11.mp3"
     p "In einem Max-Heap gilt die Regel: Jeder Elternknoten ist größer als seine beiden Kindknoten. "
 
+    voice "Prof12.mp3"
     p "Das bedeutet, dass der größte Wert im Baum immer an der Spitze – der Wurzel – zu finden ist. "
 
+    voice "Prof13.mp3"
     p "Warum nutzen wir diesen Heap? Nun, die Max-Heap-Eigenschaft ermöglicht es uns, in jedem Schritt das größte verbleibende Element schnell zu finden. "
 
+    voice "Prof14.mp3"
     p "Das ist der Schlüssel zu Heapsort. "
 
     show professor at left ,half_size with move
 
+    voice "Prof15.mp3"
     p "Schauen wir uns die drei Schritte von Heapsort an. "
 
+    voice "Prof16.mp3"
     p "Schritt 1: Aufbau eines Max-Heaps "
+
+    voice "Prof17.mp3"
     p "Der erste Schritt besteht darin, das Eingabearray in einen Max-Heap umzuwandeln. Dafür verwenden wir eine Methode namens Heapify. "
 
+    voice "Prof18.mp3"
     p "Stellen Sie sich vor, wir überprüfen jeden Knoten und stellen sicher, dass die Max-Heap-Eigenschaft erfüllt ist. "
 
+    voice "Prof19.mp3"
     p "Falls ein Elternknoten kleiner ist als eines seiner Kinder, vertauschen wir die beiden und setzen die Überprüfung fort."
 
+    voice "Prof20.mp3"
     p "Wir arbeiten uns dabei von unten nach oben durch den Baum. Warum? "
 
+    voice "Prof21.mp3"
     p "Weil ein Problem bei den unteren Knoten sofort Auswirkungen auf die darüberliegenden hat. Indem wir von unten beginnen, stellen wir sicher, dass die Struktur stabil bleibt."
    
 #schritt 2
+    voice "Prof22.mp3"
     p "Schritt 2: Tauschen und Neuaufbau "
+
+    voice "Prof23.mp3"
     p "Sobald wir einen Max-Heap haben, können wir mit dem Sortieren beginnen. "
 
+    voice "Prof24.mp3"
     p "Das größte Element – das Wurzelelement – wird mit dem letzten Element des Arrays getauscht. "
 
+    voice "Prof25.mp3"
     p "Dadurch bringen wir das größte Element an die richtige Position. "
 
-    p "Aber Achtung: Nach dem Tausch ist die Max-Heap-Eigenschaft verletzt. Deshalb wenden wir Heapify erneut an, diesmal auf den verkleinerten Heap, um die Struktur zu reparieren. "
-
-
-    p "Schritt 2: Tauschen und Neuaufbau "
-    p "Sobald wir einen Max-Heap haben, können wir mit dem Sortieren beginnen. "
-
-    p "Das größte Element – das Wurzelelement – wird mit dem letzten Element des Arrays getauscht. "
-
-    p "Dadurch bringen wir das größte Element an die richtige Position. "
-
+    voice "Prof26.mp3"
     p "Aber Achtung: Nach dem Tausch ist die Max-Heap-Eigenschaft verletzt. Deshalb wenden wir Heapify erneut an, diesmal auf den verkleinerten Heap, um die Struktur zu reparieren. "
 
 #schritt 3
+
+    voice "Prof27.mp3"
     p "Schritt 3: Wiederholen bis zur vollständigen Sortierung "
+
+    voice "Prof28.mp3"
     p "Diesen Prozess – Tauschen, Reparieren und Verkleinern des Heaps – wiederholen wir so lange, bis alle Elemente sortiert sind. "
 
+    voice "Prof29.mp3"
     p "Am Ende erhalten wir eine Liste in aufsteigender Reihenfolge. "
 
+    voice "Prof30.mp3"
     p "Vielleicht fragen Sie sich, warum Heapsort eine gute Wahl ist. Nun, Heapsort hat im besten, durchschnittlichen und schlechtesten Fall eine Zeitkomplexität von O(n log n). "
 
+    voice "Prof31.mp3"
     p "Das liegt daran, dass jeder Schritt – sei es der Aufbau des Heaps oder das Heapify – proportional zur Höhe des Baums arbeitet, was logarithmisch wächst. "
 
+    voice "Prof32.mp3"
     p "Ein weiterer Vorteil von Heapsort ist, dass er nur eine konstante Menge an zusätzlichem Speicherplatz benötigt. "
 
+    voice "Prof33.mp3"
     p "Der gesamte Sortiervorgang erfolgt direkt im Eingabearray. Dies nennt man in-situ-Sortierung, und es unterscheidet Heapsort von vielen anderen Algorithmen wie Mergesort. "
 
+    voice "Prof34.mp3"
     p "Aber nichts ist perfekt. Heapsort hat auch Schwächen. "
 
+    voice "Prof35.mp3"
     p "Eine davon ist, dass der Algorithmus nicht stabil ist. Das bedeutet, dass gleiche Werte ihre relative Reihenfolge verlieren können. "
 
+    voice "Prof36.mp3"
     p "Außerdem ist Heapsort keine Divide-and-Conquer-Methode wie Quicksort oder Mergesort. "
 
+    voice "Prof37.mp3"
     p "Statt das Array in kleinere Teile zu zerlegen, arbeiten wir direkt mit der Heap-Struktur. "
 
+    voice "Prof38.mp3"
     p "Zusammengefasst: Heapsort basiert auf drei Schritten – dem Aufbau eines Max-Heaps, dem Tauschen des größten Elements und dem Wiederherstellen der Max-Heap-Eigenschaft, bis das Array vollständig sortiert ist. "
 
+    voice "Prof39.mp3"
     p "Mit diesem Wissen sollten Sie in der Lage sein, Heapsort eigenständig zu implementieren und seine Effizienz zu verstehen. "
 
+    voice "Prof40.mp3"
     p "Aber denken Sie daran, der Schlüssel liegt im Verständnis der Max-Heap-Eigenschaft und der korrekten Anwendung von Heapify. "
 
 
@@ -548,10 +581,18 @@ label D_start :
 
     voice "Narrator DE line22.ogg"
     x "Professor Black schließt seine Vorlesung mit einem breiten Grinsen ab."
+    voice "Prof41.mp3"
     p  "...und damit ist die heutige Vorlesung über Sortieralgorithmen beendet. "
+    
     p  "Sie mögen jetzt nicht besonders nützlich erscheinen... "
+
+    voice "Prof42.mp3"
     p  "aber du wirst den Tag erleben, an dem du dieses Wissen brauchst, "
+
+    voice "Prof43.mp3"
     p  "sei es in deiner Programmierkarriere, beim Entwickeln von Programmen als Hobby... "
+
+    voice "Prof44.mp3"
     p  "(mit einem subtilen Grinsen und einem Seitenblick auf Rex)... oder bei der Rettung der Menschheit."
 
     voice "Narrator DE line23.ogg"
@@ -1201,8 +1242,10 @@ label game_over_0:
 
     voice "Rex Bad Ending Future DE line3.ogg"
     r  "Ich hasse es, wenn du recht hast, Doc! Los geht's, TM-510, bring mich hier raus!"
-
+$ life_counter1 = 3
+jump retry
 return
+
 label game_over_1:
 
 #Scene 7: Too Far back in the past
@@ -1234,8 +1277,10 @@ label game_over_1:
     voice "Rex Bad Ending Past DE line4.ogg"
     r   "Wusste ich doch, dass das schiefgeht! TM-510, bring mich hier raus, bevor ich auf der Speisekarte lande!"
 
+    voice "Tyrannosaurus Sound.mp3"
     x   "(Die Zeitmaschine startet im letzten Moment, und der T-Rex bleibt verwirrt zurück.)"
-
+$ life_counter1 = 3
+jump retry
 return
 
 #Scene 8: Happy Ending
@@ -1310,7 +1355,8 @@ label minigame:
 
     voice "Bolt_Spiral21.mp3"
     b "mein Gott... der Heapsortinator ist kaputt , du musst ihn reparieren"
-
+label retry:
+    scene timemachine02_alarm
     voice "Rex DE line35.ogg"
     r "dann muss ich wohl den Heapsortinator überprüfen "
 
@@ -1322,16 +1368,15 @@ label minigame:
 
     voice "Bolt_Spiral23.mp3"
     b "Setze die Zahlen auf einen Heap-Baum!"
-    scene mg2_n #minigame heaptree
+    scene mg032_n #minigame heaptree
 
     voice "Bolt_Spiral24.mp3"
     b "Gut , danach noch das Heapify"
     label mg1:
-        scene mg70_n
+        scene mg032_n
         call lifecount2 from _call_lifecount2
         menu:
-            "6 to 7":
-                scene mg67_n
+            "6 zu 7":
                 #play explosion sound effect
 
                 voice "Bolt_Spiral_wrong_answer.mp3"
@@ -1352,7 +1397,7 @@ label minigame:
                 #else: 
                 #    jump game_over
 
-            "7 to 0":
+            "7 zu 0":
                 scene mg70_n #minigame heaptree 7 to 0
                 #play correct ding"
                 voice "Bolt_Spiral_right_answer.mp3"
@@ -1379,7 +1424,7 @@ label minigame:
         b "Und dann ... ?"
 
         menu:
-            "6 to 7":
+            "6 zu 7":
 
                 #scene mg76_n #minigame heaptree 7 to 6
                 scene mg67_n #minigame heaptree 6 to 7
@@ -1404,7 +1449,7 @@ label minigame:
             #        jump game_over
 
 
-            "3 to 7":
+            "3 zu 7":
                 scene mg37_n #minigame heaptree 3 to 7
                 #play correct ding"
 
@@ -1433,13 +1478,14 @@ label minigame:
             #"3 to 0":
                 #scene mg03_n #minigame heaptree 0 to 3
 
-            "6 to 3":
+            "6 zu 3":
                 scene mg63_n #minigame heaptree 6 to 3
                 #play correct ding"
+                voice "Bolt_Spiral_right_answer.mp3"
                 b "Das klappt !"
                 jump mg4
 
-            "3 to 0":
+            "3 zu 0":
                 scene mg03_n #minigame heaptree 0 to 3
 
                 #play explosion sound effect
@@ -1452,7 +1498,7 @@ label minigame:
                 else: 
                     jump game_over
     
-            " 1 to 7":
+            " 1 zu 7":
 
                 scene mg17_n #minigame heaptree 1 to 7
                 #play explosion sound effect
@@ -1484,7 +1530,7 @@ label minigame:
         b "Und dann ... ?"
 
         menu:
-            "1 to 7":
+            "1 zu 7":
 
                 scene mg17_n #minigame heaptree 1 to 7
                 #play explosion sound effect
@@ -1497,7 +1543,7 @@ label minigame:
                 else: 
                     jump game_over
     
-            "3 to 6":
+            "3 zu 6":
                 scene mg36_n #minigame heaptree 3 to 6
                 #play explosion sound effect
 
@@ -1509,7 +1555,7 @@ label minigame:
                 else: 
                     jump game_over
 
-            "0 to 7":
+            "0 zu 7":
                 scene mg07_n #minigame heaptree 0 to 7
 
                 voice "Bolt_Spiral_right_answer.mp3"
@@ -1533,7 +1579,7 @@ label minigame:
         voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
-            "0 to 1":
+            "0 zu 1":
                 scene mg01w_n #minigame heaptree 1 to 0
                 #play explosion sound effect
 
@@ -1545,7 +1591,7 @@ label minigame:
                 else: 
                     jump game_over
     
-            "7 to 6":
+            "7 zu 6":
                 scene mg76_n #minigame heaptree 7 to 6
                 #play explosion sound effect
 
@@ -1557,7 +1603,7 @@ label minigame:
                 else: 
                     jump game_over
 
-            "0 to 6":
+            "0 zu 6":
                 scene mg06_n #minigame heaptree 0 to 6
 
                 voice "Bolt_Spiral_right_answer.mp3"
@@ -1581,7 +1627,7 @@ label minigame:
         voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
-            "7 to 0":
+            "7 zu 0":
                 scene mg70w_n #minigame heaptree 1 to 0
                 #play explosion sound effect
 
@@ -1593,7 +1639,7 @@ label minigame:
                 else: 
                     jump game_over
     
-            "1 to 6":
+            "1 zu 6":
                 scene mg16w_n #minigame heaptree 7 to 6
                 #play explosion sound effect
 
@@ -1605,7 +1651,7 @@ label minigame:
                 else: 
                     jump game_over
 
-            "0 to 3":
+            "3 zu 0":
                 scene mg03_n #minigame heaptree 0 to 3
 
                 voice "Bolt_Spiral_right_answer.mp3"
@@ -1629,7 +1675,7 @@ label minigame:
         voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
-            "1 to 6":
+            "1 zu 6":
                 scene mg16_n #minigame heaptree 1 to 6
                 #play explosion sound effect
 
@@ -1641,7 +1687,7 @@ label minigame:
                 else: 
                     jump game_over
     
-            "7 to 3":
+            "7 zu 3":
                 scene mg73_n #minigame heaptree 3 to 7
                 #play explosion sound effect
 
@@ -1653,7 +1699,7 @@ label minigame:
                 else: 
                     jump game_over
 
-            "0 to 6":
+            "0 zu 6":
                 scene mg062_n #minigame heaptree 0 to 
 
                 voice "Bolt_Spiral_right_answer.mp3"
@@ -1677,7 +1723,7 @@ label minigame:
         voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
-            "1 to 0":
+            "1 zu 0":
                 scene mg10_n #minigame heaptree 1 to 0
                 #play explosion sound effect
 
@@ -1689,7 +1735,7 @@ label minigame:
                 else: 
                     jump game_over
     
-            "6 to 1":
+            "6 zu 1":
                 scene mg61_n #minigame heaptree 6 to 1
                 #play explosion sound effect
 
@@ -1701,7 +1747,7 @@ label minigame:
                 else: 
                     jump game_over
 
-            "0 to 3":
+            "0 zu 3":
                 scene mg032_n #minigame heaptree 0 to 
 
                 voice "Bolt_Spiral_right_answer.mp3"
@@ -1725,7 +1771,7 @@ label minigame:
         voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
-            "6 to 0":
+            "6 zu 0":
                 scene mg60w_n #minigame heaptree 1 to 0
                 #play explosion sound effect
 
@@ -1737,7 +1783,7 @@ label minigame:
                 else: 
                     jump game_over
     
-            "7 to 0":
+            "7 zu 0":
                 scene mg70w2_n #minigame heaptree 7 to 6
                 #play explosion sound effect
 
@@ -1749,7 +1795,7 @@ label minigame:
                 else: 
                     jump game_over
 
-            "1 to 3":
+            "1 zu 3":
                 scene mg13_n #minigame heaptree 0 to 
 
                 voice "Bolt_Spiral_right_answer.mp3"
@@ -1773,7 +1819,7 @@ label minigame:
         voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
-            "6 to 7":
+            "6 zu 7":
                 scene mg67w2_n #minigame heaptree 1 to 0
                 #play explosion sound effect
 
@@ -1785,7 +1831,7 @@ label minigame:
                 else: 
                     jump game_over
     
-            "3 to 1":
+            "3 zu 1":
                 scene mg31w_n #minigame heaptree 7 to 6
                 #play explosion sound effect
 
@@ -1797,7 +1843,7 @@ label minigame:
                 else: 
                     jump game_over
 
-            "0 to 1":
+            "0 zu 1":
                 scene mg01_n #minigame heaptree 0 to 
 
                 voice "Bolt_Spiral_right_answer.mp3"

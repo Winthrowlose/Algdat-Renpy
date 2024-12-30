@@ -8,6 +8,88 @@ game/audio/Black DE line2.ogg matches ** (['all']).
 game/audio/Black DE line3.ogg matches ** (['all']).
 game/audio/Black DE line4.ogg matches ** (['all']).
 game/audio/bm3.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/ matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral1.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral10.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral11.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral12.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral13.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral13_1.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral14.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral15.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral16.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral17.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral18.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral19.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral2.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral20.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral21.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral22.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral23.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral24.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral3.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral4.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral5.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral6.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral7.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral8.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral8_1.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral8_2.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral8_3.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral9.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral9_1.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral_BE_F1.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral_BE_F2.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral_BE_P1.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral_BE_P2.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral_GE1.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral_GE2.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral_GE3.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral_GE4.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral_right_answer.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral_und_dann.mp3 matches ** (['all']).
+game/audio/Bolt Spiral Voice/Bolt_Spiral_wrong_answer.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral1.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral10.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral11.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral12.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral13.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral13_0.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral13_1.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral14.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral15.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral16.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral17.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral18.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral19.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral2.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral20.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral21.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral22.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral23.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral24.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral3.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral4.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral5.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral6.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral7.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral8.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral8_1.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral8_2.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral8_3.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral9.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral9_1.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral_BE_F1.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral_BE_F2.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral_BE_P1.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral_BE_P2.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral_GE1.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral_GE2.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral_GE3.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral_GE4.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral_right_answer.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral_und_dann.mp3 matches ** (['all']).
+game/audio/Bolt_Spiral_wrong_answer.mp3 matches ** (['all']).
 game/audio/Narrator DE/ matches ** (['all']).
 game/audio/Narrator DE/Narrator DE line1.ogg matches ** (['all']).
 game/audio/Narrator DE/Narrator DE line10.ogg matches ** (['all']).
@@ -61,6 +143,95 @@ game/audio/Narrator DE line6.ogg matches ** (['all']).
 game/audio/Narrator DE line7.ogg matches ** (['all']).
 game/audio/Narrator DE line8.ogg matches ** (['all']).
 game/audio/Narrator DE line9.ogg matches ** (['all']).
+game/audio/Prof1.mp3 matches ** (['all']).
+game/audio/Prof10.mp3 matches ** (['all']).
+game/audio/Prof11.mp3 matches ** (['all']).
+game/audio/Prof12.mp3 matches ** (['all']).
+game/audio/Prof13.mp3 matches ** (['all']).
+game/audio/Prof14.mp3 matches ** (['all']).
+game/audio/Prof15.mp3 matches ** (['all']).
+game/audio/Prof16.mp3 matches ** (['all']).
+game/audio/Prof17.mp3 matches ** (['all']).
+game/audio/Prof18.mp3 matches ** (['all']).
+game/audio/Prof19.mp3 matches ** (['all']).
+game/audio/Prof2.mp3 matches ** (['all']).
+game/audio/Prof20.mp3 matches ** (['all']).
+game/audio/Prof21.mp3 matches ** (['all']).
+game/audio/Prof22.mp3 matches ** (['all']).
+game/audio/Prof23.mp3 matches ** (['all']).
+game/audio/Prof24.mp3 matches ** (['all']).
+game/audio/Prof25.mp3 matches ** (['all']).
+game/audio/Prof26.mp3 matches ** (['all']).
+game/audio/Prof27.mp3 matches ** (['all']).
+game/audio/Prof28.mp3 matches ** (['all']).
+game/audio/Prof29.mp3 matches ** (['all']).
+game/audio/Prof3.mp3 matches ** (['all']).
+game/audio/Prof30.mp3 matches ** (['all']).
+game/audio/Prof31.mp3 matches ** (['all']).
+game/audio/Prof32.mp3 matches ** (['all']).
+game/audio/Prof33.mp3 matches ** (['all']).
+game/audio/Prof34.mp3 matches ** (['all']).
+game/audio/Prof35.mp3 matches ** (['all']).
+game/audio/Prof36.mp3 matches ** (['all']).
+game/audio/Prof37.mp3 matches ** (['all']).
+game/audio/Prof38.mp3 matches ** (['all']).
+game/audio/Prof39.mp3 matches ** (['all']).
+game/audio/Prof4.mp3 matches ** (['all']).
+game/audio/Prof40.mp3 matches ** (['all']).
+game/audio/Prof41.mp3 matches ** (['all']).
+game/audio/Prof42.mp3 matches ** (['all']).
+game/audio/Prof43.mp3 matches ** (['all']).
+game/audio/Prof44.mp3 matches ** (['all']).
+game/audio/Prof5.mp3 matches ** (['all']).
+game/audio/Prof6.mp3 matches ** (['all']).
+game/audio/Prof7.mp3 matches ** (['all']).
+game/audio/Prof8.mp3 matches ** (['all']).
+game/audio/Prof9.mp3 matches ** (['all']).
+game/audio/Prof_Voice/ matches ** (['all']).
+game/audio/Prof_Voice/Prof1.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof10.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof11.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof12.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof13.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof14.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof15.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof16.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof17.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof18.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof19.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof2.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof20.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof21.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof22.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof23.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof24.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof25.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof26.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof27.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof28.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof29.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof3.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof30.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof31.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof32.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof33.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof34.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof35.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof36.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof37.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof38.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof39.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof4.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof40.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof41.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof42.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof43.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof44.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof5.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof6.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof7.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof8.mp3 matches ** (['all']).
+game/audio/Prof_Voice/Prof9.mp3 matches ** (['all']).
 game/audio/Rex Bad Ending Future DE line1.ogg matches ** (['all']).
 game/audio/Rex Bad Ending Future De line2.ogg matches ** (['all']).
 game/audio/Rex Bad Ending Future DE line3.ogg matches ** (['all']).
@@ -363,7 +534,7 @@ game/images/Minigame/MESSED UP VARIATIONS GREEN NODES/MESSED UP VARIATIONS 63107
 game/images/Minigame/MESSED UP VARIATIONS GREEN NODES/MESSED UP VARIATIONS 63107/mg73_n.png matches ** (['all']).
 game/images/Minigame/MESSED UP VARIATIONS GREEN NODES/MESSED UP VARIATIONS 73160/ matches ** (['all']).
 game/images/Minigame/MESSED UP VARIATIONS GREEN NODES/MESSED UP VARIATIONS 73160/mg03.png matches ** (['all']).
-game/images/Minigame/MESSED UP VARIATIONS GREEN NODES/MESSED UP VARIATIONS 73160/mg03_n.png matches ** (['all']).
+game/images/Minigame/MESSED UP VARIATIONS GREEN NODES/MESSED UP VARIATIONS 73160/mg03_nw.png matches ** (['all']).
 game/images/Minigame/MESSED UP VARIATIONS GREEN NODES/MESSED UP VARIATIONS 73160/mg17.png matches ** (['all']).
 game/images/Minigame/MESSED UP VARIATIONS GREEN NODES/MESSED UP VARIATIONS 73160/mg17_n.png matches ** (['all']).
 game/images/Minigame/MESSED UP VARIATIONS GREEN NODES/MESSED UP VARIATIONS 76130/ matches ** (['all']).
