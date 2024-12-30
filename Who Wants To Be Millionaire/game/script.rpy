@@ -135,6 +135,7 @@ label D_start :
     r "Was zur Hölle? Ein Wecker so früh nach der gestrigen Aufgabe?
     Der Arzt ist diese Woche absolut in Höchstform."
 
+    voice "Bolt_Spiral1.mp3"
     b "Rex an die Kommandozentrale, Rex an die Kommandozentrale! Wir haben endlich
     Informationen für den Sortieralgorithmus gefunden, den wir brauchen."
 
@@ -142,6 +143,7 @@ label D_start :
 
     show bolt at half_size, left with dissolve
     
+    voice "Bolt_Spiral2.mp3"
     b "Ah, da bist du ja, komm mein Junge. Wir haben Arbeit zu erledigen."
 
     show rex at half_size, right
@@ -151,6 +153,7 @@ label D_start :
     r "Morgen Doc, ich dachte wir hätten das Sortieren mit Informationen geknackt, die ich
     gestern von Goldstein und von Neumann im Jahr 1948 stehlen musste?"
 
+    voice "Bolt_Spiral3.mp3"
     b "Das, Rex, war eine detaillierte Beschreibung und Analyse von Mergesort. Was wir
     heute hier finden müssen, ist Heapsort. Man könnte sagen, ein Verwandter von Mergesort,
     aber in vielerei Hinsicht einzigartig."
@@ -159,6 +162,7 @@ label D_start :
     r "Das ist ja alles cool Doc, aber müssen wir wirklich alle Sortieralgorithmen verstehen?
     Reicht das, was wir bis jetzt haben nicht aus?"
 
+    voice "Bolt_Spiral4.mp3"
     b "Rex, Die verschiedenen Sortieralgorithmen haben ihre eigenen praktischen Funktionen.
     Unsere Kollegen aus der Versorgung könnten eine bessere Methode gebrauchen, um die
     Lebensmittelkisten nach ihrem Gewicht zu stapeln."
@@ -166,6 +170,7 @@ label D_start :
     voice "Rex DE line4.ogg"
     r "Sie haben Recht, Doc."
 
+    voice "Bolt_Spiral5.mp3"
     b "Außerdem ist das der Zweck des Kodex, das Wissen aus unserer Vergangenheit
     wiederzuerlangen, egal, was die älteren Führer wollen. Ziel ist es doch die Unwissenheit
     über unsere Geschichte und ehemalige Technologien auszulöschen, damit wir nach einer besseren
@@ -174,6 +179,7 @@ label D_start :
     voice "Rex DE line5.ogg"
     r "Ja, ja, die edle Vision"
 
+    voice "Bolt_Spiral6.mp3"
     b "Rex, mein Junge. Für die nächste Mission wirst du ins Jahr 2024 transportiert.
     An einen Ort namens Estinien Applied University of Technology"
 
@@ -181,25 +187,30 @@ label D_start :
     r "Moment. Anfang 2000? Sie sagten doch, jeder Moment zwischen 1999 und 2500 sei
     aufgrund der Zeitfeld-Interferenz tabu?"
 
+    voice "Bolt_Spiral7.mp3"
     b "Ja, ja, ich weiß. Die Spiral-Termporal-Field-Theroie meines Vaters. Das ist aber der
     Hauptgrund, warum wir fast nichts über die Informatik wissen."
 
+    voice "Bolt_Spiral8.mp3"
     b "Aber sieh doch, aufgrund ihrer Vergangenheit glauben wir Zugang zu diesem zeitlichen
     Feld gefunden zu haben."
 
     voice "Rex DE line7.ogg"
     r "Ein Hoch auf die Wissenschaft!"
 
+    voice "Bolt_Spiral8_1.mp3"
     b "Die Wissenschaft ist wirklich wunderbar."
 
-
+    voice "Bolt_Spiral8_2.mp3"
     b "Siehst du Rex, das Zeitfeld wirkt wie ein Schild um die Jahre 1999 und 2500. Wir haben
     aber rausgefunden, dass wir diese Barriere durchdringen können. Dafür müssen wir uns nur
     als Objekt dieser Zeit verkleiden und unsere wahre Zeitsignatur verbergen."
 
+    voice "Bolt_Spiral8_3.mp3"
     b "Um es kurz zu machen: Wenn das Zeitfeld irgendwie deine wahre Zeitsignatur kennt, dann
     werden Sie gewaltsam in die Vergangenheit oder Zukunft geschleudert."
 
+    voice "Bolt_Spiral9.mp3"
     b "Hier das wichtigste. Das Temporal Cloaking Device. Du musst nur diese Taste drücken,
     und auf 2024 einstellen. Die Zeitmaschine wird dich in das Jahr befördern und
     sich selbst tarnen"
@@ -212,6 +223,7 @@ label D_start :
     voice "Rex DE line8.ogg"
     r "Ist das?"    #Rex Soyface pointing 
 
+    voice "Bolt_Spiral9_1.mp3"
     b "Ja, das ist es tatsächlich, ein Ort, den die meisten Menschen meiden, perfekt,
     um eine Zeitmaschine zu verstecken"
 
@@ -223,6 +235,7 @@ label D_start :
     r "Lass uns den 02.08.2024 daraus machen und dann müssen wir nur noch das Temporal
     Cloaking Device auf 2024 stellen, kurz bevor wir ankommen."
 
+    voice "Bolt_Spiral10.mp3"
     b "Okay, Rex, alles sieht gut aus und scheint in Ordnung zu sein. Viel Glück bei deiner
     Mission und vergiss nicht, dein Tarngerät einzuschalten."  
 
@@ -281,11 +294,13 @@ label D_start :
 
     #Bolt nur als Hologramm
 
+    voice "Bolt_Spiral11.mp3"
     b "Was ist los, Rex? Ich empfange eine kritische Störung."
 
     voice "Rex DE line18.ogg"
     r "Die Zeitmaschine ist abgestürzt!"
 
+    voice "Bolt_Spiral12.mp3"
     b "Mit dir ist es immer ein Abenteuer oder? Bleib wo du bist. Ich werde den Schaden
     analysieren und sehen was ich tun kann."
 
@@ -295,21 +310,26 @@ label D_start :
     voice "Rex DE line20.ogg"
     r "Und was soll ich tun während ich warte?"
 
+    voice "Bolt_Spiral13.mp3"
     b "Rex, ich hab gute und schlechte Neuigkeiten."
 
+    
     b "Zuerst die schlechten. Es wird wohl eine Weile dauern, bis die Maschine repariert ist."
 
+    voice "Bolt_Spiral13_1.mp3"
     b "Nimm bitte dein Kommunikationsgerät mit!"
 
     voice "Rex DE line21.ogg"
     r "Und die guten Nachrichten?"
 
+    voice "Bolt_Spiral14.mp3"
     b "Du befindest dich genau in der Mitte deines Ziels. Jetzt liegt es nur an ihnen,
     mehr über Heapsort zu lernen."
 
     voice "Rex DE line22.ogg"
     r "Ok,Ok. Zuerst muss ich mir neue Kleidung suchen. Dieser Overall ist nicht besonders unaufällig. das wasser hilf auch nich dabei."
 
+    voice "Bolt_Spiral15.mp3"
     b "Wasser ?"
 
     hide rex
@@ -318,7 +338,8 @@ label D_start :
     voice "Rex DE line23.ogg"
     r "Ja , Wasser , ich bin auf einer Insel in einem Teich"
 
-    b "Nun , mein vorschlag ist das schwimmen"
+    voice "Bolt_Spiral16.mp3"
+    b "Nun , mein vorschlag ist zu schwimmen"
 
     voice "Rex DE line24.ogg"
     r "wollte ich gerade tun !"
@@ -356,6 +377,8 @@ label D_start :
     voice "Narrator DE line15.ogg"
     x "Rexs Kommunikationsgerät fängt plötzlich an zu brummen . ein Hologram von Bolt erscheint."
     show bolt at half_size, left with dissolve
+    
+    voice "Bolt_Spiral17.mp3"
     b "Rex! das ist er , das ist der Professor!"
     $ name_p = "Professor"
     hide rex
@@ -363,6 +386,8 @@ label D_start :
 
     voice "Rex DE line26.ogg"
     r  "Dok, nicht so laut!"
+
+    voice "Bolt_Spiral18.mp3"
     b "Oh, richtig. Ahem. Folge ihm, Rex! Er ist der Schlüssel zum Heapsort wissen!"
     hide bolt
     show professor  at half_size, left with dissolve
@@ -413,6 +438,8 @@ label D_start :
     voice "Narrator DE line19.ogg"
     x "Rex gähnt und sein Blick wandert duch den Raum. Plötzlich ertönt Bolts Stimme in seinem Ohr."
     hide professor with dissolve
+
+    voice "Bolt_Spiral19.mp3"
     b "Rex! Aufpassen! Gleich kommt Heapsort!"
     show professor at half_size, right with dissolve
     voice "Narrator DE line20.ogg"
@@ -421,6 +448,8 @@ label D_start :
 
     voice "Narrator DE line21.ogg"
     x  "Professor Black beginnt, den Algorithmus im Detail zu erklären. Rex kritzelt wütend auf sein Tablet."
+
+    voice "Bolt_Spiral20.mp3"
     b "Ja! Ja! Das ist der Schlüssel zur Reparatur von TM-510! Rex, mein Junge, hör gut zu und mach dir Notizen, wie du es schon unzählige Male getan hast, und komm zurück zu unserer guten alten Zeit..."
 
     voice "Rex DE line30.ogg"
@@ -1157,6 +1186,7 @@ label game_over_0:
 
     show rex_sithlord  at right , half_size with dissolve
 
+    voice "Bolt_Spiral_BE_F1.mp3"
     b  "Rex, was hast du getan?! Du bist zu weit in die Zukunft gereist! Unsere Berechnungen zeigen, dass die Menschheit in dieser Zeit vollständig durch Maschinen ersetzt wurde."
 
     voice "Rex Bad Ending Future DE line2.ogg"
@@ -1166,6 +1196,7 @@ label game_over_0:
 
     T "Warnung: Unbekannte Entität erkannt. Empfehle sofortige Rückkehr zur Zeitmaschine."
 
+    voice "Bolt_Spiral_BE_F2.mp3"
     b "Rex, du musst sofort die Zeitmaschine reaktivieren! Die Maschinen in dieser Zeit könnten feindlich sein!"
 
     voice "Rex Bad Ending Future DE line3.ogg"
@@ -1188,6 +1219,7 @@ label game_over_1:
 
     x   "(Ein lautes Brüllen ertönt in der Ferne, und der Boden bebt leicht.)"
 
+    voice "Bolt_Spiral_BE_P1.mp3"
     b   "Rex! Was hast du gemacht?! Du bist in der Kreidezeit! Wir haben keine Daten darüber, wie lange du hier sicher bleiben kannst!"
 
     voice "Rex Bad Ending Past DE line3.ogg"
@@ -1196,6 +1228,7 @@ label game_over_1:
     voice "Tyrannosaurus Sound.mp3"
     x   "(Ein riesiger Tyrannosaurus Rex tritt in Sichtweite und richtet seinen Blick auf Rex.)"
 
+    voice "Bolt_Spiral_BE_P2.mp3"
     b   "Rex, steig sofort zurück in die Zeitmaschine! Und vergiss nicht, die Koordinaten zu korrigieren!"
 
     voice "Rex Bad Ending Past DE line4.ogg"
@@ -1214,6 +1247,7 @@ label victory :
     scene command center 3670
     show rex at right , half_size with dissolve
 
+    voice "Bolt_Spiral_GE1.mp3"
     b  "Rex! Du hast es geschafft! Die TM-510 zeigt die korrekten Koordinaten an – willkommen zurück in 3670."
 
     x "Rex (springt erleichtert aus der Zeitmaschine)"
@@ -1221,16 +1255,19 @@ label victory :
     voice "Rex Good Ending DE line1.ogg"
     r "Puh, ich dachte, das würde schiefgehen. Aber hey, Heapsort hat mich gerettet!"
 
+    voice "Bolt_Spiral_GE2.mp3"
     b  "Heapsort und deine Fähigkeit, sich anzupassen. Das Wissen, das du zurückgebracht hast, wird der Schlüssel zur Wiederherstellung unseres Fortschritts sein."
 
     voice "Rex Good Ending DE line2.ogg"
     r "Na ja, ich hatte meine Zweifel, ob ich das hinbekomme. Aber es hat sich gelohnt. Also, was jetzt?"
 
+    voice "Bolt_Spiral_GE3.mp3"
     b "Jetzt, mein Junge, werden wir das Wissen über Heapsort analysieren und in die Codex-Datenbank aufnehmen. Du hast Geschichte geschrieben, Rex!"
 
     voice "Rex Good Ending DE line3.ogg"
     r "Ich? Ein Held? Na, wenn das so ist… können wir jetzt endlich eine Pause machen? Ich brauche ein Sandwich."
 
+    voice "Bolt_Spiral_GE4.mp3"
     b "Natürlich. Aber mach dich darauf gefasst, dass die nächste Mission bald beginnt. Wissen ruht nie!"
 
     return
@@ -1270,16 +1307,24 @@ label minigame:
 
     voice "Rex DE line34.ogg"
     r "um... Bolt, du solltest dir das mal anschauen"
+
+    voice "Bolt_Spiral21.mp3"
     b "mein Gott... der Heapsortinator ist kaputt , du musst ihn reparieren"
 
     voice "Rex DE line35.ogg"
     r "dann muss ich wohl den Heapsortinator überprüfen "
+
+    voice "Bolt_Spiral22.mp3"
     b "sortiere es mit Maxheap !"
 
 
     scene mg1_n #minigame scrambled
+
+    voice "Bolt_Spiral23.mp3"
     b "Setze die Zahlen auf einen Heap-Baum!"
     scene mg2_n #minigame heaptree
+
+    voice "Bolt_Spiral24.mp3"
     b "Gut , danach noch das Heapify"
     label mg1:
         scene mg70_n
@@ -1288,6 +1333,8 @@ label minigame:
             "6 to 7":
                 scene mg67_n
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1308,12 +1355,14 @@ label minigame:
             "7 to 0":
                 scene mg70_n #minigame heaptree 7 to 0
                 #play correct ding"
+                voice "Bolt_Spiral_right_answer.mp3"
                 b "Das klappt !"
                 jump mg2
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
 
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1326,6 +1375,7 @@ label minigame:
 
     label mg2:
         call lifecount2 from _call_lifecount2_1
+        voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
 
         menu:
@@ -1334,6 +1384,8 @@ label minigame:
                 #scene mg76_n #minigame heaptree 7 to 6
                 scene mg67_n #minigame heaptree 6 to 7
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1355,6 +1407,8 @@ label minigame:
             "3 to 7":
                 scene mg37_n #minigame heaptree 3 to 7
                 #play correct ding"
+
+                voice "Bolt_Spiral_right_answer.mp3"
                 b "Das klappt !"
                 jump mg3
 
@@ -1370,6 +1424,8 @@ label minigame:
 
     label mg3:
         call lifecount2 from _call_lifecount2_2
+
+        voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
 
         menu:
@@ -1387,6 +1443,8 @@ label minigame:
                 scene mg03_n #minigame heaptree 0 to 3
 
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1398,6 +1456,8 @@ label minigame:
 
                 scene mg17_n #minigame heaptree 1 to 7
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1407,6 +1467,8 @@ label minigame:
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1418,6 +1480,7 @@ label minigame:
 
     label mg4:
         call lifecount2 from _call_lifecount2_3
+        voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
 
         menu:
@@ -1425,6 +1488,8 @@ label minigame:
 
                 scene mg17_n #minigame heaptree 1 to 7
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1435,6 +1500,8 @@ label minigame:
             "3 to 6":
                 scene mg36_n #minigame heaptree 3 to 6
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1444,11 +1511,15 @@ label minigame:
 
             "0 to 7":
                 scene mg07_n #minigame heaptree 0 to 7
+
+                voice "Bolt_Spiral_right_answer.mp3"
                 b "Das klappt !"
                 jump mg5   
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1459,11 +1530,14 @@ label minigame:
 
     label mg5:
         call lifecount2 from _call_lifecount2_4
+        voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
             "0 to 1":
                 scene mg01w_n #minigame heaptree 1 to 0
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1474,6 +1548,8 @@ label minigame:
             "7 to 6":
                 scene mg76_n #minigame heaptree 7 to 6
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1483,11 +1559,15 @@ label minigame:
 
             "0 to 6":
                 scene mg06_n #minigame heaptree 0 to 6
+
+                voice "Bolt_Spiral_right_answer.mp3"
                 b "Das klappt !"
                 jump mg6   
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1498,11 +1578,14 @@ label minigame:
 
     label mg6:
         call lifecount2 from _call_lifecount2_5
+        voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
             "7 to 0":
                 scene mg70w_n #minigame heaptree 1 to 0
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1513,6 +1596,8 @@ label minigame:
             "1 to 6":
                 scene mg16w_n #minigame heaptree 7 to 6
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1522,11 +1607,15 @@ label minigame:
 
             "0 to 3":
                 scene mg03_n #minigame heaptree 0 to 3
+
+                voice "Bolt_Spiral_right_answer.mp3"
                 b "Das klappt !"
                 jump mg7   
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1537,11 +1626,14 @@ label minigame:
 
     label mg7:
         call lifecount2 from _call_lifecount2_6
+        voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
             "1 to 6":
                 scene mg16_n #minigame heaptree 1 to 6
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1552,6 +1644,8 @@ label minigame:
             "7 to 3":
                 scene mg73_n #minigame heaptree 3 to 7
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1561,11 +1655,15 @@ label minigame:
 
             "0 to 6":
                 scene mg062_n #minigame heaptree 0 to 
+
+                voice "Bolt_Spiral_right_answer.mp3"
                 b "Das klappt !"
                 jump mg8   
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1576,11 +1674,14 @@ label minigame:
 
     label mg8:
         call lifecount2 from _call_lifecount2_7
+        voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
             "1 to 0":
                 scene mg10_n #minigame heaptree 1 to 0
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1591,6 +1692,8 @@ label minigame:
             "6 to 1":
                 scene mg61_n #minigame heaptree 6 to 1
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1600,11 +1703,15 @@ label minigame:
 
             "0 to 3":
                 scene mg032_n #minigame heaptree 0 to 
+
+                voice "Bolt_Spiral_right_answer.mp3"
                 b "Das klappt !"
                 jump mg9   
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1615,11 +1722,14 @@ label minigame:
 
     label mg9:
         call lifecount2 from _call_lifecount2_8
+        voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
             "6 to 0":
                 scene mg60w_n #minigame heaptree 1 to 0
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1630,6 +1740,8 @@ label minigame:
             "7 to 0":
                 scene mg70w2_n #minigame heaptree 7 to 6
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1639,11 +1751,15 @@ label minigame:
 
             "1 to 3":
                 scene mg13_n #minigame heaptree 0 to 
+
+                voice "Bolt_Spiral_right_answer.mp3"
                 b "Das klappt !"
                 jump mg10   
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1654,11 +1770,14 @@ label minigame:
 
     label mg10:
         call lifecount2 from _call_lifecount2_9
+        voice "Bolt_Spiral_und_dann.mp3"
         b "Und dann ... ?"
         menu:
             "6 to 7":
                 scene mg67w2_n #minigame heaptree 1 to 0
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1669,6 +1788,8 @@ label minigame:
             "3 to 1":
                 scene mg31w_n #minigame heaptree 7 to 6
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1678,11 +1799,15 @@ label minigame:
 
             "0 to 1":
                 scene mg01_n #minigame heaptree 0 to 
+
+                voice "Bolt_Spiral_right_answer.mp3"
                 b "Das klappt !"
                 jump mg11   
 
             "Es sieht schon korrekt aus.":
                 #play explosion sound effect
+
+                voice "Bolt_Spiral_wrong_answer.mp3"
                 b "Ich glaube, das ist nicht ganz richtig, Junge. Versuch es noch einmal"
                 $ life_counter1 -= 1
                 if life_counter1 > 0:
@@ -1693,7 +1818,7 @@ label minigame:
 
     label mg11:
         call lifecount2 from _call_lifecount2_10
-        r "Das korrekte Arry ist ..."
+        r "Das korrekte Array ist ..."
         menu:
             "7, 6, 3, 1, 0":
                 $ life_counter1 -= 1
