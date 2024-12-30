@@ -269,8 +269,9 @@ label D_start :
 
 
     #Alarmgeräusche
-
-    T "Zielort nähert sich. Tarnvorrichtung akiviert!"
+    play sound "Alarm sound.mp3"
+    voice "TM DE line1.ogg"
+    T "Zielort nähert sich. Tarnvorrichtung aktiviert!"
 
     show rex at half_size, right with dissolve
 
@@ -286,8 +287,10 @@ label D_start :
     voice "Rex DE line17.ogg"
     r "Moment mal, der Doc hat diese Autofunktion nie erwähnt, ist die überhaupt sicher?"
 
+    voice "Rex drückt die Taste für die Tarnfunktion DE.ogg"
     x "Rex drückt die Taste für die Tarnfunktion"
 
+    voice "TM DE line2.ogg"
     T "Manuelle Übersteuerung erkannt! Tarnfunktion abgeschaltet. Zeitreise wird beendet."
 
     #Alarm Zeitmaschine, Absturz dieser
@@ -1223,6 +1226,7 @@ label game_over_0:
     voice "Rex Bad Ending Future DE line1.ogg"
     r  "Was… was ist hier passiert? Das ist nicht 3670!"
 
+    voice "TM Bad Ending Future DE line1.ogg"
     T   "Fehler bei der Zielzeit. Angekommen: Jahr 5000."
 
     show rex_sithlord  at right , half_size with dissolve
@@ -1235,6 +1239,7 @@ label game_over_0:
 
     x "(Plötzlich beginnt eine der Maschinen sich zu bewegen und nähert sich Rex.)"
 
+    voice "TM Bad Ending Future DE line2.ogg"
     T "Warnung: Unbekannte Entität erkannt. Empfehle sofortige Rückkehr zur Zeitmaschine."
 
     voice "Bolt_Spiral_BE_F2.mp3"
@@ -1255,11 +1260,13 @@ label game_over_1:
     voice "Rex Bad Ending Past DE line1.ogg"
     r   "Okay, das hier sieht definitiv nicht nach Sachsen aus. Oder nach 3670. Wo bin ich?!"
 
-    T   "Fehler bei der Zielzeit. Angekommen: Jahr 65.000.000 v. Chr."
+    voice "TM DE Bad Ending Past line1.ogg"
+    T   "Fehler bei der Zielzeit. Angekommen: Jahr -66.000.000"
 
     voice "Rex Bad Ending Past DE line2.ogg"
     r   "Was?! Das ist die Kreidezeit! Ich bin bei den Dinosauriern gelandet!"
 
+    voice "TRex Far away roar.mp3"
     x   "(Ein lautes Brüllen ertönt in der Ferne, und der Boden bebt leicht.)"
 
     voice "Bolt_Spiral_BE_P1.mp3"
